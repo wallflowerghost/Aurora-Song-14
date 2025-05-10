@@ -1,3 +1,38 @@
+# Chest
+
+marking-bubble = Bubbles
+marking-bubble-bubble = Bubbles
+
+marking-fishbowl = Fishbowl
+marking-fishbowl-fishbowl1 = Fish
+marking-fishbowl-fishbowl2 = Fish bubbles
+
+marking-SlimeBonechest = Floating Ribcage
+marking-SlimeBonechest-bone = Floating Ribcage
+
+marking-SlimeCore = Core
+marking-SlimeCore-core = Core
+
+marking-SlimeCoreGlowing = Core (Glowing)
+marking-SlimeCoreGlowing-core = Core (Glowing)
+
+marking-SlimeLungs = Lungs
+marking-SlimeLungs-lungs = Lungs
+
+# Head
+
+marking-FadingStars = Fading Starlight
+marking-FadingStars-fadingstars1 = Brightest
+marking-FadingStars-fadingstars2 = Middling
+marking-FadingStars-fadingstars3 = Darkest
+
+marking-fizz = Fizz
+marking-fizz-fizz = Fizz
+
+marking-SlimeBonehead = Floating Skull
+marking-SlimeBonehead-bone = Floating Skull
+
+marking-SlimeNose = Nose (Profile)
 marking-SlimeNose-nose = Nose (Profile)
 marking-SlimeNose = Nose (Profile)
 
@@ -7,22 +42,35 @@ marking-SlimeMouth = Mouth
 marking-SlimeBrain-brain = Brain
 marking-SlimeBrain = Brain
 
-marking-SlimeEyeglow-eyeglow = Eye Glow
-marking-SlimeEyeglow = Eye Glow
+# Snout
 
-marking-SlimeCore-core = Core
-marking-SlimeCore = Core
+# Eyes
 
-marking-SlimeLungs-lungs = Lungs
-marking-SlimeLungs = Lungs
+marking-SlimeEyesDefault = Eyes
+marking-SlimeEyesDefault-eyes = Eyes (Default)
 
-marking-SlimeBonehead-bonehead = Floating Skull
-marking-SlimeBonehead = Floating Skull
+marking-SlimeEyeglow = Glowing Eyes
+marking-SlimeEyeglow-glow = Glowing Eyes
 
-marking-SlimeBonechest-bonechest = Floating Ribcage
-marking-SlimeBonechest = Floating Ribcage
+marking-SlimeEyesDroopy = Droopy Eyes
+marking-SlimeEyesDroopy-droopy = Droopy Eyes
 
-marking-SlimeBonearmleft-bonearmleft = Floating Bones (Left Arm)
+marking-SlimeEyesDroopyGlowing = Droopy Glowing Eyes
+marking-SlimeEyesDroopyGlowing-droopyglow = Droopy Glowing Eyes
+
+marking-SlimeEyesCyclops = Cyclops Eye
+marking-SlimeEyesCyclops-cyclops = Cyclops Eye
+
+marking-SlimeEyesCyclopsGlowing = Cyclops Glowing Eye
+marking-SlimeEyesCyclopsGlowing-cyclopsglow = Cyclops Glowing Eye
+
+# RArm
+
+marking-SlimeBonearmright = Floating Bones (Right Arm)
+marking-SlimeBonearmright-bone = Floating Bones (Right Arm)
+
+# LArm
+
 marking-SlimeBonearmleft = Floating Bones (Left Arm)
 
 marking-SlimeBonearmright-bonearmright = Floating Bones (Right Arm)
