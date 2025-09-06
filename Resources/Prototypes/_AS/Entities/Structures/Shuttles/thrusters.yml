@@ -1,4 +1,4 @@
-
+﻿
 #region Security
 - type: entity
   id: ThrusterSyndicate
@@ -10,7 +10,7 @@
     sprite: _NF/Structures/Shuttles/thruster.rsi
     layers: &secThrusterLayers
     - state: base_syndi
-          map: ["enum.ThrusterVisualLayers.Base"]
+      map: ["enum.ThrusterVisualLayers.Base"]
     - state: thrust
       map: ["enum.ThrusterVisualLayers.ThrustOn"]
       shader: unshaded
@@ -20,14 +20,6 @@
       shader: unshaded
       visible: false
       offset: 0, 1
-  - type: Destructible
-    thresholds: &secDestructibleThresholds
-    - trigger:
-        !type:DamageTrigger
-        damage: 600  # Considering we need a lot of thrusters didn't want to make an individual one too tanky
-      behaviors:
-        - !type:DoActsBehavior
-          acts: ["Destruction"]
   - type: Machine
     board: ThrusterSyndicateMachineCircuitboard
 

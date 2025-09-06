@@ -1,4 +1,4 @@
-- type: entity
+﻿- type: entity
   id: SyndiTechFabCircuitboard
   parent: SecurityTechFabCircuitboard
   name: Syndicate techfab machine board
@@ -19,14 +19,15 @@
     state: security
   - type: MachineBoard
     prototype: ThrusterSyndicate
-        requirements:
+    requirements:
       Capacitor: 3
     stackRequirements:
       Steel: 5
- - type: entity 
+
+- type: entity
   id: ThrusterMedicMachineCircuitboard
   parent: BaseMachineCircuitboard
-  name: SLE thruster machine board
+  name: Medic thruster machine board
   components:
   - type: Sprite
     state: medical
