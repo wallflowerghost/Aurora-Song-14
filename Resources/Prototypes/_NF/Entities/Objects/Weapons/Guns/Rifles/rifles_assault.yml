@@ -14,6 +14,9 @@
     magState: mag
     steps: 4
     zeroVisible: true
+  - type: Tag
+    tags:
+    - SolandMoss # Aurora
 
 - type: entity
   id: NFWeaponRifleAssaultM90 #M90 has no grenade launcher, so we stop referring to it as having one | Aurora
