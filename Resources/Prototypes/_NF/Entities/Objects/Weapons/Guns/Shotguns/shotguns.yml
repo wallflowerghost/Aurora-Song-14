@@ -1,7 +1,7 @@
 #region WizDen
 - type: entity
   id: NFWeaponShotgunBulldog
-  parent: [BaseC3SyndicateContraband, NFBaseWeaponShotgunChamber12gMagazine, NFBaseWeaponFrameShotgunWieldable, NFBaseWeaponEncumbranceLMG]
+  parent: [BaseC2ContrabandUnredeemable, NFBaseWeaponShotgunChamber12gMagazine, NFBaseWeaponFrameShotgunWieldable, NFBaseWeaponEncumbranceLMG, NFBaseWeaponFrameShotgunGorlex] # Contraband status adjusted | Aurora
   name: Bulldog
   description: |-
     An automatic magazine-fed shotgun for close-quarters combat. Kicks like a mule on steroids.
@@ -10,6 +10,8 @@
     sprite: Objects/Weapons/Guns/Shotguns/bulldog.rsi
   - type: Clothing
     sprite: Objects/Weapons/Guns/Shotguns/bulldog.rsi
+  - type: Item # Size fix attempted, possibly still goes into boots for some reason | Aurora
+    size: Large
   - type: Gun
     selectedMode: FullAuto
     availableModes:
@@ -19,7 +21,7 @@
 
 - type: entity
   id: NFWeaponShotgunDoubleBarreled
-  parent: [ NFBaseWeaponShotgunChamber12g, NFBaseWeaponFrameShotgunWieldable ]
+  parent: [ NFBaseWeaponShotgunChamber12g, NFBaseWeaponFrameShotgunWieldable ] # renamed from .50 to 12g | Aurora
   name: double-barreled shotgun
   description: |-
     An immortal classic. A civilian grade shotgun.
@@ -40,7 +42,7 @@
 
 - type: entity
   id: NFWeaponShotgunEnforcer
-  parent: [ NFBaseWeaponShotgunChamber12g, NFBaseWeaponFrameShotgunNanotrasen ]
+  parent: [BaseC2ContrabandUnredeemable,NFBaseWeaponShotgunChamber12g, NFBaseWeaponFrameShotgunNanotrasen] # Contraband status adjusted | Aurora
   name: Enforcer
   description: |-
     A premium semi-automatic shotgun, featuring an upgraded tube capacity.
@@ -57,7 +59,7 @@
 
 - type: entity
   id: NFWeaponShotgunKammerer
-  parent: [ NFBaseWeaponShotgunChamber12g, NFBaseWeaponFrameShotgunWieldable ]
+  parent: [ NFBaseWeaponShotgunChamber12g, NFBaseWeaponFrameShotgunWieldable ] # renamed from .50 to 12g | Aurora
   name: Kammerer
   description: |-
     An old yet faithful design, and a favorite among irregular forces on many worlds.
@@ -75,10 +77,13 @@
     capacity: 5
   - type: NFWeaponDetails
     manufacturer: weapon-details-manufacturer-nanotrasen-munitions
+  - type: Tag #Aurora, makes it work with wall cabinets
+    tags:
+    - WeaponShotgunKammerer
 
 - type: entity
   id: NFWeaponShotgunSawn
-  parent: [ NFBaseWeaponShotgunChamber12g, NFBaseWeaponFrameShotgun, NFBaseWeaponEncumbrancePistol ]
+  parent: [ NFBaseWeaponShotgunChamber12g, NFBaseWeaponFrameShotgun, NFBaseWeaponEncumbrancePistol ] # renamed from .50 to 12g | Aurora
   name: sawn-off shotgun
   description: |-
     Groovy!
@@ -108,7 +113,7 @@
 
 - type: entity
   id: NFWeaponShotgunHandmade
-  parent: [ NFBaseWeaponShotgunChamber12g, NFBaseWeaponFrameShotgun ]
+  parent: [ NFBaseWeaponShotgunChamber12g, NFBaseWeaponFrameShotgun ] # renamed from .50 to 12g | Aurora
   name: handmade pistol
   description: |-
     Looks unreliable, but legal.
@@ -138,7 +143,7 @@
 
 - type: entity
   id: NFWeaponShotgunBlunderbuss
-  parent: [ BaseC3PirateContraband, NFBaseWeaponShotgunChamber12g, NFBaseWeaponFrameShotgunWieldable ]
+  parent: [ BaseC3PirateContraband, NFBaseWeaponShotgunChamber12g, NFBaseWeaponFrameShotgunWieldable ] # renamed from .50 to 12g | Aurora
   name: blunderbuss
   description: |-
     Deadly at close range, an illegal shotgun often found at the side of a pirate.
@@ -159,7 +164,7 @@
 
 - type: entity
   id: NFWeaponShotgunImprovised
-  parent: [ NFBaseWeaponShotgunChamber12g, NFBaseWeaponFrameShotgunWieldable ]
+  parent: [ NFBaseWeaponShotgunChamber12g, NFBaseWeaponFrameShotgunWieldable ] # renamed from .50 to 12g | Aurora
   name: improvised shotgun
   description: |-
     A shitty, but legal, hand-made shotgun. It can only hold one round in the chamber.
@@ -208,17 +213,17 @@
     proto: NFShellShotgunBeanbag
     capacity: 5
 
-# Suplus, Aurora
+# Surplus | Aurora
 - type: entity
-  parent: [ BaseC1Contraband,  NFBaseWeaponShotgunChamber12g, NFBaseWeaponFrameShotgunWieldable ]
-  id: WeaponShotgunSurpFalchion
+  parent: [ BaseC2Contraband,  NFBaseWeaponShotgunChamber12g, NFBaseWeaponFrameShotgunWieldable ] # Contraband status adjusted | Aurora
+  id: ASWeaponShotgunSurpFalchion
   name: Falchion
   description: |-
     The first home-grown custom weapon used by the colonial forces. A reliable weapon. It can survive rapid depressurization, being dropped in a plasma pool, a direct blast from a cannon, and still it will function just fine.
   suffix: Surplus
   components:
   - type: Gun
-    fireRate: 2.5
+    fireRate: 1.8
   - type: Item
     size: Normal
     shape:

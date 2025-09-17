@@ -9,7 +9,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 15
+        Piercing: 15 # Damage rebalanced | Aurora
 
 - type: entity
   id: NFBulletPistol35Overpressure
@@ -20,7 +20,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 19
+        Piercing: 19 # Damage rebalanced | Aurora
 
 - type: entity
   id: NFBulletPistol35Incendiary
@@ -31,8 +31,8 @@
   - type: Projectile
     damage:
       types:
-        Blunt: 2
-        Heat: 14
+        Blunt: 2 # Incendiary bullets do not pierce well | Aurora
+        Heat: 14 # Damage rebalanced | Aurora
 
 
 - type: entity
@@ -44,8 +44,8 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 10
-        Radiation: 6
+        Piercing: 10 # Damage rebalanced | Aurora
+        Radiation: 6 # Damage rebalanced | Aurora
 
 - type: entity
   id: NFBulletPistol35Practice
@@ -56,7 +56,7 @@
   - type: Projectile
     damage:
       types:
-        Blunt: 1
+        Blunt: 0.5
 
 # Frontier
 # .35 pistol
@@ -70,6 +70,9 @@
     damage:
       types:
         Shock: 4
+        Blunt: 4
+  - type: StaminaDamageOnCollide
+    damage: 4 # 15 hits to slowdown
 
 - type: entity
   id: NFBulletPistol35Rubber
@@ -80,9 +83,9 @@
   - type: Projectile
     damage:
       types:
-        Blunt: 2
+        Blunt: 1
   - type: StaminaDamageOnCollide
-    damage: 17 # 6 shots to stun is good to me
+    damage: 17 # 6 shots to stun is good to me, rebalanced | Aurora
 
 #region .45 pistol
 - type: entity
@@ -94,7 +97,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 32
+        Piercing: 32 # Damage rebalanced | Aurora
 
 - type: entity
   id: NFBulletPistol45Overpressure
@@ -105,7 +108,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 38
+        Piercing: 38 # Damage rebalanced | Aurora
 
 - type: entity
   id: NFBulletPistol45Incendiary
@@ -116,8 +119,8 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 3
-        Heat: 32
+        Piercing: 3 # Incendiary bullets do not pierce well | Aurora
+        Heat: 32 # Damage rebalanced | Aurora
 
 - type: entity
   id: NFBulletPistol45Uranium
@@ -128,8 +131,8 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 20
-        Radiation: 15
+        Piercing: 20 # Damage rebalanced | Aurora
+        Radiation: 15 # Damage rebalanced | Aurora
 
 - type: entity
   id: NFBulletPistol45Practice
@@ -140,7 +143,7 @@
   - type: Projectile
     damage:
       types:
-        Blunt: 2
+        Blunt: 1
 
 # Frontier
 # .45 pistol
@@ -154,6 +157,9 @@
     damage:
       types:
         Shock: 6
+        Blunt: 6
+  - type: StaminaDamageOnCollide
+    damage: 6 # 10 hits to slowdown
 
 - type: entity
   id: NFBulletPistol45Rubber
@@ -164,6 +170,6 @@
   - type: Projectile
     damage:
       types:
-        Blunt: 3
+        Blunt: 2
   - type: StaminaDamageOnCollide
-    damage: 35
+    damage: 35 # 3 shots to stun is good to me, rebalanced | Aurora

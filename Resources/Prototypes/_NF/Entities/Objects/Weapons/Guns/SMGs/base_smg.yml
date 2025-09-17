@@ -8,9 +8,9 @@
   - type: Wieldable
     unwieldOnUse: false
   - type: GunWieldBonus
-    minAngle: -2.1
-    maxAngle: -6.3
-  - type: Gun
+    minAngle: -0.8
+    maxAngle: -4
+  - type: Gun # base stats, to be modified by manufacturers, slight increase to projectile speed and fireRate | Aurora
     projectileSpeed: 30
     minAngle: 4.2
     maxAngle: 14.6
@@ -32,12 +32,9 @@
   parent: NFBaseWeaponFrameSubMachineGun
   abstract: true
   components:
-  - type: GunWieldBonus
-    minAngle: -1.7
-    maxAngle: -7.5
   - type: Gun
     minAngle: 6.7
-    maxAngle: 17
+    maxAngle: 17 # Slightly less accurate but faster fire rate | Aurora
     angleIncrease: 1
     angleDecay: 2
     fireRate: 7
@@ -46,16 +43,16 @@
 
 - type: entity
   id: NFBaseWeaponFrameSubMachineGunCybersun
-  parent: [ BaseC3SyndicateContraband, NFBaseWeaponFrameSubMachineGun ]
+  parent: [ BaseC2ContrabandUnredeemable, NFBaseWeaponFrameSubMachineGun ] # Contraband adjusted | Aurora
   abstract: true
   components:
-  - type: GunWieldBonus
+  - type: GunWieldBonus # Make the C-20r better in two hands, but useable in one | Aurora
     minAngle: -4.2
     maxAngle: -7.3
   - type: Gun
-    minAngle: 12.2
-    maxAngle: 21.6
-    angleIncrease: 0.5
+    minAngle: 4
+    maxAngle: 21
+    angleIncrease: 1
     angleDecay: 2
     fireRate: 7
     burstCooldown: 0.5
@@ -69,10 +66,10 @@
 
 - type: entity
   id: NFBaseWeaponFrameSubMachineGunGorlex
-  parent: [ BaseC3SyndicateContraband, NFBaseWeaponFrameSubMachineGun ]
+  parent: [ BaseC2ContrabandUnredeemable, NFBaseWeaponFrameSubMachineGun ] # Contraband adjusted | Aurora
   abstract: true
   components:
-  - type: GunWieldBonus
+  - type: GunWieldBonus #Gorlex SMG doesn't become more accurate, but does handle recoil better in two hands | Aurora
     minAngle: 0
     maxAngle: 0
     angleIncrease: -1
@@ -90,9 +87,6 @@
   parent: [ NFBaseWeaponFrameSubMachineGun ]
   abstract: true
   components:
-  - type: GunWieldBonus
-    minAngle: -1.8
-    maxAngle: -6.5
   - type: Gun
     minAngle: 6.7
     maxAngle: 21

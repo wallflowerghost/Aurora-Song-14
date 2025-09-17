@@ -181,7 +181,7 @@ namespace Content.Client.Options.UI.Tabs
             AddButton(ContentKeyFunctions.Drop);
             AddButton(ContentKeyFunctions.ExamineEntity);
             AddButton(ContentKeyFunctions.SwapHands);
-            AddButton(ContentKeyFunctions.SwapHandsPrevious); // Frontier
+            AddButton(ContentKeyFunctions.SwapHandsReverse);
             AddButton(ContentKeyFunctions.MoveStoredItem);
             AddButton(ContentKeyFunctions.RotateStoredItem);
             AddButton(ContentKeyFunctions.SaveItemLocation);
@@ -190,6 +190,9 @@ namespace Content.Client.Options.UI.Tabs
             AddButton(ContentKeyFunctions.SmartEquipBackpack);
             AddButton(ContentKeyFunctions.SmartEquipBelt);
             AddButton(ContentKeyFunctions.SmartEquipWallet); // Frontier
+            AddButton(ContentKeyFunctions.SmartEquipSuitStorage);
+            AddButton(ContentKeyFunctions.SmartEquipPocket1);
+            AddButton(ContentKeyFunctions.SmartEquipPocket2);
             AddButton(ContentKeyFunctions.OpenBackpack);
             AddButton(ContentKeyFunctions.OpenBelt);
             AddButton(ContentKeyFunctions.OpenWallet); // Frontier

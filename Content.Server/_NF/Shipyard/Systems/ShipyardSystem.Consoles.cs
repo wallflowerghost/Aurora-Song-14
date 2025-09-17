@@ -67,6 +67,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
     [Dependency] private readonly MindSystem _mind = default!;
     [Dependency] private readonly ShuttleRecordsSystem _shuttleRecordsSystem = default!;
     [Dependency] private readonly IEntityManager _entityManager = default!;
+    [Dependency] private readonly ShipyardDirectionSystem _directionSystem = default!; // Aurora Song port of Monolith direction system
 
     private static readonly Regex DeedRegex = new(@"\s*\([^()]*\)");
 
@@ -218,7 +219,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
         var deedShuttle = EnsureComp<ShuttleDeedComponent>(shuttleUid);
         AssignShuttleDeedProperties((shuttleUid, deedShuttle), shuttleUid, name, shuttleOwner, voucherUsed);
 
-        if (!voucherUsed && component.NewJobTitle != null)
+        if (!voucherUsed && component.NewJobTitle != null && !HasComp<PreventShipyardTitleOverwriteComponent>(args.Actor))
         {
             _idSystem.TryChangeJobTitle(targetId, Loc.GetString(component.NewJobTitle), idCard, player);
         }
@@ -283,7 +284,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
         if (component.SecretShipyardChannel is { } secretChannel)
             SendPurchaseMessage(shipyardConsoleUid, player, name, secretChannel, secret: true);
 
-        Get<ShipyardDirectionSystem>().SendShipDirectionMessage(player, shuttleUid);
+        _directionSystem.SendShipDirectionMessage(player, shuttleUid); // Monolith Direction System
 
         PlayConfirmSound(player, shipyardConsoleUid, component);
         if (voucherUsed)
@@ -302,7 +303,8 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
                     ownerName: shuttleOwner,
                     entityUid: EntityManager.GetNetEntity(shuttleUid),
                     purchasedWithVoucher: voucherUsed,
-                    purchasePrice: (uint)vessel.Price
+                    purchasePrice: (uint)vessel.Price,
+                    vesselPrototypeId: vessel.ID
                 )
             );
         }

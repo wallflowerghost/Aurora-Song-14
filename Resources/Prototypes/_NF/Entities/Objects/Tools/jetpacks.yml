@@ -2,7 +2,7 @@
 - type: entity
   id: JetpackNfsd
   parent: JetpackSecurity
-  name: NFSD jetpack
+  name: SLE jetpack
   suffix: Empty
   components:
   - type: Item
@@ -13,14 +13,13 @@
     sprite: _NF/Objects/Tanks/Jetpacks/nfsd.rsi
   - type: Tag
     tags:
-      - HideContextMenu
       - EmagImmune
 
 #Filled security
 - type: entity
   id: JetpackNfsdFilled
   parent: JetpackSecurityFilled
-  name: NFSD jetpack
+  name: SLE jetpack
   suffix: Filled
   components:
   - type: Item
@@ -31,5 +30,4 @@
     sprite: _NF/Objects/Tanks/Jetpacks/nfsd.rsi
   - type: Tag
     tags:
-      - HideContextMenu
       - EmagImmune

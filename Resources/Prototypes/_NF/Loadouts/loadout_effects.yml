@@ -15,6 +15,7 @@
     - SlimePerson
     - Vox
     - Sheleg # Different meds
+    - IPC
     inverted: true
 
 - type: loadoutEffectGroup
@@ -77,3 +78,12 @@
     blacklist:
     - JobPlantManager
     - JobPlantTechnician
+
+# Begin Aurora Song
+- type: loadoutEffectGroup
+  id: ASFeroxi
+  effects:
+  - !type:SpeciesLoadoutEffect
+    species:
+    - Feroxi
+# End AuroraSong

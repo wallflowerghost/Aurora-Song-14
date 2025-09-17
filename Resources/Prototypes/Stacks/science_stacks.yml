@@ -2,23 +2,10 @@
   id: ArtifactFragment
   name: stack-artifact-fragment
   spawn: ArtifactFragment1
-  maxCount: 30
-
-- type: stack
-  id: Capacitor
-  name: stack-capacitor
-  icon: { sprite: /Textures/_NF/Objects/Misc/stock_parts.rsi, state: capacitor } # Frontier: add _NF
-  spawn: CapacitorStockPart
-  maxCount: 10
+  maxCount: 100 #AS14: 30 => 100
 
 - type: stack
   id: Manipulator
   name: stack-micro-manipulator
   spawn: MicroManipulatorStockPart
-  maxCount: 10
-
-- type: stack
-  id: MatterBin
-  name: stack-matter-bin
-  spawn: MatterBinStockPart
   maxCount: 10
