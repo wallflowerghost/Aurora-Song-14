@@ -6,7 +6,6 @@
   - MobHumanoidHostileBase
   - MobHumanoidInvetory
   - MobHumanoidHostileAISimpleRanged
-  - NFMobRestrictions
   id: MobArcadianAgentBase
   components:
   - type: Body

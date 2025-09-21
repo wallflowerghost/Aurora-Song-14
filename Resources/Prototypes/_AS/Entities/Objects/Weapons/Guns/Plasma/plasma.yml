@@ -32,7 +32,7 @@
   - type: Gun
     fireRate: 2
   - type: PlasmaGun
-    GasUsage: 0.18
+    GasUsage: 0.12
   - type: BatterySelfRecharger
     autoRecharge: true
     autoRechargeRate: 8
@@ -56,3 +56,36 @@
     sprite: _AS/Objects/Weapons/Guns/PAS-2_Scourer.rsi
   - type: Clothing
     sprite: _AS/Objects/Weapons/Guns/PAS-2_Scourer.rsi
+
+- type: entity
+  name: Icarus MK.II
+  parent: [ASBaseWeaponFramePlasmaRifleArcadia, ASBaseWeaponPlasmaBoltsArcadian]
+  id: ASPlasmaRifleIcarus
+  description: A high-end plasma rifle manufactured by Arcadia Security Solutions, more efficient by far than contemporaries.
+  suffix: PlasGunArcadia
+  components:
+  - type: Gun
+    fireRate: 2.5
+  - type: PlasmaGun
+    GasUsage: 0.08
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 10
+  - type: ItemSlots
+    slots:
+      gas_tank:
+        name: pneumatic-cannon-component-itemslot-name
+        whitelist:
+          components:
+          - GasTank
+        insertSound:
+          path: /Audio/Weapons/click.ogg
+          params:
+            volume: -3
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+        ents: [ ]
+      gas_tank: !type:ContainerSlot
+  - type: Sprite
+    sprite: _AS/Objects/Weapons/Guns/Rifles/icarusmkii.rsi
