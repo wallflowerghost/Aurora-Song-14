@@ -89,3 +89,5 @@
       gas_tank: !type:ContainerSlot
   - type: Sprite
     sprite: _AS/Objects/Weapons/Guns/Rifles/icarusmkii.rsi
+  - type: Clothing
+    sprite: _AS/Objects/Weapons/Guns/Rifles/icarusmkii.rsi
