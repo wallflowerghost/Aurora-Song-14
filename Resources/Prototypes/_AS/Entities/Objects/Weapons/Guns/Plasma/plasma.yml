@@ -33,6 +33,8 @@
     fireRate: 2
   - type: PlasmaGun
     GasUsage: 0.12
+    AllowedGases:
+    - Plasma
   - type: BatterySelfRecharger
     autoRecharge: true
     autoRechargeRate: 8
@@ -68,6 +70,8 @@
     fireRate: 2.5
   - type: PlasmaGun
     GasUsage: 0.08
+    AllowedGases:
+    - Plasma
   - type: BatterySelfRecharger
     autoRecharge: true
     autoRechargeRate: 10

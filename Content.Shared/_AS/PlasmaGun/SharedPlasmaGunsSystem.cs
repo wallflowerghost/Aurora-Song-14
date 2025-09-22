@@ -3,7 +3,7 @@ using Content.Shared.Weapons.Ranged.Systems;
 using Robust.Shared.Containers;
 using Robust.Shared.Serialization;
 
-namespace Content.Shared.PlasmaGun;
+namespace Content.Shared._AS.PlasmaGun;
 
 public abstract class SharedPlasmaGunsSystem : EntitySystem
 {
