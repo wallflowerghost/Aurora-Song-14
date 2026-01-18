@@ -1,18 +1,69 @@
 - type: entity
+<<<<<<<< HEAD:Resources/Prototypes/Nyanotrasen/Entities/Mobs/Species/felinid.yml
   name: Urist McFelinid
   parent: [BaseMobHuman]
   id: MobFelinidBase
   abstract: true
+========
+  parent: BaseSpeciesAppearance
+  id: AppearanceFelinid
+  name: felinid appearance
+>>>>>>>> 8479f76b3b (nubody fixes: species prototypes):Resources/Prototypes/_DV/Body/Species/felinid.yml
   components:
-  - type: Sprite
-    scale: 0.8, 0.8
+  - type: Inventory
+    femaleDisplacements:
+      jumpsuit:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Human/displacement.rsi
+            state: jumpsuit-female
+  - type: EntityTableContainerFill
+    containers:
+      body_organs: !type:AllSelector
+        children:
+        - id: OrganHumanTorso
+        - id: OrganHumanHead
+        - id: OrganHumanArmLeft
+        - id: OrganHumanArmRight
+        - id: OrganHumanHandRight
+        - id: OrganHumanHandLeft
+        - id: OrganHumanLegLeft
+        - id: OrganHumanLegRight
+        - id: OrganHumanFootLeft
+        - id: OrganHumanFootRight
+        - id: OrganHumanBrain
+        - id: OrganHumanEyes
+        - id: OrganHumanTongue
+        - id: OrganHumanAppendix
+        - id: OrganHumanEars
+        - id: OrganHumanLungs
+        - id: OrganHumanHeart
+        - id: OrganAnimalStomach # starcup
+        - id: OrganHumanLiver
+        - id: OrganHumanKidneys
   - type: HumanoidAppearance
     species: Felinid
+<<<<<<<< HEAD:Resources/Prototypes/Nyanotrasen/Entities/Mobs/Species/felinid.yml
     hideLayersOnEquip: # Frontier
     - Hair # Frontier
     - HeadTop # Frontier
+========
+    hideLayersOnEquip:
+    - Hair
+    - Snout
+  - type: Sprite
+    scale: 0.8, 0.8
+
+- type: entity
+  parent:
+  - AppearanceFelinid
+  - BaseSpeciesMobOrganic # starcup: changed from BaseMobHuman for consistency
+  id: MobFelinid
+  name: Urist McFelinid
+  components:
+>>>>>>>> 8479f76b3b (nubody fixes: species prototypes):Resources/Prototypes/_DV/Body/Species/felinid.yml
   - type: Fixtures
-    fixtures: # TODO: This needs a second fixture just for mob collisions.
+    fixtures:
       fix1:
         shape:
           !type:PhysShapeCircle
@@ -23,8 +74,11 @@
         - MobMask
         layer:
         - MobLayer
+<<<<<<<< HEAD:Resources/Prototypes/Nyanotrasen/Entities/Mobs/Species/felinid.yml
   - type: Body
     prototype: Felinid
+========
+>>>>>>>> 8479f76b3b (nubody fixes: species prototypes):Resources/Prototypes/_DV/Body/Species/felinid.yml
   - type: Damageable
     damageModifierSet: Felinid
   - type: SlowOnDamage
@@ -74,6 +128,7 @@
     action: ActionHairball
     coughPopup: hairball-cough
   - type: Felinid
+<<<<<<<< HEAD:Resources/Prototypes/Nyanotrasen/Entities/Mobs/Species/felinid.yml
   - type: NpcFactionMember
     factions:
     - NanoTrasen
@@ -110,3 +165,5 @@
   components:
   - type: HumanoidAppearance
     species: Felinid
+========
+>>>>>>>> 8479f76b3b (nubody fixes: species prototypes):Resources/Prototypes/_DV/Body/Species/felinid.yml
