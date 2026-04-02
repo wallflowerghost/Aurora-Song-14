@@ -1985,6 +1985,14 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
 
         #endregion
 
+        // Aurora
+        // See design documentation: Content.Server/_AS/PersistentSystems/README
+        # region Persistant Game Systems
+
+
+
+        #endregion
+
         public abstract Task SendNotification(DatabaseNotification notification);
 
         // SQLite returns DateTime as Kind=Unspecified, Npgsql actually knows for sure it's Kind=Utc.
