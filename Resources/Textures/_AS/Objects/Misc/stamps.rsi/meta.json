@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-4.0",
+  "copyright": "stamp-sheriff by GhostPrince (Discord). stamp-pal/doctor by whatston3 (GitHub), stamp-bailiff by dustylens (GitHub)",
+  "extra_copyright": [
+    "Resprites and recolors for NFSD to SLE by Vandanna/ Cygnall (discord/ github)"
+    ],
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "stamp-pal"
+    },
+    {
+      "name": "stamp-commissioner"
+    },
+    {
+      "name": "stamp-lieutenant"
+    },
+    {
+      "name": "stamp-cr"
+    },
+    {
+      "name": "stamp-site-manager"
+    },
+    {
+      "name": "stamp-site-worker"
+    }
+  ]
+}

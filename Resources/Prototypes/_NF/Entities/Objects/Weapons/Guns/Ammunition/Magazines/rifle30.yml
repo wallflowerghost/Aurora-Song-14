@@ -64,6 +64,7 @@
   - type: MagazineVisuals
     steps: 7
 
+# Reinstated old .30 Box mag for L6 | Aurora
 - type: entity
   id: NFBaseMagazineBoxRifle30
   name: box magazine (.30 rifle)
@@ -126,6 +127,14 @@
       - state: inhand-right-mag
       - state: inhand-right-stripe
         color: "#ff8d00"
+
+- type: entity # Aurora's Song - empty mag to be filled with looted overpressure cartridges
+  id: NFMagazineRifle30OverpressureEmpty
+  name: magazine (.30 rifle, fillable, overpressure)
+  parent: NFMagazineRifle30Overpressure
+  components:
+    - type: BallisticAmmoProvider
+      proto: null
 
 - type: entity
   id: NFMagazineRifle30Incendiary
@@ -206,7 +215,7 @@
         color: "#dddddd"
 
 #region .30 box mags
-- type: entity
+- type: entity # L6 Box mag | Aurora
   id: NFMagazineBoxRifle30
   name: box magazine (.30 rifle)
   parent: NFBaseMagazineBoxRifle30
@@ -280,6 +289,14 @@
       - state: inhand-right-mag
       - state: inhand-right-stripe
         color: "#ff8d00"
+
+- type: entity # Aurora's Song - empty mag to be filled with looted overpressure cartridges
+  id: NFMagazineLowCapacityRifle30OverpressureEmpty
+  name: low cap magazine (.30 rifle, fillable, overpressure)
+  parent: NFMagazineLowCapacityRifle30Overpressure
+  components:
+    - type: BallisticAmmoProvider
+      proto: null
 
 - type: entity
   id: NFMagazineLowCapacityRifle30Incendiary

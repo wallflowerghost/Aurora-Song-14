@@ -122,6 +122,8 @@
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
   - type: ContrabandPalletConsole
+    cashType: FrontierUplinkCoin
+    altCashType: ExchangeCoin # AS
   - type: ActivatableUI
     key: enum.ContrabandPalletConsoleUiKey.Contraband
   - type: AccessReader
@@ -336,6 +338,7 @@
     board: Null # Really shouldn't spawn anything on destruction
   - type: ContrabandPalletConsole
     cashType: Doubloon
+    altCashType: Null # AS
     faction: Pirates
     licenseRequired: Null
     locStringPrefix: pirate-
@@ -558,7 +561,7 @@
   suffix: Local
   components:
   - type: NFDroneConsoleTarget
-    id: Frontier
+    id: Aurora # Aurora Song - Changed from Frontier to Aurora
 
 - type: entity
   parent: BaseComputerTrafficRemote
@@ -568,7 +571,7 @@
   suffix: Remote
   components:
   - type: NFDroneConsole
-    id: Frontier
+    id: Aurora # Aurora Song - Changed from Frontier to Aurora
 
 - type: entity
   parent: BaseComputerTrafficLocal

@@ -24,20 +24,20 @@
     allowedEmotes:
     - Squeak
     - Belch # Frontier
-  - type: Fixtures
-    fixtures: # TODO: This needs a second fixture just for mob collisions.
-      fix1:
-        shape:
-          !type:PhysShapeCircle
-          radius: 0.28
-        density: 140
-        restitution: 0.0
-        mask:
-        - MobMask
-        layer:
-        - MobLayer
+  # - type: Fixtures
+    # fixtures: # TODO: This needs a second fixture just for mob collisions. Aurora's Song - Removed so they can drag things properly
+      # fix1:
+        # shape:
+          # !type:PhysShapeCircle
+          # radius: 0.28
+        # density: 140
+        # restitution: 0.0
+        # mask:
+        # - MobMask
+        # layer:
+        # - MobLayer
   - type: Sprite
-    scale: 0.8, 0.8
+    # scale: 0.8, 0.8 Aurora's Song - standardized them to human size by commenting this out. The default is 1,1
     layers:
       - map: [ "enum.HumanoidVisualLayers.Chest" ]
       - map: [ "enum.HumanoidVisualLayers.Head" ]
@@ -47,6 +47,10 @@
       - map: [ "enum.HumanoidVisualLayers.LArm" ]
       - map: [ "enum.HumanoidVisualLayers.RLeg" ]
       - map: [ "enum.HumanoidVisualLayers.LLeg" ]
+      # Aurora's Song - Add underwear marking layer
+      - map: [ "enum.HumanoidVisualLayers.UndergarmentBottom" ]
+      - map: [ "enum.HumanoidVisualLayers.UndergarmentTop" ]
+      # End Aurora's Song
       - map: [ "jumpsuit" ]
       - map: [ "enum.HumanoidVisualLayers.LHand" ]
       - map: [ "enum.HumanoidVisualLayers.RHand" ]
@@ -108,7 +112,7 @@
     shape:
       - 0, 0, 3, 2
       - 0, 2, 5, 4
-  - type: MouthStorage
+  - type: MouthStorage # Aurora: removed cheek storage for now (It's tied into an antiquated system that was reworked)
     mouthProto: CheekStorage
     openStorageAction: ActionOpenMouthStorage
     spitDamageThreshold: 3

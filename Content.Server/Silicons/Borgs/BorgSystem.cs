@@ -1,7 +1,8 @@
+using System.Diagnostics.CodeAnalysis;
+using System.Linq;
 using Content.Server.Actions;
 using Content.Server.Administration.Logs;
 using Content.Server.Administration.Managers;
-using Content.Server.Body.Components;
 using Content.Server.DeviceNetwork.Systems;
 using Content.Server.Explosion.EntitySystems;
 using Content.Server.Hands.Systems;
@@ -12,7 +13,7 @@ using Content.Shared.Access;
 using Content.Shared.Access.Components;
 using Content.Shared.Access.Systems;
 using Content.Shared.Alert;
-using Content.Shared.Containers.ItemSlots;
+using Content.Shared.Body.Events;
 using Content.Shared.Database;
 using Content.Shared.IdentityManagement;
 using Content.Shared.Interaction;
@@ -37,10 +38,9 @@ using Robust.Server.GameObjects;
 using Robust.Shared.Configuration;
 using Robust.Shared.Containers;
 using Robust.Shared.Player;
+using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
-using System.Diagnostics.CodeAnalysis;
-using System.Linq;
 using Content.Server.Access.Systems; // Frontier
 
 namespace Content.Server.Silicons.Borgs;
@@ -72,8 +72,7 @@ public sealed partial class BorgSystem : SharedBorgSystem
     [Dependency] private readonly AccessSystem _access = default!; // Frontier
 
 
-    [ValidatePrototypeId<JobPrototype>]
-    public const string BorgJobId = "Borg";
+    public static readonly ProtoId<JobPrototype> BorgJobId = "Borg";
 
     /// <inheritdoc/>
     public override void Initialize()
@@ -204,7 +203,7 @@ public sealed partial class BorgSystem : SharedBorgSystem
             _mind.TransferTo(mindId, args.Entity, mind: mind);
         }
          // Corvax-Next-AiRemoteControl-Start
-        if (HasComp<AiRemoteBrainComponent>(args.Entity))
+        if (HasComp<AiRemoteBrainComponent>(args.Entity) && args.Container == component.BrainContainer) // AS: Dont want it acting like we removed our brain if we pick up a BORIS and set it down.
         {
             BorgDeactivate(uid, component);
             RemComp<AiRemoteControllerComponent>(uid);

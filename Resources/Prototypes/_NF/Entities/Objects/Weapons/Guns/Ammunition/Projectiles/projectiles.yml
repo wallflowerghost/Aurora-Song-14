@@ -143,7 +143,7 @@
       projectile:
         shape:
           !type:PhysShapeAabb
-          bounds: "-0.15,-0.3,0.15,0.3"
+          bounds: "-0.15,-0.3,0.15,0.3" # adjusted size for better hit detection | Aurora
         hard: false
         mask:
         - Opaque
@@ -208,6 +208,13 @@
 - type: entity
   parent: BulletCharge
   id: NFBulletCharge
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: MiningGatheringSoft # Frontier
+
+- type: entity
+  parent: BulletChargeGlaive
+  id: NFBulletChargeGlaive
   categories: [ HideSpawnMenu ]
   components:
   - type: MiningGatheringSoft # Frontier

@@ -25,7 +25,7 @@
         shape:
           !type:PhysShapeCircle
           radius: 0.35
-        density: 150
+        density: 300
         mask:
         - MobMask
         layer:
@@ -96,18 +96,22 @@
     - Binary
     - Common
     - Science
+    - Shipboard # AS
+    - Traffic # AS
   - type: ActiveRadio
     channels:
     - Binary
     - Common
     - Science
+    - Shipboard # AS
+    - Traffic # AS
   - type: ZombieImmune
   # Begin DeltaV Changes - use IPC healing instead of 1 weld to heal everything
   #- type: Repairable
   #  doAfterDelay: 10
   #  allowSelfRepair: false
   - type: WeldingHealable
-    allowSelfHeal: false
+    allowSelfHeal: true # Aurora
   # End DeltaV Changes
   - type: BorgChassis
   - type: LockingWhitelist
@@ -147,15 +151,14 @@
   - type: Body
   - type: StatusEffects
     allowed:
-    - Stun
-    - KnockedDown
-    - SlowedDown
     - Flashed
   - type: TypingIndicator
     proto: robot
   - type: Speech
     speechVerb: Robotic
     speechSounds: Borg
+    allowedEmotes:
+      - Scream # AS: Disregard all screaming from silicons, they cannot feel pain
   - type: Vocal
     sounds:
       Unsexed: UnisexSilicon
@@ -221,8 +224,8 @@
       id: blinking
       interpolate: Nearest
       maxDuration: 1.0
-      startValue: 0.1 # Wizden#37444
-      endValue: 2.0 # Wizden#37444
+      startValue: 0.1
+      endValue: 2.0
       isLooped: true
   - type: ToggleableVisuals
     spriteLayer: light
@@ -242,6 +245,7 @@
     - FootstepSound
     - CanPilot
     - SiliconEmotes
+    - SiliconOrIPCEmotes # DeltaV
     - Unimplantable
   - type: Emoting
   - type: GuideHelp
@@ -369,6 +373,7 @@
   - type: Vocal
     sounds:
       Unsexed: UnisexSiliconSyndicate
+    screamAction: null # AS Dont give them a button to scream if they can't
   - type: PointLight
     color: "#dd200b"
 

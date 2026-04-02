@@ -44,7 +44,7 @@
 #    - id: ClothingHeadsetAltCommand # Frontier
     - id: ClothingOuterArmorCaptainCarapace
 #    - id: CommsComputerCircuitboard # Frontier
-#    - id: DoorRemoteCommand # Frontier
+#    - id: DoorRemoteCustom # Frontier
 #    - id: MedalCase # Frontier
 #    - id: NukeDisk # Frontier
 #    - id: PinpointerNuclear # Frontier
@@ -341,7 +341,7 @@
   table: !type:AllSelector
     children:
 #    - id: WeaponEnergyShotgun # Frontier
-    - id: NFHyperlinkBookSpaceLaw # Frontier: BookSpaceLaw<NFHyperlinkBookSpaceLaw
+    - id: ASHyperlinkBookSpaceLaw # Aurora's Song: BookSpaceLaw<ASHyperlinkBookSpaceLaw
 #    - id: BoxEncryptionKeySecurity # Frontier
 #    - id: CigarGoldCase # Frontier
 #      prob: 0.50 # Frontier

@@ -3,7 +3,7 @@ using System.Linq;
 using System.Numerics;
 using Content.Client.DisplacementMap;
 using Content.Client.Inventory;
-using Content.Shared._DV.Silicon.IPC; // DeltaV - IPC Snouts
+using Content.Shared._AS.Humanoid.Markings; // Aurora's Song - Custom species heads
 using Content.Shared.Clothing;
 using Content.Shared.Clothing.Components;
 using Content.Shared.Clothing.EntitySystems;
@@ -41,6 +41,7 @@ public sealed class ClientClothingSystem : ClothingSystem
         {"outerClothing", "OUTERCLOTHING"},
         {Jumpsuit, "INNERCLOTHING"},
         {"neck", "NECK"},
+        {"neckalt", "NECK"}, // Aurora's Song - second neck slot
         {"back", "BACKPACK"},
         {"belt", "BELT"},
         {"gloves", "HAND"},
@@ -61,7 +62,7 @@ public sealed class ClientClothingSystem : ClothingSystem
         base.Initialize();
 
         SubscribeLocalEvent<ClothingComponent, GetEquipmentVisualsEvent>(OnGetVisuals);
-        SubscribeLocalEvent<ClothingComponent, InventoryTemplateUpdated>(OnInventoryTemplateUpdated);
+        SubscribeLocalEvent<InventoryComponent, InventoryTemplateUpdated>(OnInventoryTemplateUpdated);
 
         SubscribeLocalEvent<InventoryComponent, VisualsChangedEvent>(OnVisualsChanged);
         SubscribeLocalEvent<SpriteComponent, DidUnequipEvent>(OnDidUnequip);
@@ -84,20 +85,19 @@ public sealed class ClientClothingSystem : ClothingSystem
         }
     }
 
-    private void OnInventoryTemplateUpdated(Entity<ClothingComponent> ent, ref InventoryTemplateUpdated args)
+    private void OnInventoryTemplateUpdated(Entity<InventoryComponent> ent, ref InventoryTemplateUpdated args)
     {
-        UpdateAllSlots(ent.Owner, clothing: ent.Comp);
+        UpdateAllSlots(ent.Owner, ent.Comp);
     }
 
     private void UpdateAllSlots(
         EntityUid uid,
-        InventoryComponent? inventoryComponent = null,
-        ClothingComponent? clothing = null)
+        InventoryComponent? inventoryComponent = null)
     {
         var enumerator = _inventorySystem.GetSlotEnumerator((uid, inventoryComponent));
         while (enumerator.NextItem(out var item, out var slot))
         {
-            RenderEquipment(uid, item, slot.Name, inventoryComponent, clothingComponent: clothing);
+            RenderEquipment(uid, item, slot.Name, inventoryComponent);
         }
     }
 
@@ -111,8 +111,9 @@ public sealed class ClientClothingSystem : ClothingSystem
         // Begin DeltaV Additions - IPC snouts
         var speciesId = inventory.SpeciesId;
 
-        if (TryComp(args.Equipee, out SnoutHelmetComponent? helmetComponent) && helmetComponent.EnableAlternateHelmet)
-            speciesId = helmetComponent.ReplacementRace;
+        // Aurora's Song - Head replacement for snouts instead of snouts (for slime animals)
+        if (TryComp(args.Equipee, out SnoutHelmetComponent? helmetComponent) && helmetComponent.AlternateHelmet != null)
+            speciesId = helmetComponent.AlternateHelmet;
 
         // first attempt to get species specific data.
         if (speciesId != null)
@@ -282,7 +283,8 @@ public sealed class ClientClothingSystem : ClothingSystem
 
         // temporary, until layer draw depths get added. Basically: a layer with the key "slot" is being used as a
         // bookmark to determine where in the list of layers we should insert the clothing layers.
-        var slotLayerExists = _sprite.LayerMapTryGet((equipee, sprite), slot, out var index, false);
+        var bookmarkSlot = slot == "neckalt" ? "neck" : slot; // Aurora's Song: neckalt shares neck bookmark
+        var slotLayerExists = _sprite.LayerMapTryGet((equipee, sprite), bookmarkSlot, out var index, false);
 
         // Select displacement maps
         var displacementData = inventory.Displacements.GetValueOrDefault(slot); //Default unsexed map
@@ -304,6 +306,8 @@ public sealed class ClientClothingSystem : ClothingSystem
         }
 
         // add the new layers
+        // Aurora's Song - Track first layer for neckalt slot to control rendering order
+        var firstLayer = true;
         foreach (var (key, layerData) in ev.Layers)
         {
             if (!revealedLayers.Add(key))
@@ -314,7 +318,12 @@ public sealed class ClientClothingSystem : ClothingSystem
 
             if (slotLayerExists)
             {
-                index++;
+                // Aurora's Song - neckalt doesn't increment on first layer, making it render behind neck items
+                if (slot == "neckalt" && firstLayer)
+                    firstLayer = false;
+                else
+                    index++;
+                // Aurora's Song - end neckalt layering logic
                 // note that every insertion requires reshuffling & remapping all the existing layers.
                 _sprite.AddBlankLayer((equipee, sprite), index);
                 _sprite.LayerMapSet((equipee, sprite), key, index);

@@ -71,7 +71,6 @@ public abstract partial class SharedStationAiSystem : EntitySystem
     private EntityQuery<BroadphaseComponent> _broadphaseQuery;
     private EntityQuery<MapGridComponent> _gridQuery;
 
-    [ValidatePrototypeId<EntityPrototype>]
     private static readonly EntProtoId DefaultAi = "StationAiBrain";
 
     private const float MaxVisionMultiplier = 5f;
@@ -108,6 +107,8 @@ public abstract partial class SharedStationAiSystem : EntitySystem
         SubscribeLocalEvent<StationAiCoreComponent, ComponentShutdown>(OnAiShutdown);
         SubscribeLocalEvent<StationAiCoreComponent, PowerChangedEvent>(OnCorePower);
         SubscribeLocalEvent<StationAiCoreComponent, GetVerbsEvent<Verb>>(OnCoreVerbs);
+
+        SubscribeLocalEvent<StationAiEyeComponent, ComponentShutdown>(OnComponentShutdown); // AS
     }
 
     private void OnCoreVerbs(Entity<StationAiCoreComponent> ent, ref GetVerbsEvent<Verb> args)
@@ -124,6 +125,8 @@ public abstract partial class SharedStationAiSystem : EntitySystem
                 Category = VerbCategory.Debug,
                 Act = () =>
                 {
+                    if (_net.IsClient)
+                        return;
                     var brain = SpawnInContainerOrDrop(DefaultAi, ent.Owner, StationAiCoreComponent.Container);
                     _mind.ControlMob(user, brain);
                 },
@@ -414,8 +417,9 @@ public abstract partial class SharedStationAiSystem : EntitySystem
         if (_net.IsClient)
             return false;
 
-        if (ent.Comp.RemoteEntity != null)
-            return false;
+        var comparison = new EntityUid(0); // TODO: Someone smarter than me come up with a more elegent solution
+        if (ent.Comp.RemoteEntity != null && ent.Comp.RemoteEntity != comparison) // AS: Its null or 0 if the eye gets deleted somehow. 
+            return false; // We don't want to set up an eye if it already exists
 
         var proto = ent.Comp.RemoteEntityProto;
 
@@ -427,7 +431,13 @@ public abstract partial class SharedStationAiSystem : EntitySystem
 
         if (proto != null)
         {
-            ent.Comp.RemoteEntity = SpawnAtPosition(proto, coords.Value);
+            var eye = SpawnAtPosition(proto, coords.Value); // AS
+            if (ent.Comp.Remote)
+            {
+                var eyeComp = EnsureComp<StationAiEyeComponent>(eye); // AS
+                eyeComp.CoreEntity = ent; // AS
+            }
+            ent.Comp.RemoteEntity = eye; // AS
             Dirty(ent);
         }
 
@@ -438,6 +448,9 @@ public abstract partial class SharedStationAiSystem : EntitySystem
     {
         if (_net.IsClient)
             return;
+
+        if (TryComp<StationAiEyeComponent>(ent.Comp.RemoteEntity, out var eye)) // AS: Null the eyes CoreEntity so it doesn't try to respawn itself when we delete it.
+            eye.CoreEntity = null;
 
         QueueDel(ent.Comp.RemoteEntity);
         ent.Comp.RemoteEntity = null;
@@ -465,6 +478,9 @@ public abstract partial class SharedStationAiSystem : EntitySystem
         }
 
         _mover.SetRelay(user, ent.Comp.RemoteEntity.Value);
+
+        var eyeName = Loc.GetString("station-ai-eye-name", ("name", Name(user)));
+        _metadata.SetEntityName(ent.Comp.RemoteEntity.Value, eyeName);
     }
 
     private EntityUid? GetInsertedAI(Entity<StationAiCoreComponent> ent)
@@ -574,6 +590,24 @@ public abstract partial class SharedStationAiSystem : EntitySystem
         }
 
         return _blocker.CanComplexInteract(entity.Owner);
+    }
+
+    private void OnComponentShutdown(EntityUid uid, StationAiEyeComponent component, ComponentShutdown args) // AS
+    {
+
+        var comparison = new EntityUid(0); // TODO: Someone smarter than me come up with a more elegent solution
+        if (component.CoreEntity == null || component.CoreEntity == comparison) // If its been nulled or zero, it either doesn't exist or been set that way purposefully.
+            return;
+
+        if (!TryComp<StationAiCoreComponent>(component.CoreEntity.Value, out var coreComp))
+            return;
+
+        var core = new Entity<StationAiCoreComponent>(component.CoreEntity.Value, coreComp);
+        coreComp.RemoteEntity = null; // Normally, RemoteEntity becomes 0 when it gets deleted, but this function fires in a wierd inbetween time
+        SetupEye(core); // So we set it to null here, so this function behaves as though the eye has been deleted.
+        AttachEye(core); // Which it will be, but hasn't yet. I'm not sure if this will cause issues.
+
+
     }
 }
 

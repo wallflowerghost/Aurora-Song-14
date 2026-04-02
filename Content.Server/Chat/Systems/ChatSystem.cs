@@ -6,6 +6,7 @@ using Content.Server.Administration.Managers;
 using Content.Server.Chat.Managers;
 using Content.Server.GameTicking;
 using Content.Server.Speech.EntitySystems;
+using Content.Server.Speech.Prototypes;
 using Content.Server.Station.Components;
 using Content.Server.Station.Systems;
 using Content.Shared.ActionBlocker;
@@ -35,7 +36,6 @@ using Robust.Shared.Replays;
 using Robust.Shared.Utility;
 using Content.Shared.Physics;
 using Robust.Shared.Physics;
-using Content.Server.Speech.Prototypes;
 using Content.Shared._DEN.Earmuffs;
 
 namespace Content.Server.Chat.Systems;
@@ -405,7 +405,7 @@ public sealed partial class ChatSystem : SharedChatSystem
             return;
         }
 
-        if (!EntityManager.TryGetComponent<StationDataComponent>(station, out var stationDataComp)) return;
+        if (!TryComp<StationDataComponent>(station, out var stationDataComp)) return;
 
         var filter = _stationSystem.GetInStation(stationDataComp);
 
@@ -628,14 +628,17 @@ public sealed partial class ChatSystem : SharedChatSystem
             ("entity", ent),
             ("message", action));
 
-        bool soundEmoteSent = true; // Frontier: if check emote is false, assume somebody's sending an emote
-        if (checkEmote)
-            soundEmoteSent = TryEmoteChatInput(source, action); // Frontier: assign value to soundEmoteSent
-
-        // Frontier: send emote message
-        if (!soundEmoteSent)
+        bool emoteEventInvoked = false; // Frontier: track emote event
+        if (checkEmote &&
+            !TryEmoteChatInput(source, action, out emoteEventInvoked)) // Frontier: track emote event
         {
-            var ev = new NFEntityEmotedEvent(source, action);
+            return;
+        }
+
+        // Frontier: send custom emotes through custom event
+        if (!emoteEventInvoked)
+        {
+            var ev = new NFEntityEmotedEvent(action);
             RaiseLocalEvent(source, ev, true);
         }
         // End Frontier
@@ -920,8 +923,7 @@ public sealed partial class ChatSystem : SharedChatSystem
         return message;
     }
 
-    [ValidatePrototypeId<ReplacementAccentPrototype>]
-    public const string ChatSanitize_Accent = "chatsanitize";
+    public static readonly ProtoId<ReplacementAccentPrototype> ChatSanitize_Accent = "chatsanitize";
 
     public string SanitizeMessageReplaceWords(string message)
     {
@@ -1084,23 +1086,6 @@ public sealed class EntitySpokeEvent : EntityEventArgs
         ObfuscatedMessage = obfuscatedMessage;
     }
 }
-
-// Frontier: emote event
-/// <summary>
-///     Raised on an entity when it sends a custom emote (one with a message but no sound).
-/// </summary>
-public sealed class NFEntityEmotedEvent : EntityEventArgs
-{
-    public readonly EntityUid Source;
-    public readonly string Emote;
-
-    public NFEntityEmotedEvent(EntityUid source, string emote)
-    {
-        Source = source;
-        Emote = emote;
-    }
-}
-// End Frontier
 
 /// <summary>
 ///     InGame IC chat is for chat that is specifically ingame (not lobby) but is also in character, i.e. speaking.

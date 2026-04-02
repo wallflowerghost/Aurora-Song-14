@@ -121,6 +121,7 @@ public sealed partial class HumanoidCharacterAppearance : ICharacterAppearance, 
             HumanoidSkinColor.VoxFeathers => Humanoid.SkinColor.ClosestVoxColor(speciesPrototype.DefaultSkinTone),
             HumanoidSkinColor.AnimalFur => Humanoid.SkinColor.ClosestAnimalFurColor(speciesPrototype.DefaultSkinTone), // Einstein Engines - Tajaran
             HumanoidSkinColor.ShelegToned => Humanoid.SkinColor.ShelegSkinTone(speciesPrototype.DefaultHumanSkinTone), // Frontier
+            HumanoidSkinColor.HumanAnimal => speciesPrototype.DefaultSkinTone, // DEN - Humanoid Skin Tones
             _ => Humanoid.SkinColor.ValidHumanSkinTone,
         };
 
@@ -155,10 +156,10 @@ public sealed partial class HumanoidCharacterAppearance : ICharacterAppearance, 
 
         var newHairStyle = hairStyles.Count > 0
             ? random.Pick(hairStyles)
-            : HairStyles.DefaultHairStyle;
+            : HairStyles.DefaultHairStyle.Id;
 
         var newFacialHairStyle = facialHairStyles.Count == 0 || sex == Sex.Female
-            ? HairStyles.DefaultFacialHairStyle
+            ? HairStyles.DefaultFacialHairStyle.Id
             : random.Pick(facialHairStyles);
 
         var newHairColor = random.Pick(HairStyles.RealisticHairColors);
@@ -177,8 +178,7 @@ public sealed partial class HumanoidCharacterAppearance : ICharacterAppearance, 
         switch (skinType)
         {
             case HumanoidSkinColor.HumanToned:
-                var tone = Math.Round(Humanoid.SkinColor.HumanSkinToneFromColor(newSkinColor));
-                newSkinColor = Humanoid.SkinColor.HumanSkinTone((int)tone);
+                newSkinColor = Humanoid.SkinColor.HumanSkinTone(random.Next(0, 101));
                 break;
             case HumanoidSkinColor.Hues:
                 break;
@@ -190,6 +190,10 @@ public sealed partial class HumanoidCharacterAppearance : ICharacterAppearance, 
                 break;
             case HumanoidSkinColor.AnimalFur: // Einstein Engines - Tajaran
                 newSkinColor = Humanoid.SkinColor.ProportionalAnimalFurColor(newSkinColor);
+                break;
+            case HumanoidSkinColor.HumanAnimal: // The Den - Humanoid Skin Tones
+                if (random.NextFloat(1.0f) > 0.5f) // 50% chance of being humanoid skin
+                    newSkinColor = ToHumanoidTone(newSkinColor);
                 break;
         }
 
@@ -206,6 +210,12 @@ public sealed partial class HumanoidCharacterAppearance : ICharacterAppearance, 
     public static Color ClampColor(Color color)
     {
         return new(color.RByte, color.GByte, color.BByte);
+    }
+
+    private static Color ToHumanoidTone(Color skinColor)
+    {
+        var tone = Math.Round(Humanoid.SkinColor.HumanSkinToneFromColor(skinColor));
+        return Humanoid.SkinColor.HumanSkinTone((int)tone);
     }
 
     public static HumanoidCharacterAppearance EnsureValid(HumanoidCharacterAppearance appearance, string species, Sex sex)
@@ -244,6 +254,9 @@ public sealed partial class HumanoidCharacterAppearance : ICharacterAppearance, 
 
             markingSet.EnsureSpecies(species, skinColor, markingManager);
             markingSet.EnsureSexes(sex, markingManager);
+            // Aurora: height and width slider limiters
+            appearance.Height = Math.Clamp(appearance.Height, speciesProto.MinHeight, speciesProto.MaxHeight);
+            appearance.Width = Math.Clamp(appearance.Width, speciesProto.MinWidth, speciesProto.MaxWidth);
         }
 
         return new HumanoidCharacterAppearance(
