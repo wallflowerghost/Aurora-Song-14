@@ -48,6 +48,16 @@ namespace Content.Server.Database
         public DbSet<BanTemplate> BanTemplate { get; set; } = null!;
         public DbSet<IPIntelCache> IPIntelCache { get; set; } = null!;
 
+        #region Aurora Song
+
+        public DbSet<RecordCharacter> RecordCharacter { get; set; } = null!;
+
+        public DbSet<RecordPersonalNote> RecordPersonalNote { get; set; } = null!;
+
+        public DbSet<RecordEdit> RecordEdit { get; set; } = null!;
+
+        #endregion
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Preference>()
@@ -382,6 +392,79 @@ namespace Content.Server.Database
                 .OwnsOne(p => p.HWId)
                 .Property(p => p.Type)
                 .HasDefaultValue(HwidType.Legacy);
+
+            #region Aurora Song
+
+            // RecordCharacter
+            modelBuilder.Entity<RecordCharacter>()
+                .HasOne<Profile>()
+                .WithMany()
+                .HasForeignKey(r => r.TargetCharacterId)
+                .OnDelete(DeleteBehavior.SetNull);
+
+            modelBuilder.Entity<RecordCharacter>()
+                .HasOne<Player>()
+                .WithMany()
+                .HasForeignKey(r => r.AuthorUserId)
+                .HasPrincipalKey(p => p.UserId)
+                .OnDelete(DeleteBehavior.SetNull);
+
+            modelBuilder.Entity<RecordCharacter>()
+                .HasOne<Profile>()
+                .WithMany()
+                .HasForeignKey(r => r.AuthorCharacterId)
+                .OnDelete(DeleteBehavior.SetNull);
+
+            modelBuilder.Entity<RecordCharacter>()
+                .HasOne<Player>()
+                .WithMany()
+                .HasForeignKey(r => r.DeletedById)
+                .HasPrincipalKey(p => p.UserId)
+                .OnDelete(DeleteBehavior.SetNull);
+
+            modelBuilder.Entity<RecordCharacter>()
+                .HasIndex(r => new { r.RecordType, r.TargetCharacterId, r.CreatedAt })
+                .IsDescending(false, false, true);
+
+            // RecordPersonalNote
+            modelBuilder.Entity<RecordPersonalNote>()
+                .HasOne(r => r.RecordCharacter)
+                .WithOne(r => r.RecordPersonalNote)
+                .HasForeignKey<RecordPersonalNote>(r => r.RecordCharacterId)
+                .OnDelete(DeleteBehavior.NoAction); // RecordCharacter deletion is not expected behavior and should be handled manually by database operators.
+
+            // RecordEdit
+            modelBuilder.Entity<RecordEdit>()
+                .HasOne(e => e.RecordCharacter)
+                .WithMany(r => r.RecordEdits)
+                .HasForeignKey(e => e.RecordCharacterId)
+                .OnDelete(DeleteBehavior.NoAction); // RecordCharacter deletion is not expected behavior and should be handled manually by database operators.
+
+            modelBuilder.Entity<RecordEdit>()
+                .HasOne<Player>()
+                .WithMany()
+                .HasForeignKey(r => r.AuthorUserId)
+                .HasPrincipalKey(p => p.UserId)
+                .OnDelete(DeleteBehavior.SetNull);
+
+            modelBuilder.Entity<RecordEdit>()
+                .HasOne<Profile>()
+                .WithMany()
+                .HasForeignKey(r => r.AuthorCharacterId)
+                .OnDelete(DeleteBehavior.SetNull);
+
+            modelBuilder.Entity<RecordEdit>()
+                .HasOne<Player>()
+                .WithMany()
+                .HasForeignKey(r => r.DeletedById)
+                .HasPrincipalKey(p => p.UserId)
+                .OnDelete(DeleteBehavior.SetNull);
+
+            modelBuilder.Entity<RecordEdit>()
+                .HasIndex(r => new { r.RecordCharacterId, r.CreatedAt })
+                .IsDescending(false, true);
+
+            #endregion
         }
 
         public virtual IQueryable<AdminLog> SearchLogs(IQueryable<AdminLog> query, string searchText)
@@ -1367,4 +1450,71 @@ namespace Content.Server.Database
         /// </summary>
         public float Score { get; set; }
     }
+
+    #region Aurora Song
+
+    public class RecordCharacter
+    {
+        public int Id { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public int? RoundId { get; set; }
+        public RecordType RecordType { get; set; }
+        public int? TargetCharacterId { get; set; }
+        public Guid? AuthorUserId { get; set; }
+        public int? AuthorCharacterId { get; set; }
+        public bool Hidden { get; set; }
+        public bool Deleted { get; set; }
+        public Guid? DeletedById { get; set; }
+        public DateTime? DeletedAt { get; set; }
+
+        // Child record nav properties (1-1)
+        public RecordPersonalNote? RecordPersonalNote { get; set; }
+        // public RecordSLENote? RecordSLENote { get; set; }
+        // public RecordMedicalNote? RecordMedicalNote { get; set; }
+
+        // Edit history (1-many)
+        public ICollection<RecordEdit> RecordEdits { get; set; } = new List<RecordEdit>();
+    }
+
+    public enum RecordType
+    {
+        PersonalNote,
+        SleNote,
+        MedicalNote,
+        License,
+        Arrest,
+        LegalCase,
+        Employment,
+    }
+
+    public class RecordPersonalNote
+    {
+        [Key]
+        public int RecordCharacterId { get; set; }
+        public RecordCharacter RecordCharacter { get; set; } = null!;
+        public string Title { get; set; } = null!;
+        public string Note { get; set; } = null!;
+    }
+
+    /// <summary>
+    /// Represents a modification made to a <see cref="RecordCharacter"/>.
+    /// Each change to a character record should be recorded here as a new entry, excluding admin ooc deletions.
+    /// This includes in universe deletions (hiding) which is achieved by setting or unsetting the hidden flag.
+    /// </summary>
+    public class RecordEdit
+    {
+        public int Id { get; set; }
+        public int RecordCharacterId { get; set; }
+        public RecordCharacter RecordCharacter { get; set; } = null!;
+        public string Field { get; set; } = null!;
+        public string? OldValue { get; set; }
+        public string? NewValue { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public Guid? AuthorUserId { get; set; }
+        public int? AuthorCharacterId { get; set; }
+        public bool Deleted { get; set; }
+        public Guid? DeletedById { get; set; }
+        public DateTime? DeletedAt { get; set; }
+    }
+    #endregion
 }
