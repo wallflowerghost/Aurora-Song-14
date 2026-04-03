@@ -521,7 +521,7 @@ namespace Content.Server.Database
 
         [Column("pref_unavailable")] public DbPreferenceUnavailableMode PreferenceUnavailable { get; set; }
 
-        public int PreferenceId { get; set; }
+        public int? PreferenceId { get; set; }
         public Preference Preference { get; set; } = null!;
     }
 

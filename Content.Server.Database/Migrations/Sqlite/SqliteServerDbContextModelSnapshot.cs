@@ -899,7 +899,7 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .HasColumnType("TEXT")
                         .HasColumnName("nsfw_flavor_text");
 
-                    b.Property<int>("PreferenceId")
+                    b.Property<int?>("PreferenceId")
                         .HasColumnType("INTEGER")
                         .HasColumnName("preference_id");
 
@@ -1909,8 +1909,6 @@ namespace Content.Server.Database.Migrations.Sqlite
                     b.HasOne("Content.Server.Database.Preference", "Preference")
                         .WithMany("Profiles")
                         .HasForeignKey("PreferenceId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired()
                         .HasConstraintName("FK_profile_preference_preference_id");
 
                     b.Navigation("Preference");
