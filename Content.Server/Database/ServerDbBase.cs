@@ -1995,7 +1995,7 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
         private RecordCharacter AddCharacterRecord(
             ServerDbContext context,
             RecordType recordType,
-            int targetCharacterId,
+            int? targetCharacterId,
             Guid authorUserId, // If a use case has no author, create a separate method variant for that intent.
             int? authorCharacterId,
             int? roundId)
@@ -2014,7 +2014,8 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
             return record;
         }
 
-        private async Task<List<RecordCharacter>> GetFilteredCharacterRecords(
+        private IQueryable<RecordCharacter> FilterCharacterRecords(
+            ServerDbContext context,
             RecordType? recordType,
             int? targetCharacterId = null,
             Guid? authorUserId = null,
@@ -2022,9 +2023,7 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
             bool? hidden = false,
             bool? deleted = false)
         {
-            await using var db = await GetDb();
-
-            var query = db.DbContext.RecordCharacter.AsQueryable();
+            var query = context.RecordCharacter.AsQueryable();
 
             if (recordType != null)
                 query = query.Where(r => r.RecordType == recordType);
@@ -2044,9 +2043,7 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
             if (deleted != null)
                 query = query.Where(r => r.Deleted == deleted);
 
-            query = query.OrderByDescending(r => r.CreatedAt);
-
-            return await query.ToListAsync();
+            return query.OrderByDescending(r => r.CreatedAt);
         }
 
         public Task<RecordUpdateResult> HideRecord(Guid? authorUserId, int recordId, int? authorCharacterId)
@@ -2129,8 +2126,9 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
         public enum RecordUpdateResult
         {
             NotFound,
+            Prohibited,
             NoChange,
-            Updated
+            Updated,
         };
 
         #endregion
@@ -2156,6 +2154,83 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
                 AuthorUserId = authorUserId,
                 AuthorCharacterId = authorCharacterId,
             });
+        }
+
+        #endregion
+
+        #region Personal Notes
+
+        public async Task<RecordPersonalNote> AddPersonalNote(Guid authorUserId, int authorCharacterId, string title, string note, int roundId)
+        {
+            await using var db = await GetDb();
+
+            // The target in this case matches the author. This maintains indexing search patterns.
+            var characterRecord = AddCharacterRecord(db.DbContext, RecordType.PersonalNote, authorCharacterId, authorUserId, authorCharacterId, roundId);
+
+            var record = new RecordPersonalNote
+            {
+                RecordCharacter = characterRecord,
+                Note = note,
+                Title = title,
+            };
+
+            db.DbContext.RecordPersonalNote.Add(record);
+            await db.DbContext.SaveChangesAsync();
+            return record;
+        }
+
+        public async Task<List<RecordPersonalNote>> GetPersonalNotes(int authorCharacterId)
+        {
+            await using var db = await GetDb();
+
+            var characterRecords = await FilterCharacterRecords(db.DbContext, RecordType.PersonalNote, authorCharacterId)
+                .Include(r => r.RecordPersonalNote)
+                .ToListAsync();
+
+            return characterRecords
+                .Select(r => r.RecordPersonalNote)
+                .OfType<RecordPersonalNote>()
+                .ToList();
+        }
+
+        public async Task<RecordUpdateResult> UpdatePersonalNote(Guid? authorUserId,
+            int authorCharacterId,
+            int recordId,
+            string? title,
+            string? note)
+        {
+            var result = RecordUpdateResult.NoChange;
+
+            await using var db = await GetDb();
+
+            var existing = await db.DbContext.RecordPersonalNote
+                .Include(r => r.RecordCharacter)
+                .SingleOrDefaultAsync(r => r.RecordCharacterId == recordId);
+
+            if (existing == null)
+                return RecordUpdateResult.NotFound;
+
+            if (existing.RecordCharacter.Deleted == true)
+                return RecordUpdateResult.Prohibited;
+
+            if (title != null && existing.Title != title)
+            {
+                AddRecordEdit(db.DbContext, recordId, nameof(RecordPersonalNote.Title), existing.Title, title, authorUserId, authorCharacterId);
+                existing.Title = title;
+                result = RecordUpdateResult.Updated;
+            }
+
+            if (note != null && existing.Note != note)
+            {
+                AddRecordEdit(db.DbContext, recordId, nameof(RecordPersonalNote.Note), existing.Note, note, authorUserId, authorCharacterId);
+                existing.Note = note;
+                result = RecordUpdateResult.Updated;
+            }
+
+            if (result == RecordUpdateResult.Updated)
+                await db.DbContext.SaveChangesAsync();
+
+            return result;
         }
 
         #endregion
