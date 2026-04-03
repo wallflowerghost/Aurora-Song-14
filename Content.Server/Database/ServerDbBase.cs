@@ -141,7 +141,7 @@ namespace Content.Server.Database
                 return;
             }
 
-            db.Profile.Remove(profile);
+            profile.PreferenceId = null;
         }
 
         public async Task<PlayerPreferences> InitPrefsAsync(NetUserId userId, ICharacterProfile defaultProfile)
