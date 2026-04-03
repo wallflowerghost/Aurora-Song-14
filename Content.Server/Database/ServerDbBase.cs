@@ -7,6 +7,7 @@ using System.Runtime.CompilerServices;
 using System.Text.Json;
 using System.Threading;
 using System.Threading.Tasks;
+using Content.Server._AS.PersistentSystems; // Aurora Song
 using Content.Server.Administration.Logs;
 using Content.Server.Administration.Managers;
 using Content.Shared.Administration.Logs;
@@ -2055,14 +2056,6 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
             await db.DbContext.SaveChangesAsync();
             return RecordUpdateResult.Updated;
         }
-
-        public enum RecordUpdateResult
-        {
-            NotFound,
-            Prohibited,
-            NoChange,
-            Updated,
-        };
 
         #endregion
 

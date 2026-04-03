@@ -4,6 +4,7 @@ using System.Net;
 using System.Text.Json;
 using System.Threading;
 using System.Threading.Tasks;
+using Content.Server._AS.PersistentSystems; // Aurora
 using Content.Server.Administration.Logs;
 using Content.Shared._Floof.Consent;
 using Content.Shared.Administration.Logs;
@@ -352,6 +353,19 @@ namespace Content.Server.Database
         Task<bool> UpsertIPIntelCache(DateTime time, IPAddress ip, float score);
         Task<IPIntelCache?> GetIPIntelCache(IPAddress ip);
         Task<bool> CleanIPIntelCache(TimeSpan range);
+
+        #endregion
+
+        // Aurora Song
+        #region Persistent Game Systems
+
+        Task<RecordPersonalNote> AddPersonalNote(Guid authorUserId, int authorCharacterId, string title, string note, int roundId);
+        Task<List<RecordPersonalNote>> GetPersonalNotes(int authorCharacterId);
+        Task<RecordUpdateResult> UpdatePersonalNote(Guid? authorUserId, int authorCharacterId, int recordId, string? title, string? note);
+        Task<RecordUpdateResult> HideRecord(Guid? authorUserId, int recordId, int? authorCharacterId);
+        Task<RecordUpdateResult> UnhideRecord(Guid? authorUserId, int recordId, int? authorCharacterId);
+        Task<RecordUpdateResult> DeleteRecord(Guid? authorUserId, int recordId);
+        Task<RecordUpdateResult> UndeleteRecord(Guid? authorUserId, int recordId);
 
         #endregion
 
@@ -1077,6 +1091,53 @@ namespace Content.Server.Database
             return RunDbCommand(() => _db.RemoveGhostRoleWhitelist(player, ghostRole));
         }
         // End Frontier
+
+        // Aurora Song
+        #region Persistent Game Systems
+
+        public Task<RecordUpdateResult> HideRecord(Guid? authorUserId, int recordId, int? authorCharacterId)
+        {
+            DbWriteOpsMetric.Inc();
+            return RunDbCommand(() => _db.HideRecord(authorUserId, recordId, authorCharacterId));
+        }
+
+        public Task<RecordUpdateResult> UnhideRecord(Guid? authorUserId, int recordId, int? authorCharacterId)
+        {
+            DbWriteOpsMetric.Inc();
+            return RunDbCommand(() => _db.UnhideRecord(authorUserId, recordId, authorCharacterId));
+        }
+
+        public Task<RecordUpdateResult> DeleteRecord(Guid? authorUserId, int recordId)
+        {
+            DbWriteOpsMetric.Inc();
+            return RunDbCommand(() => _db.DeleteRecord(authorUserId, recordId));
+        }
+
+        public Task<RecordUpdateResult> UndeleteRecord(Guid? authorUserId, int recordId)
+        {
+            DbWriteOpsMetric.Inc();
+            return RunDbCommand(() => _db.UndeleteRecord(authorUserId, recordId));
+        }
+
+        public Task<RecordPersonalNote> AddPersonalNote(Guid authorUserId, int authorCharacterId, string title, string note, int roundId)
+        {
+            DbWriteOpsMetric.Inc();
+            return RunDbCommand(() => _db.AddPersonalNote(authorUserId, authorCharacterId, title, note, roundId));
+        }
+
+        public Task<List<RecordPersonalNote>> GetPersonalNotes(int authorCharacterId)
+        {
+            DbReadOpsMetric.Inc();
+            return RunDbCommand(() => _db.GetPersonalNotes(authorCharacterId));
+        }
+
+        public Task<RecordUpdateResult> UpdatePersonalNote(Guid? authorUserId, int authorCharacterId, int recordId, string? title, string? note)
+        {
+            DbWriteOpsMetric.Inc();
+            return RunDbCommand(() => _db.UpdatePersonalNote(authorUserId, authorCharacterId, recordId, title, note));
+        }
+
+        #endregion
 
         public Task<bool> UpsertIPIntelCache(DateTime time, IPAddress ip, float score)
         {
