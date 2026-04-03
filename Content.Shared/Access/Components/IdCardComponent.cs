@@ -12,6 +12,12 @@ namespace Content.Shared.Access.Components;
 [Access(typeof(SharedIdCardSystem), typeof(SharedPdaSystem), typeof(SharedAgentIdCardSystem), Other = AccessPermissions.ReadWrite)]
 public sealed partial class IdCardComponent : Component
 {
+    /// <summary>
+    /// The ID associated with the profile stored in the database.
+    /// </summary>
+    [DataField]
+    public int? ProfileId;
+
     [DataField]
     [AutoNetworkedField]
     // FIXME Friends

@@ -9,6 +9,9 @@ namespace Content.Shared.Preferences
     {
         string Name { get; }
 
+        // Aurora
+        int ProfileId { get; }
+
         ICharacterAppearance CharacterAppearance { get; }
 
         bool MemberwiseEquals(ICharacterProfile other);
