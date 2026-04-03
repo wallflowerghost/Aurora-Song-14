@@ -2,6 +2,7 @@ using System.Collections.Immutable;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Net;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Text.Json;
 using System.Threading;
@@ -1987,9 +1988,177 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
 
         // Aurora
         // See design documentation: Content.Server/_AS/PersistentSystems/README
-        # region Persistant Game Systems
+        # region Persistent Game Systems
 
+        #region Character Records
 
+        private RecordCharacter AddCharacterRecord(
+            ServerDbContext context,
+            RecordType recordType,
+            int targetCharacterId,
+            Guid authorUserId, // If a use case has no author, create a separate method variant for that intent.
+            int? authorCharacterId,
+            int? roundId)
+        {
+            var record = new RecordCharacter
+            {
+                RecordType = recordType,
+                TargetCharacterId = targetCharacterId,
+                AuthorUserId = authorUserId,
+                AuthorCharacterId = authorCharacterId,
+                RoundId = roundId,
+                CreatedAt = DateTime.UtcNow,
+            };
+
+            context.RecordCharacter.Add(record);
+            return record;
+        }
+
+        private async Task<List<RecordCharacter>> GetFilteredCharacterRecords(
+            RecordType? recordType,
+            int? targetCharacterId = null,
+            Guid? authorUserId = null,
+            int? authorCharacterId = null,
+            bool? hidden = false,
+            bool? deleted = false)
+        {
+            await using var db = await GetDb();
+
+            var query = db.DbContext.RecordCharacter.AsQueryable();
+
+            if (recordType != null)
+                query = query.Where(r => r.RecordType == recordType);
+
+            if (targetCharacterId != null)
+                query = query.Where(r => r.TargetCharacterId == targetCharacterId);
+
+            if (authorUserId != null)
+                query = query.Where(r => r.AuthorUserId == authorUserId);
+
+            if (authorCharacterId != null)
+                query = query.Where(r => r.AuthorCharacterId == authorCharacterId);
+
+            if (hidden != null)
+                query = query.Where(r => r.Hidden == hidden);
+
+            if (deleted != null)
+                query = query.Where(r => r.Deleted == deleted);
+
+            query = query.OrderByDescending(r => r.CreatedAt);
+
+            return await query.ToListAsync();
+        }
+
+        public Task<RecordUpdateResult> HideRecord(Guid? authorUserId, int recordId, int? authorCharacterId)
+        {
+            return SetHideRecord(authorUserId, recordId, authorCharacterId, true);
+        }
+
+        public Task<RecordUpdateResult> UnhideRecord(Guid? authorUserId, int recordId, int? authorCharacterId)
+        {
+            return SetHideRecord(authorUserId, recordId, authorCharacterId, false);
+        }
+
+        private async Task<RecordUpdateResult> SetHideRecord(Guid? authorUserId, int recordId, int? authorCharacterId, bool hide)
+        {
+            await using var db = await GetDb();
+
+            var existing = await db.DbContext.RecordCharacter
+                .SingleOrDefaultAsync(r => r.Id == recordId);
+
+            if (existing == null)
+                return RecordUpdateResult.NotFound;
+
+            if (existing.Hidden == hide)
+                return RecordUpdateResult.NoChange;
+
+            existing.Hidden = hide;
+
+            AddRecordEdit(
+                db.DbContext,
+                recordId,
+                nameof(RecordCharacter.Hidden),
+                (!hide).ToString(),
+                hide.ToString(),
+                authorUserId,
+                authorCharacterId);
+
+            await db.DbContext.SaveChangesAsync();
+            return RecordUpdateResult.Updated;
+        }
+
+        public Task<RecordUpdateResult> DeleteRecord(Guid? authorUserId, int recordId)
+        {
+            return SetDeleteRecord(authorUserId, recordId, true);
+        }
+
+        public Task<RecordUpdateResult> UndeleteRecord(Guid? authorUserId, int recordId)
+        {
+            return SetDeleteRecord(authorUserId, recordId, false);
+        }
+
+        private async Task<RecordUpdateResult> SetDeleteRecord(Guid? authorUserId, int recordId, bool delete)
+        {
+            await using var db = await GetDb();
+
+            var existing = await db.DbContext.RecordCharacter
+                .SingleOrDefaultAsync(r => r.Id == recordId);
+
+            if (existing == null)
+                return RecordUpdateResult.NotFound;
+
+            if (existing.Deleted == delete)
+                return RecordUpdateResult.NoChange;
+
+            existing.Deleted = delete;
+            if (delete)
+            {
+                existing.DeletedAt = DateTime.UtcNow;
+                existing.DeletedById = authorUserId;
+            }
+            else
+            {
+                existing.DeletedAt = null;
+                existing.DeletedById = null;
+            }
+
+            await db.DbContext.SaveChangesAsync();
+            return RecordUpdateResult.Updated;
+        }
+
+        public enum RecordUpdateResult
+        {
+            NotFound,
+            NoChange,
+            Updated
+        };
+
+        #endregion
+
+        #region Record Edits
+
+        private void AddRecordEdit(
+            ServerDbContext context,
+            int recordCharacterId,
+            string field,
+            string? oldValue,
+            string? newValue,
+            Guid? authorUserId,
+            int? authorCharacterId)
+        {
+            context.RecordEdit.Add(new RecordEdit
+            {
+                RecordCharacterId = recordCharacterId,
+                Field = field,
+                OldValue = oldValue,
+                NewValue = newValue,
+                CreatedAt = DateTime.UtcNow,
+                AuthorUserId = authorUserId,
+                AuthorCharacterId = authorCharacterId,
+            });
+        }
+
+        #endregion
 
         #endregion
 
