@@ -22,7 +22,7 @@ public sealed class ConsentCardSystem : SharedConsentCardSystem
     [Dependency] private readonly IChatManager _chat = default!;
     [Dependency] private readonly IAdminManager _admin = default!;
     [Dependency] private readonly IPlayerManager _player = default!;
-    private readonly SoundPathSpecifier _alertSound = new("/Audio/_AS/Admin/dutdut_alert.ogg");
+    private readonly SoundPathSpecifier _alertSound = new("/Audio/Effects/adminhelp.ogg");
 
     public override void Initialize()
     {
