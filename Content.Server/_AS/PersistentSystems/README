@@ -60,6 +60,9 @@ Physical deletion of rows should only be performed by database operators at the 
 
 Profile rows are not deleted from the database, character deletion is handled by de-referencing that characters `profile` from that players `preference`. This ensures `target_character_id` always resolves and records are never orphaned. If a profile must be physically deleted, actions doing so should refer to **Soft Deletes** as for how to handle cascading deletions.
 
+### `ProfileId`
+`ProfileId` is held and accessed at the EntitySystem level via a field on `IdCardComponent`. This means that the ID card is the in-game representation of a character's stored profile.
+
 ### Querying
 Records are queried from the parent down, filtering by `record_type` and `target_character_id`. A composite index on `(record_type, target_character_id, created_at DESC)` is defined on `RecordCharacter` for this access pattern. Child tables are joined via `Include()` on the navigation property. Queries always join the parent to ensure soft delete flags are respected.
 
