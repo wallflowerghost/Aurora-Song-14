@@ -1,4 +1,4 @@
-namespace Content.Server._AS.PersistentSystems;
+namespace Content.Shared._AS.PersistentSystems;
 
 public enum RecordUpdateResult
 {

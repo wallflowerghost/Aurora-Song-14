@@ -3,13 +3,13 @@ using Robust.Shared.Serialization;
 namespace Content.Shared._AS.PersistentSystems;
 
 [Serializable, NetSerializable]
-public sealed class PersonalNotes(List<PersonalNoteEntry> notes) : BoundUserInterfaceState
+public sealed class PersonalNotes(List<PersonalNote> notes) : BoundUserInterfaceState
 {
-    public List<PersonalNoteEntry> Notes = notes;
+    public List<PersonalNote> Notes = notes;
 }
 
 [Serializable, NetSerializable]
-public sealed class PersonalNoteEntry(int recordId, string title, string note, DateTime createdAt)
+public sealed class PersonalNote(int recordId, string title, string note, DateTime createdAt)
 {
     public int RecordId = recordId;
     public string Title = title;
@@ -36,4 +36,11 @@ public sealed class UpdatePersonalNoteMessage(int recordId, string? title, strin
 public sealed class HidePersonalNoteMessage(int recordId) : BoundUserInterfaceMessage
 {
     public int RecordId = recordId;
+}
+
+[Serializable, NetSerializable]
+public sealed class RecordUpdateStatusMessage(int recordId, RecordUpdateResult result) : EntityEventArgs
+{
+    public int RecordId = recordId;
+    public RecordUpdateResult Result = result;
 }

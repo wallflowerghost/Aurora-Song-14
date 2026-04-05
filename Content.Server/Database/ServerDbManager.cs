@@ -6,6 +6,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Content.Server._AS.PersistentSystems; // Aurora
 using Content.Server.Administration.Logs;
+using Content.Shared._AS.PersistentSystems;
 using Content.Shared._Floof.Consent;
 using Content.Shared.Administration.Logs;
 using Content.Shared.CCVar;
