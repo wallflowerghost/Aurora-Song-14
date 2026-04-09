@@ -1984,17 +1984,17 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
             return query.OrderByDescending(r => r.CreatedAt);
         }
 
-        public Task<RecordUpdateResult> HideRecord(Guid? authorUserId, int recordId, int? authorCharacterId)
+        public Task<RecordUpdateStatus> HideRecord(Guid? authorUserId, int recordId, int? authorCharacterId)
         {
             return SetHideRecord(authorUserId, recordId, authorCharacterId, true);
         }
 
-        public Task<RecordUpdateResult> UnhideRecord(Guid? authorUserId, int recordId, int? authorCharacterId)
+        public Task<RecordUpdateStatus> UnhideRecord(Guid? authorUserId, int recordId, int? authorCharacterId)
         {
             return SetHideRecord(authorUserId, recordId, authorCharacterId, false);
         }
 
-        private async Task<RecordUpdateResult> SetHideRecord(Guid? authorUserId, int recordId, int? authorCharacterId, bool hide)
+        private async Task<RecordUpdateStatus> SetHideRecord(Guid? authorUserId, int recordId, int? authorCharacterId, bool hide)
         {
             await using var db = await GetDb();
 
@@ -2002,10 +2002,10 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
                 .SingleOrDefaultAsync(r => r.Id == recordId);
 
             if (existing == null)
-                return RecordUpdateResult.NotFound;
+                return RecordUpdateStatus.NotFound;
 
             if (existing.Hidden == hide)
-                return RecordUpdateResult.NoChange;
+                return RecordUpdateStatus.NoChange;
 
             existing.Hidden = hide;
 
@@ -2019,20 +2019,20 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
                 authorCharacterId);
 
             await db.DbContext.SaveChangesAsync();
-            return RecordUpdateResult.Updated;
+            return RecordUpdateStatus.Updated;
         }
 
-        public Task<RecordUpdateResult> DeleteRecord(Guid? authorUserId, int recordId)
+        public Task<RecordUpdateStatus> DeleteRecord(Guid? authorUserId, int recordId)
         {
             return SetDeleteRecord(authorUserId, recordId, true);
         }
 
-        public Task<RecordUpdateResult> UndeleteRecord(Guid? authorUserId, int recordId)
+        public Task<RecordUpdateStatus> UndeleteRecord(Guid? authorUserId, int recordId)
         {
             return SetDeleteRecord(authorUserId, recordId, false);
         }
 
-        private async Task<RecordUpdateResult> SetDeleteRecord(Guid? authorUserId, int recordId, bool delete)
+        private async Task<RecordUpdateStatus> SetDeleteRecord(Guid? authorUserId, int recordId, bool delete)
         {
             await using var db = await GetDb();
 
@@ -2040,10 +2040,10 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
                 .SingleOrDefaultAsync(r => r.Id == recordId);
 
             if (existing == null)
-                return RecordUpdateResult.NotFound;
+                return RecordUpdateStatus.NotFound;
 
             if (existing.Deleted == delete)
-                return RecordUpdateResult.NoChange;
+                return RecordUpdateStatus.NoChange;
 
             existing.Deleted = delete;
             if (delete)
@@ -2058,14 +2058,14 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
             }
 
             await db.DbContext.SaveChangesAsync();
-            return RecordUpdateResult.Updated;
+            return RecordUpdateStatus.Updated;
         }
 
         #endregion
 
         #region Record Edits
 
-        private void AddRecordEdit(
+        private RecordEdit AddRecordEdit(
             ServerDbContext context,
             int recordCharacterId,
             string field,
@@ -2074,7 +2074,7 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
             Guid? authorUserId,
             int? authorCharacterId)
         {
-            context.RecordEdit.Add(new RecordEdit
+            var record = new RecordEdit
             {
                 RecordCharacterId = recordCharacterId,
                 Field = field,
@@ -2083,7 +2083,9 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
                 CreatedAt = DateTime.UtcNow,
                 AuthorUserId = authorUserId,
                 AuthorCharacterId = authorCharacterId,
-            });
+            };
+            context.RecordEdit.Add(record);
+            return record;
         }
 
         #endregion
@@ -2115,6 +2117,7 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
 
             var characterRecords = await FilterCharacterRecords(db.DbContext, RecordType.PersonalNote, authorCharacterId)
                 .Include(r => r.RecordPersonalNote)
+                .AsNoTracking()
                 .ToListAsync();
 
             return characterRecords
@@ -2129,7 +2132,7 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
             string? title,
             string? note)
         {
-            var result = RecordUpdateResult.NoChange;
+            var result = new RecordUpdateResult();
 
             await using var db = await GetDb();
 
@@ -2138,27 +2141,39 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
                 .SingleOrDefaultAsync(r => r.RecordCharacterId == recordId);
 
             if (existing == null)
-                return RecordUpdateResult.NotFound;
+            {
+                result.Status = RecordUpdateStatus.NotFound;
+                return result;
+            }
 
             if (existing.RecordCharacter.Deleted == true)
-                return RecordUpdateResult.Prohibited;
-
-            if (title != null && existing.Title != title)
             {
-                AddRecordEdit(db.DbContext, recordId, nameof(RecordPersonalNote.Title), existing.Title, title, authorUserId, authorCharacterId);
-                existing.Title = title;
-                result = RecordUpdateResult.Updated;
+                result.Status = RecordUpdateStatus.Prohibited;
+                return result;
             }
 
-            if (note != null && existing.Note != note)
-            {
-                AddRecordEdit(db.DbContext, recordId, nameof(RecordPersonalNote.Note), existing.Note, note, authorUserId, authorCharacterId);
-                existing.Note = note;
-                result = RecordUpdateResult.Updated;
-            }
+            var titleEdit = title != null && existing.Title != title
+                ? AddRecordEdit(db.DbContext, recordId, nameof(RecordPersonalNote.Title), existing.Title, title, authorUserId, authorCharacterId)
+                : null;
 
-            if (result == RecordUpdateResult.Updated)
+            var noteEdit = note != null && existing.Note != note
+                ? AddRecordEdit(db.DbContext, recordId, nameof(RecordPersonalNote.Note), existing.Note, note, authorUserId, authorCharacterId)
+                : null;
+
+            if (titleEdit != null)
+                existing.Title = title!;
+            if (noteEdit != null)
+                existing.Note = note!;
+
+            if (result.Edits != null)
+            {
                 await db.DbContext.SaveChangesAsync();
+                result.Status = RecordUpdateStatus.Updated;
+                if (titleEdit != null)
+                    (result.Edits ??= new List<Edit>(2)).Add(new Edit(nameof(RecordPersonalNote.Title), titleEdit.Id, titleEdit.OldValue, titleEdit.NewValue));
+                if (noteEdit != null)
+                    (result.Edits ??= new List<Edit>(2)).Add(new Edit(nameof(RecordPersonalNote.Note), noteEdit.Id, noteEdit.OldValue, noteEdit.NewValue));
+            }
 
             return result;
         }

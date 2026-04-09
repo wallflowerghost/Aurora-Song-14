@@ -39,8 +39,8 @@ public sealed class HidePersonalNoteMessage(int recordId) : BoundUserInterfaceMe
 }
 
 [Serializable, NetSerializable]
-public sealed class RecordUpdateStatusMessage(int recordId, RecordUpdateResult result) : EntityEventArgs
+public sealed class RecordUpdateStatusMessage(int recordId, RecordUpdateStatus status) : EntityEventArgs
 {
     public int RecordId = recordId;
-    public RecordUpdateResult Result = result;
+    public RecordUpdateStatus Status = status;
 }

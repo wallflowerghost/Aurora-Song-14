@@ -1473,7 +1473,8 @@ namespace Content.Server.Database
         // public RecordMedicalNote? RecordMedicalNote { get; set; }
 
         // Edit history (1-many)
-        public ICollection<RecordEdit> RecordEdits { get; set; } = new List<RecordEdit>();
+        public ICollection<RecordEdit>? RecordEdits { get; set; }
+
     }
 
     public enum RecordType

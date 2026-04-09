@@ -3,6 +3,7 @@ using Content.Server.Access.Systems;
 using Content.Server.Database;
 using Content.Server.GameTicking.Events;
 using Content.Shared._AS.PersistentSystems;
+using Robust.Shared.Network;
 using Robust.Shared.Player;
 
 namespace Content.Server._AS.PersistentSystems;
@@ -12,33 +13,35 @@ public sealed class PersonalNoteSystem : EntitySystem
     [Dependency] private readonly IdCardSystem _idCard = default!;
     [Dependency] private readonly IServerDbManager _db = default!;
     [Dependency] private readonly ISawmill _sawmill = default!;
+    [Dependency] private readonly RecordLogging _logging = default!;
 
     private int _roundId;
 
     public override void Initialize()
     {
         SubscribeLocalEvent<RoundStartingEvent>(ev => _roundId = ev.Id);
-        SubscribeAllEvent<CreatePersonalNoteMessage>(OnCreatePersonalNote);
-        SubscribeAllEvent<UpdatePersonalNoteMessage>(OnUpdatePersonalNote);
-        SubscribeAllEvent<HidePersonalNoteMessage>(OnHidePersonalNote);
         base.Initialize();
     }
 
-    private async Task<List<RecordPersonalNote>> GetPersonalNotes(int profileId)
+    public async Task<List<RecordPersonalNote>> GetPersonalNotes(int profileId)
     {
         return await _db.GetPersonalNotes(profileId);
     }
 
-    private async void OnCreatePersonalNote(CreatePersonalNoteMessage msg, EntitySessionEventArgs args)
+    public async void CreatePersonalNote(ICommonSession session, string title, string note)
     {
         try
         {
-            if (args.SenderSession.AttachedEntity is not { } attachedEntity)
+            if (session.AttachedEntity is not { } attachedEntity || GetProfileId(attachedEntity) is not { } profileId)
+            {
+                _sawmill.Warning($"Failed to resolve ID for {session.UserId}");
                 return;
-            if (GetProfileId(attachedEntity) is not { } profileId)
-                return;
+            }
 
-            var newRecord = await _db.AddPersonalNote(args.SenderSession.UserId, profileId, msg.Title, msg.Note, _roundId);
+            if (title == string.Empty)
+                title = "Untitled";
+            var newRecord = await _db.AddPersonalNote(session.UserId, profileId, title, note, _roundId);
+            _logging.LogPersonalNoteCreated(newRecord);
         }
         catch (Exception e)
         {
@@ -46,44 +49,36 @@ public sealed class PersonalNoteSystem : EntitySystem
         }
     }
 
-    private async void OnUpdatePersonalNote(UpdatePersonalNoteMessage msg, EntitySessionEventArgs args)
+    public async Task<RecordUpdateResult> UpdatePersonalNote(ICommonSession session, int recordId, string? title, string? note)
     {
-        try
+        var result = new RecordUpdateResult();
+        if (session.AttachedEntity is not { } attachedEntity || GetProfileId(attachedEntity) is not { } profileId)
         {
-            if (args.SenderSession.AttachedEntity is not { } attachedEntity)
-                return;
-            if (GetProfileId(attachedEntity) is not { } profileId)
-                return;
-            var result = await _db.UpdatePersonalNote(args.SenderSession.UserId, profileId, msg.RecordId, msg.Title, msg.Note);
+            result.Status = RecordUpdateStatus.Prohibited;
+            _logging.LogRecordUpdated(session.UserId, recordId, result);
+            return result;
+        }
 
-            SendUpdateResult(args.SenderSession, msg.RecordId, result);
-        }
-        catch (Exception e)
-        {
-            _sawmill.Error($"Failed to update personal note: {e}");
-        }
+        result = await _db.UpdatePersonalNote(session.UserId, profileId, recordId, title, note);
+        _logging.LogRecordUpdated(session.UserId, recordId, result);
+        if (result.Status == RecordUpdateStatus.NotFound)
+            CreatePersonalNote(session, title ?? "", note ?? "");
+        return result;
     }
 
-    private async void OnHidePersonalNote(HidePersonalNoteMessage msg, EntitySessionEventArgs args)
+    public async Task<RecordUpdateStatus> HidePersonalNote(ICommonSession session, int recordId)
     {
-        try
+        RecordUpdateStatus result;
+        if (session.AttachedEntity is not { } attachedEntity || GetProfileId(attachedEntity) is not { } profileId)
         {
-            if (args.SenderSession.AttachedEntity is not { } attachedEntity)
-                return;
-            if (GetProfileId(attachedEntity) is not { } profileId)
-                return;
-            var result = await _db.HideRecord(args.SenderSession.UserId, msg.RecordId, profileId);
-            SendUpdateResult(args.SenderSession, msg.RecordId, result);
+            result = RecordUpdateStatus.Prohibited;
+            _logging.LogRecordHidden(session.UserId, recordId, result);
+            return result;
         }
-        catch (Exception e)
-        {
-            _sawmill.Error($"Failed to hide personal note: {e}");
-        }
-    }
 
-    private void SendUpdateResult(ICommonSession session, int recordId, RecordUpdateResult result)
-    {
-        RaiseNetworkEvent(new RecordUpdateStatusMessage(recordId, result), session);
+        result = await _db.HideRecord(session.UserId, recordId, profileId);
+        _logging.LogRecordHidden(session.UserId, recordId, result);
+        return result;
     }
 
     private int? GetProfileId(EntityUid uid)

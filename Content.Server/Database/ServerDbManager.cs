@@ -363,10 +363,10 @@ namespace Content.Server.Database
         Task<RecordPersonalNote> AddPersonalNote(Guid authorUserId, int authorCharacterId, string title, string note, int roundId);
         Task<List<RecordPersonalNote>> GetPersonalNotes(int authorCharacterId);
         Task<RecordUpdateResult> UpdatePersonalNote(Guid? authorUserId, int authorCharacterId, int recordId, string? title, string? note);
-        Task<RecordUpdateResult> HideRecord(Guid? authorUserId, int recordId, int? authorCharacterId);
-        Task<RecordUpdateResult> UnhideRecord(Guid? authorUserId, int recordId, int? authorCharacterId);
-        Task<RecordUpdateResult> DeleteRecord(Guid? authorUserId, int recordId);
-        Task<RecordUpdateResult> UndeleteRecord(Guid? authorUserId, int recordId);
+        Task<RecordUpdateStatus> HideRecord(Guid? authorUserId, int recordId, int? authorCharacterId);
+        Task<RecordUpdateStatus> UnhideRecord(Guid? authorUserId, int recordId, int? authorCharacterId);
+        Task<RecordUpdateStatus> DeleteRecord(Guid? authorUserId, int recordId);
+        Task<RecordUpdateStatus> UndeleteRecord(Guid? authorUserId, int recordId);
 
         #endregion
 
@@ -1096,25 +1096,25 @@ namespace Content.Server.Database
         // Aurora Song
         #region Persistent Game Systems
 
-        public Task<RecordUpdateResult> HideRecord(Guid? authorUserId, int recordId, int? authorCharacterId)
+        public Task<RecordUpdateStatus> HideRecord(Guid? authorUserId, int recordId, int? authorCharacterId)
         {
             DbWriteOpsMetric.Inc();
             return RunDbCommand(() => _db.HideRecord(authorUserId, recordId, authorCharacterId));
         }
 
-        public Task<RecordUpdateResult> UnhideRecord(Guid? authorUserId, int recordId, int? authorCharacterId)
+        public Task<RecordUpdateStatus> UnhideRecord(Guid? authorUserId, int recordId, int? authorCharacterId)
         {
             DbWriteOpsMetric.Inc();
             return RunDbCommand(() => _db.UnhideRecord(authorUserId, recordId, authorCharacterId));
         }
 
-        public Task<RecordUpdateResult> DeleteRecord(Guid? authorUserId, int recordId)
+        public Task<RecordUpdateStatus> DeleteRecord(Guid? authorUserId, int recordId)
         {
             DbWriteOpsMetric.Inc();
             return RunDbCommand(() => _db.DeleteRecord(authorUserId, recordId));
         }
 
-        public Task<RecordUpdateResult> UndeleteRecord(Guid? authorUserId, int recordId)
+        public Task<RecordUpdateStatus> UndeleteRecord(Guid? authorUserId, int recordId)
         {
             DbWriteOpsMetric.Inc();
             return RunDbCommand(() => _db.UndeleteRecord(authorUserId, recordId));
