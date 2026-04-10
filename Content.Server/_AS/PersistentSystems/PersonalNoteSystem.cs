@@ -12,13 +12,15 @@ public sealed class PersonalNoteSystem : EntitySystem
 {
     [Dependency] private readonly IdCardSystem _idCard = default!;
     [Dependency] private readonly IServerDbManager _db = default!;
-    [Dependency] private readonly ISawmill _sawmill = default!;
-    [Dependency] private readonly RecordLogging _logging = default!;
+
+    private readonly RecordLogging _logging = default!;
+    private ISawmill _sawmill = default!;
 
     private int _roundId;
 
     public override void Initialize()
     {
+        _sawmill = Logger.GetSawmill("record");
         SubscribeLocalEvent<RoundStartingEvent>(ev => _roundId = ev.Id);
         base.Initialize();
     }

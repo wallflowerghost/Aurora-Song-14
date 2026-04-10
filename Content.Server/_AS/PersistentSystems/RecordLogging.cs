@@ -10,7 +10,12 @@ namespace Content.Server._AS.PersistentSystems;
 public abstract class RecordLogging
 {
     [Dependency] private readonly IAdminLogManager _adminLog = default!;
-    [Dependency] private readonly ISawmill _sawmill = default!;
+    private readonly ISawmill _sawmill;
+
+    private RecordLogging()
+    {
+        _sawmill = Logger.GetSawmill("record");
+    }
 
     private LogStringHandler LogRecordCreated(LogStringHandler logStringHandler, RecordCharacter record)
     {

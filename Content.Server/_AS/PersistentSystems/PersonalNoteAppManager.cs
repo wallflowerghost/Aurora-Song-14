@@ -9,9 +9,18 @@ namespace Content.Server._AS.PersistentSystems;
 
 public sealed class PersonalNoteAppManager : EntitySystem
 {
-    [Dependency] private readonly ISawmill _sawmill = default!;
     [Dependency] private readonly PersonalNoteSystem _record = default!;
 
+    private ISawmill _sawmill = default!;
+
+    public override void Initialize()
+    {
+        _sawmill = Logger.GetSawmill("record");
+        SubscribeLocalEvent<CreatePersonalNoteMessage>(OnCreatePersonalNote);
+        SubscribeLocalEvent<UpdatePersonalNoteMessage>(OnSavePersonalNote);
+        SubscribeLocalEvent<HidePersonalNoteMessage>(HidePersonalNote);
+        base.Initialize();
+    }
 
     private void SendUpdateResult(ICommonSession session, int recordId, RecordUpdateStatus status)
     {
