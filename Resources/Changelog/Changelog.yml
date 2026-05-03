@@ -4800,3 +4800,12 @@ Entries:
   id: 9438
   time: '2026-05-03T22:40:30.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/948
+- author: CombustibleToast
+  changes:
+    - type: Fix
+      message: >-
+        Mounted cannons (especially the matter dematerializer) can now shoot
+        again
+  id: 9439
+  time: '2026-05-03T22:54:16.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/999
