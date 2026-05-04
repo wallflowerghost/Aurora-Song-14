@@ -111,9 +111,13 @@
     metabolizerTypes: [ Fairy ]
     groups:
     - id: Medicine
+      scaleModifier: 10
     - id: Cryogenic # Frontier
+      scaleModifier: 10
     - id: Poison
+      scaleModifier: 10
     - id: Narcotic
+      scaleModifier: 10
 
 - type: entity
   id: OrganFairyLiver
