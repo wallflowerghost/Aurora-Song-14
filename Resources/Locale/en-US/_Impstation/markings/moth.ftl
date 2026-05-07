@@ -91,8 +91,9 @@ marking-MouthpartsSchistocerca = Mouthparts (Schistocerca)
 
 # Eyes
 
-marking-HeterochromiaMoth = Eyes (Heterophobia)
-marking-HeterochromiaMoth-heterochromia = Heterophobia
+# Aurora's Song Edit - Heterophobia -> Heterochromia
+marking-HeterochromiaMoth = Eyes (Heterochromia)
+marking-HeterochromiaMoth-heterochromia = Heterochromia
 
 marking-MothBiggerEyes = Eyes (Large)
 marking-MothBiggerEyes-bigger = Bigger Eyes
