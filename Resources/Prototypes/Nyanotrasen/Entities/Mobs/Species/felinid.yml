@@ -1,6 +1,6 @@
 - type: entity
   name: Urist McFelinid
-  parent: BaseMobHuman
+  parent: [BaseMobHuman]
   id: MobFelinidBase
   abstract: true
   components:
@@ -86,7 +86,7 @@
     - reagents: [ Water, SpaceCleaner ]
       methods: [ Touch ]
       effects:
-      - !type:WashCreamPieReaction
+      - !type:WashCreamPie # Aurora's Song - WashCreamPieReaction>WashCreamPie
     - reagents: [ Water ]
       methods: [ Touch ]
       effects:

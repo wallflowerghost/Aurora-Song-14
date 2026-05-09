@@ -29,12 +29,17 @@
   inhand:
   - ToolboxMechanical
 
+# Aurora Song- Mantis drip merge start
+- type: loadout
+  id: ContractorMantisMeleeCane
+  price: 1000
+  inhand:
+  - MantisMeleeCane
+# Aurora Song- Mantis drip merge end
+
 #T2
 - type: loadout
   id: ContractorCane
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
   price: 1000
   inhand:
   - Cane
@@ -158,7 +163,7 @@
     proto: ContractorT1
   price: 350
   inhand:
-    - HandheldHealthAnalyzerUnpowered
+    - HandheldHealthAnalyzer # AuroraSong: HandheldHealthAnalyzerUnpowered: HandheldHealthAnalyzer
 
 - type: loadout
   id: ContractorAnomalyScanner

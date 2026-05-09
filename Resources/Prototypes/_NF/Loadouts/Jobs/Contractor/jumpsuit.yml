@@ -1,3 +1,29 @@
+# Aurora Song - Mantis drip merge
+- type: loadout
+  id: ContractorClothingUniformMantisLoincloth
+  price: 300
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitMantisLoincloth
+
+- type: loadout
+  id: ContractorClothingUniformMantisDark
+  price: 300
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitMantisDark
+
+- type: loadout
+  id: ContractorClothingUniformMantisOrnate
+  price: 300
+  equipment:
+    jumpsuit: ClothingUniformSkirtMantisOrnate
+
+- type: loadout
+  id: ContractorClothingUniformMantisAiry
+  price: 300
+  equipment:
+    jumpsuit: ClothingUniformSkirtMantisAiry
+# Mantis drip ends
+
 - type: loadout
   id: ContractorClothingUniformJumpsuitAtmos
   price: 200
@@ -9,6 +35,20 @@
   price: 200
   equipment:
     jumpsuit: ClothingUniformJumpskirtAtmos
+
+# Aurora - Atmos Flightsuits
+- type: loadout
+  id: ContractorClothingUniformFlightsuitAtmos
+  price: 300
+  equipment:
+    jumpsuit: ClothingUniformAtmosFlightSuit
+
+- type: loadout
+  id: ContractorClothingUniformFlightskirtAtmos
+  price: 300
+  equipment:
+    jumpsuit: ClothingUniformAtmosFlightSkirt
+# End Flightsuits
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitBartender
@@ -1317,7 +1357,7 @@
     proto: ContractorT2
   price: 1000
   equipment:
-    jumpsuit: ClothingUniformJumpsuitChiefEngineerNT
+    jumpsuit: ClothingUniformJumpsuitChiefEngineer #Aurora Song: ClothingUniformJumpsuitChiefEngineerNT: ClothingUniformJumpsuitChiefEngineer
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitChiefEngineer

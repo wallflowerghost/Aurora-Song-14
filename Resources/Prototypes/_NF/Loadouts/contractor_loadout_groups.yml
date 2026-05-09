@@ -8,6 +8,12 @@
   - ContractorClothingUniformJumpsuitMilitaryContractorTac
   - ContractorClothingUniformJumpsuitAtmos
   - ContractorClothingUniformJumpskirtAtmos
+  - ContractorClothingUniformFlightsuitAtmos # Aurora's Song - Flightsuits
+  - ContractorClothingUniformFlightskirtAtmos # Aurora's Song - Flightsuits
+  - ContractorClothingUniformMantisLoincloth # Aurora's Song - Mantis drip
+  - ContractorClothingUniformMantisDark # Aurora's Song - Mantis drip
+  - ContractorClothingUniformMantisOrnate # Aurora's Song - Mantis drip
+  - ContractorClothingUniformMantisAiry # Aurora's Song - Mantis drip
   - ContractorClothingUniformJumpsuitBartender
   - ContractorClothingUniformJumpskirtBartender
   - ContractorClothingUniformJumpsuitCargo
@@ -140,7 +146,7 @@
   - ContractorClothingUniformJumpskirtResearchDirector
   - ContractorClothingUniformJumpsuitSeniorEngineer
   - ContractorClothingUniformJumpskirtSeniorEngineer
-  - ContractorClothingUniformJumpsuitChiefEngineerNT
+  #- ContractorClothingUniformJumpsuitChiefEngineerNT Aurora Song: Removed in upstream
   - ContractorClothingUniformJumpsuitChiefEngineer
   - ContractorClothingUniformJumpskirtChiefEngineer
   - ContractorClothingUniformJumpsuitChiefEngineerTurtle
@@ -228,6 +234,10 @@
   - ContractorClothingBackpackDuffel
   - ContractorClothingBackpackSatchel
   - ContractorClothingBackpackMessenger
+  - ContractorClothingBackpackMantis  # Aurora Song - Mantis drip merge
+  - ContractorClothingBackpackDuffelMantis  # Aurora Song - Mantis drip merge
+  - ContractorClothingBackpackSatchelMantis  # Aurora Song - Mantis drip merge
+  - ContractorClothingBackpackMantisPurse  # Aurora Song - Mantis drip merge
   - ContractorClothingBackpackCaptain
   - ContractorClothingBackpackDuffelCaptain
   - ContractorClothingBackpackSatchelCaptain
@@ -313,6 +323,9 @@
   minLimit: 0
   loadouts:
 #  - ContractorClothingOuterHardsuitVoidParamed # Aurora - disabled for now
+  - ContractorClothingOuterCoatMantisAiry  # Aurora Song - Mantis drip merge
+  - ContractorClothingOuterCoatMantisOrnate  # Aurora Song - Mantis drip merge
+  - ContractorClothingWinterCoatMantisMu  # Aurora Song - Mantis drip merge
   - ContractorClothingOuterHoodieGrey
   - ContractorClothingOuterVestHazard
   - ContractorClothingOuterApron
@@ -408,6 +421,9 @@
   - ContractorClothingBeltMedicalFilled
   - ContractorClothingBeltMedicalEMT
   - ContractorClothingBeltMedicalEMTFilled
+  - ContractorClothingBeltMantisAiry  # Aurora Song - Mantis drip merge
+  - ContractorClothingBeltMantisDark  # Aurora Song - Mantis drip merge
+  - ContractorClothingBeltMantisOrnate  # Aurora Song - Mantis drip merge
   - ContractorClothingBeltUtility
   - ContractorClothingBeltUtilityFilled
   - ContractorClothingBeltSalvageWebbing
@@ -435,6 +451,9 @@
   name: loadout-group-contractor-shoes
   loadouts:
   - ContractorClothingShoesColorBlack
+  - ContractorClothingShoesMantisAiry  # Aurora Song - Mantis drip merge
+  - ContractorClothingShoesMantisDark  # Aurora Song - Mantis drip merge
+  - ContractorClothingShoesMantisOrnate  # Aurora Song - Mantis drip merge
   - ContractorClothingShoesClothwrap
   - ContractorClothingShoesTourist
   - ContractorClothingShoesBootsSalvage
@@ -527,6 +546,9 @@
   - ContractorClothingHeadHatChef
   - ContractorClothingHeadHatCargosoft
   - ContractorClothingHeadBandBotany
+  - ContractorClothingMantisFezAiry  # Aurora Song - Mantis drip merge
+  - ContractorClothingMantisFezOrnate  # Aurora Song - Mantis drip merge
+  - ContractorClothingMantisHoodDark  # Aurora Song - Mantis drip merge
   - ContractorClothingHeadHatHoodBioScientist
   - ContractorClothingHeadRastaHat
   - ContractorClothingHeadHatSombrero
@@ -593,6 +615,8 @@
   - ContractorClothingHeadsetEngineeringCommon
   - ContractorClothingHeadsetMedicalCommon
   - ContractorClothingHeadsetScienceCommon
+  - ContractorClothingHeadsetMantis  # Aurora Song - Mantis drip merge
+  - ContractorClothingHeadsetAltMantis  # Aurora Song - Mantis drip merge
   - ContractorClothingHeadsetMedicalScienceCommon
   - ContractorClothingHeadsetRoboticsCommon
   - ContractorClothingHeadsetServiceCommon
@@ -611,6 +635,9 @@
   loadouts:
   - ContractorClothingHandsGlovesColorYellow
   - ContractorClothingHandsGlovesLeather
+  - ContractorClothingHandsGlovesMantisAiry  # Aurora Song - Mantis drip merge
+  - ContractorClothingHandsGlovesMantisDark  # Aurora Song - Mantis drip merge
+  - ContractorClothingHandsGlovesMantisOrnate  # Aurora Song - Mantis drip merge
   - ContractorClothingHandsGlovesFingerless
   - ContractorClothingHandsGlovesLatex
   - ContractorClothingHandsGlovesNitrile
@@ -636,6 +663,9 @@
   name: loadout-group-contractor-neck
   minLimit: 0
   loadouts:
+  - ContractorClothingNeckCloakMantisDark # Aurora Song - Mantis drip merge
+  - ContractorClothingNeckMantleMantisOrnate # Aurora Song - Mantis drip merge
+  - ContractorClothingNeckMantisShackles # Aurora Song - Mantis drip merge
   - ContractorClothingNeckScarfStripedBlack
   - ContractorClothingNeckScarfStripedBlue
   - ContractorClothingNeckScarfStripedBrown
@@ -726,6 +756,7 @@
   - ContractorMedicalInternPDA
   - ContractorTechnicalAssistantPDA
   - ContractorServiceWorkerPDA
+  - ContractorMantisPDA  # Aurora Song - Mantis drip merge
   - ContractorBartenderPDA
   - ContractorChefPDA
   - ContractorBotanistPDA
@@ -764,6 +795,9 @@
   - ContractorClothingEyesGlassesCheapSunglasses
   - ContractorClothingEyesBlindfold
   - ContractorClothingEyesEyepatch
+  - ContractorClothingEyesGlassesMantis  # Aurora Song - Mantis drip merge
+  - ContractorClothingEyesGlassesMantisTinted  # Aurora Song - Mantis drip merge
+  - ContractorClothingEyesGlassesMantisBlindfold  # Aurora Song - Mantis drip merge
   - ContractorClothingEyesGlassesJamjar
   - ContractorClothingEyesGlassesChemical
   - ContractorClothingEyesHudDiagnostic
@@ -786,6 +820,11 @@
   - ContractorCigPackRed
   - ContractorCigPackBlack
   - ContractorCigPackGreen
+  - ContractorCaseMantisCandles  # Aurora Song - Mantis drip merge
+  - ContractorCaseMantisTools  # Aurora Song - Mantis drip merge
+  - ContractorFlippoLighterMantis  # Aurora Song - Mantis drip merge
+  - ContractorSyringeMantis  # Aurora Song - Mantis drip merge
+  - ContractorKnifeRavel  # Aurora Song - Mantis drip merge
   - ContractorCigarCase
   - ContractorHolocigar # Aurora's Song
   - ContractorNFAshtray
@@ -854,6 +893,7 @@
   - ContractorBriefcaseBrownFilled
   - ContractorToolboxEmergency
   - ContractorToolboxMechanical
+  - ContractorMantisMeleeCane # Aurora's Song - Mantis drip merge
   - ContractorCane
   - ContractorLGBTQHandyFlag
   - ContractorNTHandyFlag
@@ -886,6 +926,8 @@
   loadouts:
   - ContractorClothingMaskBreath
   - ContractorClothingMaskBreathMedical
+  - ContractorClothingMaskMantisVeil # Aurora's Song - Mantis drip
+  - ContractorClothingMaskMantisRitual # Aurora's Song - Mantis drip
   - ContractorClothingMaskSterile
   - ContractorClothingMaskGas
   - ContractorClothingMaskPunkHalf # Punkish (Randomized visuals)
@@ -915,11 +957,14 @@
   - EmergencyIPCBox
   - ContractorASBoxSurvivalFeroxi # Aurora Song
   - ContractorASBoxSurvivalExtendedFeroxi # Aurora Song
+  - ContractorASBoxSurvivalAvali # Aurora Song
+  - ContractorASBoxSurvivalExtendedAvali # Aurora Song
   fallbacks:
   - ContractorNFBoxSurvival
   - ContractorNFBoxSurvivalNitrogen
   - ContractorNFBoxSurvivalSheleg
   - ContractorASBoxSurvivalFeroxi # Aurora Song
+  - ContractorASBoxSurvivalAvali # Aurora Song
 
 - type: loadoutGroup
   id: ContractorEncryptionKey
