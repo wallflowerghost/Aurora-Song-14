@@ -232,6 +232,7 @@
     - id: Narcotic
     - id: Alcohol
       rateModifier: 2.5
+    - id: Cryogenic # Aurora's Song - Process cryogenics separately
 
 - type: entity
   parent: [ OrganBaseLungs, OrganSlimePersonInternal, OrganSlimePersonMetabolizer ]

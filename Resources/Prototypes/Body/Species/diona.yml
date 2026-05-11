@@ -240,6 +240,7 @@
     - id: Poison
     - id: Narcotic
     - id: Alcohol
+    - id: Cryogenic # Aurora's Song - Process cryogenics separately
 
 - type: entity
   parent: OrganDionaBrain
