@@ -216,7 +216,7 @@
   hide: false
 
 - type: construction
-  name: green metal chair
+  name: furniture-n14-chair-metal-green
   id: N14ChairMetalGreen
   graph: N14Seat
   startNode: start
