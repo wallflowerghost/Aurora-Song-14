@@ -108,7 +108,7 @@
   - type: Construction
     graph: N14Seat
     node: N14ChairMetalGreen
-  - type: StaticPrice
+  - type: StaticPrice # Aurora's Song | Arbitrage test fix, add StaticPrice and define at 25
     price: 25
 
 - type: entity
@@ -244,8 +244,8 @@
   - type: Construction
     graph: N14Seat
     node: N14ChairOfficeGreen
-  - type: StaticPrice
-    price: 50
+  - type: StaticPrice # Aurora's Song | Arbitrage test fix, add StaticPrice and define at 25
+    price: 25
 
 - type: entity
   parent: OfficeChairBase
@@ -268,8 +268,8 @@
   - type: Construction
     graph: N14Seat
     node: N14ChairOfficeErgonomic
-  - type: StaticPrice
-    price: 50
+  - type: StaticPrice # Aurora's Song | Arbitrage test fix, add StaticPrice and define at 25
+    price: 25
 
 - type: entity
   parent: N14ChairMetalGreen
@@ -304,7 +304,7 @@
   - type: Construction
     graph: N14Seat
     node: N14ChairPlastic
-  - type: StaticPrice
+  - type: StaticPrice # Aurora's Song | Arbitrage test fix, add StaticPrice and define at 25
     price: 25
 
 - type: entity
