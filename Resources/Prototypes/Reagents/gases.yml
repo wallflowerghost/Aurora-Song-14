@@ -47,7 +47,7 @@
       - !type:Oxygenate
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Human, Animal, Rat, Plant, Feroxi ] # Aurora's Song - Add feroxi
+          type: [ Human, Animal, Rat, Plant, Arachnid, Moth, Feroxi ] # Aurora's Song - Add feroxi
       # Convert Oxygen into CO2.
       - !type:ModifyLungGas
         conditions:
