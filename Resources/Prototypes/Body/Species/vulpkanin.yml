@@ -49,7 +49,7 @@
     #         state: hair
   - type: Inventory
     speciesId: vulpkanin
-    displacements:
+#    displacements: # Aurora's Song - Disable displacements fully
     # begin starcup: use delta-v sprites
     #   jumpsuit:
     #     sizeMaps:
@@ -76,11 +76,12 @@
     #       32:
     #         sprite: Mobs/Species/Vulpkanin/displacement.rsi
     #         state: shoes
-      head:
-        sizeMaps:
-          32:
-            sprite: Mobs/Species/Vulpkanin/displacement.rsi
-            state: head
+# Aurora's Song - Disable displacements fully
+#      head:
+#        sizeMaps:
+#          32:
+#            sprite: Mobs/Species/Vulpkanin/displacement.rsi
+#            state: head
     #   neck:
     #     sizeMaps:
     #       32:
@@ -137,21 +138,22 @@
     heatDamage:
       types:
         Heat: 2.5 # Per second, scales with temperature & other constants
-  # - type: Wagging TODO: Add back once we have animated tails again. Were removed due to the sprite rework, causing all of them to not fit anymore.
+  - type: Wagging # Aurora's Song - Add back Wagging
   #   action: ActionToggleWaggingVulpkanin
   - type: TemperatureProtection
     heatingCoefficient: 1.2
     coolingCoefficient: 0.3
-  - type: JumpAbility
-    action: ActionVulpkaninGravityJump
-    canCollide: true
-    jumpDistance: 3
-    jumpSound:
-      path: /Audio/Weapons/punchmiss.ogg
-      params:
-        pitch: 1.33
-        volume: -5
-        variation: 0.05
+# Aurora's Song - Disable jump
+#  - type: JumpAbility
+#    action: ActionVulpkaninGravityJump
+#    canCollide: true
+#    jumpDistance: 3
+#    jumpSound:
+#      path: /Audio/Weapons/punchmiss.ogg
+#      params:
+#        pitch: 1.33
+#        volume: -5
+#        variation: 0.05
 
 - type: entity
   parent: OrganBase
