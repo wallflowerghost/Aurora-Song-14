@@ -49,7 +49,7 @@
   parent:
   - AppearanceTajaran
   - BaseSpeciesMobOrganic
-  id: MobTajaranBase
+  id: MobTajaran
   components:
   - type: Hunger
     baseDecayRate: 0.02083333332 # 25% more than default
