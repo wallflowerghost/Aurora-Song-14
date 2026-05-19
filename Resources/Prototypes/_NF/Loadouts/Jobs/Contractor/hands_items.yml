@@ -387,6 +387,66 @@
   price: 500
   inhand:
     - HolyTextMansus
+
+- type: loadout
+  id: ContractorBibleDruid
+  groupBy: holyTexts
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 500
+  inhand:
+    - BibleDruid
+
+- type: loadout
+  id: ContractorBibleCommunistManifesto
+  groupBy: holyTexts
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 500
+  inhand:
+    - BibleCommunistManifesto
+
+- type: loadout
+  id: ContractorBibleNarsie
+  groupBy: holyTexts
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 500
+  inhand:
+    - BibleNarsie
+
+- type: loadout
+  id: ContractorBibleNanoTrasen
+  groupBy: holyTexts
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 500
+  inhand:
+    - BibleNanoTrasen
+
+- type: loadout
+  id: ContractorBibleHonk
+  groupBy: holyTexts
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 500
+  inhand:
+    - BibleHonk
+
+- type: loadout
+  id: ContractorBibleRatvar
+  groupBy: holyTexts
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 500
+  inhand:
+    - BibleRatvar
 # Aurora's Song -- More holy books end
 
 - type: loadout

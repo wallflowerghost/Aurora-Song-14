@@ -931,6 +931,12 @@
   - ContractorHolyTextExtremeTeenBible # Aurora's Song -- More holy books
   - ContractorHolyTextBibble # Aurora's Song -- More holy books
   - ContractorHolyTextMansus # Aurora's Song -- More holy books
+  - ContractorBibleDruid # Aurora's Song -- More holy books
+  - ContractorBibleCommunistManifesto # Aurora's Song -- More holy books
+  - ContractorBibleNarsie # Aurora's Song -- More holy books
+  - ContractorBibleNanoTrasen # Aurora's Song -- More holy books
+  - ContractorBibleHonk # Aurora's Song -- More holy books
+  - ContractorBibleRatvar # Aurora's Song -- More holy books
   - ContractorBodycam
 
 - type: loadoutGroup
