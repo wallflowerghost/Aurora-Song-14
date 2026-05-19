@@ -103,7 +103,6 @@ tiles-n14-tiny-corner-vertical2 = tiny corner vertical two
 tiles-n14-tiny-corner-vertical3 = tiny corner vertical three
 tiles-n14-tiny-corner-vertical4 = tiny corner vertical four
 tiles-n14-wasteland = wasteland
-tiles-n14-wood-oak = oak wood floor
 tiles-n14-wood-house = house wood floor
 tile-n14-wood-maple = maple wood floor
 tiles-n14-industrial = industrial floor
