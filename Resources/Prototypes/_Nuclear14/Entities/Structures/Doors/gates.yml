@@ -1,10 +1,8 @@
-# Aurora's Song | Replaced names with locale strings
+# Aurora's Song | Replaced name and description with locale string
 # Metal
 - type: entity
   parent: BaseStructure
   id: N14FenceChainGate
-  name: structures-n14-door-gate
-  description: A gate in the fence to allow access.
   components:
   - type: InteractionOutline
   - type: Physics

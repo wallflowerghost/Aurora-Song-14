@@ -1,10 +1,8 @@
-# Aurora's Song | replaced names with locale strings
+# Aurora's Song | replaced names and description with locale strings
 - type: entity
   abstract: true
   parent: BaseStructure
   id: N14BaseFence
-  name: structures-n14-wall-fence
-  description: Helps keep trespassers out.
   placement:
     mode: SnapgridCenter
     snap:
@@ -35,7 +33,6 @@
 - type: entity
   parent: N14BaseFence
   id: N14WallFenceChain
-  name: structures-n14-wall-fence-chainlink
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Walls/nc14/fencechain.rsi

@@ -1,11 +1,9 @@
 #MARK: Metal (Oh... Hi Mark)
-# Aurora's Song | Replaced names with locale strings
+# Aurora's Song | Replaced names and descriptions with locale strings
 - type: entity
   parent: BaseMaterialDoorNavMap
   id: N14DoorMetalBlueSlanted
-  name: strucutres-n14-door-metal-blue
   suffix: slanted
-  description: An old blue metal door.
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Doors/SlantedDoors/metalblue.rsi
@@ -52,9 +50,7 @@
 - type: entity
   parent: N14DoorMetalBlueSlanted
   id: N14DoorMetalRedSlanted
-  name: structures-n14-door-metal-red
   suffix: Slanted
-  description: An old red metal door.
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Doors/SlantedDoors/metalred.rsi
@@ -68,7 +64,6 @@
 - type: entity
   parent: N14DoorMetalBlueSlanted
   id: N14DoorMetalBlueAltSlanted
-  name: strucutres-n14-door-metal-blue
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Doors/SlantedDoors/metalbluealt.rsi
@@ -82,9 +77,7 @@
 - type: entity
   parent: N14DoorMetalBlueSlanted
   id: N14DoorMetalBlueWindowSlanted
-  name: structures-n14-door-metal-windowed
   suffix: Slanted, windowed
-  description: An old blue metal door with a window.
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Doors/SlantedDoors/metalbluewindow.rsi
@@ -102,9 +95,7 @@
 - type: entity
   parent: N14DoorMetalBlueWindowSlanted
   id: N14DoorMetalGrateSlanted
-  name: structures-n14-door-metal-grated
   suffix: Slanted, grate
-  description: A metal mesh door.
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Doors/SlantedDoors/metal_grate.rsi
@@ -115,9 +106,7 @@
 - type: entity
   parent: N14DoorMetalBlueWindowSlanted
   id: N14DoorMetalBarSlanted
-  name: structures-n14-door-cell
   suffix: Slanted, bar
-  description: A metal bar door.
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Doors/SlantedDoors/metal_bar.rsi
@@ -136,9 +125,7 @@
 - type: entity
   parent: N14DoorMetalBlueWindowSlanted
   id: N14DoorMetalFenceSlanted
-  name: structures-n14-door-gate
   suffix: Slanted, fence
-  description: A metal fence gate.
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Doors/SlantedDoors/fence.rsi
@@ -152,9 +139,7 @@
 - type: entity
   parent: N14DoorMetalBlueWindowSlanted
   id: N14DoorMetalFenceBarbedSlanted
-  name: structures-n14-door-gate-barbed
   suffix: Slanted, fence barbed
-  description: A metal barbed fence gate.
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Doors/SlantedDoors/fence_barbed.rsi
@@ -167,9 +152,7 @@
 - type: entity
   parent: N14DoorMetalBlueSlanted
   id: N14DoorWoodSlanted
-  name: structures-n14-door-wooden
   suffix: Slanted
-  description: A wooden door.
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Doors/SlantedDoors/wood.rsi
@@ -207,7 +190,6 @@
 - type: entity
   parent: N14DoorWoodSlanted
   id: N14DoorWoodBlueSlanted
-  name: structures-n14-door-wooden-blue
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Doors/SlantedDoors/woodblue.rsi
@@ -229,7 +211,6 @@
 - type: entity
   parent: N14DoorWoodSlanted
   id: N14DoorWoodRedSlanted
-  name: structures-n14-door-wooden-red
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Doors/SlantedDoors/woodred.rsi
@@ -240,7 +221,6 @@
 - type: entity
   parent: N14DoorWoodSlanted
   id: N14DoorWoodWhiteSlanted
-  name: structures-n14-door-wooden-white
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Doors/SlantedDoors/woodwhite.rsi
@@ -253,9 +233,7 @@
 - type: entity
   parent: N14DoorMetalBlueSlanted
   id: N14DoorAirlockSlanted
-  name: structures-n14-airlock
   suffix: slanted
-  description: An old bunker airlock.
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Doors/SlantedDoors/airlock.rsi

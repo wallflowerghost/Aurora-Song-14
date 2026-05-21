@@ -1,9 +1,7 @@
-# Aurora's Song | replaced names with locale strings
+# Aurora's Song | replaced names and locale strings with locale strings
 - type: entity
   parent: BaseMaterialDoor
   id: N14DoorShutterFramedRoller
-  name: structures-n14-door-shutter
-  description: A lightweight airtight roller shutter door.
   components:
   - type: Door
     bumpOpen: false
@@ -22,9 +20,7 @@
 - type: entity
   parent: BaseMaterialDoor
   id: N14DoorShutterRoller
-  name: structures-n14-door-shutter-garage
   suffix: frameless
-  description: A lightweight airtight roller shutter door.
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Doors/RollerDoors/garageshutter.rsi

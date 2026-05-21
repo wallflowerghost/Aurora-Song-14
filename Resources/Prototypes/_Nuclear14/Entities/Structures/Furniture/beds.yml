@@ -1,9 +1,7 @@
-#Aurora's Song | Replaced names of all entities with Locale strings
+#Aurora's Song | Replaced names and descriptions of all entities with Locale strings
 - type: entity
   parent: Bed
   id: N14Bed
-  name: furniture-n14-bed
-  description: A clean mattress for sleeping on.
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Furniture/bedsandchairs.rsi
@@ -15,8 +13,6 @@
 - type: entity
   parent: N14Bed
   id: N14BedDirty
-  name: furniture-n14-bed-dirty
-  description: A bed that looks like it's seen better days.
   components:
   - type: Sprite
     state: bed_dirty
@@ -25,8 +21,6 @@
 - type: entity
   parent: N14Bed
   id: N14BedWood
-  name: furniture-n14-bed-wooden
-  description: A bed with a wooden frame.
   components:
   - type: Sprite
     state: bed_wood
@@ -37,8 +31,6 @@
 - type: entity
   parent: N14Bed
   id: N14BedWoodBunk
-  name: furniture-n14-bed-wooden-bunk
-  description: A bunk bed with a wooden frame.
   components:
   - type: Sprite
     state: bed_wood_bunk
@@ -47,8 +39,6 @@
 - type: entity
   id: N14Bedroll
   parent: RollerBed
-  name: furniture-n14-bedroll
-  description: A bedroll for sleeping on the road. Not very comfy.
   components:
     - type: HealOnBuckle
       damage:
@@ -101,7 +91,6 @@
 - type: entity
   parent: N14Bedroll
   id: N14BedrollFolded
-  name: furniture-n14-bedroll-folded
   suffix: rolled
   components:
   - type: Foldable
@@ -112,8 +101,6 @@
 - type: entity
   parent: N14Bed
   id: N14BedMattressDirty1
-  name: furniture-n14-bed-mattress
-  description: A mattress on the floor. A little rough.
   components:
   - type: Sprite
     state: mattress1
@@ -122,8 +109,6 @@
 - type: entity
   parent: N14BedMattressDirty1
   id: N14BedMattressDirty2
-  name: furniture-n14-bed-mattress
-  description: A mattress on the floor. Filthy.
   components:
   - type: Sprite
     state: mattress2
@@ -131,8 +116,6 @@
 - type: entity
   parent: N14BedMattressDirty1
   id: N14BedMattressDirty3
-  name: furniture-n14-bed-mattress
-  description: A mattress on the floor. Is that blood?
   components:
   - type: Sprite
     state: mattress3
@@ -140,8 +123,6 @@
 - type: entity
   parent: N14BedMattressDirty1
   id: N14BedMattressDirty4
-  name: furniture-n14-bed-mattress
-  description: A mattress on the floor. That's definitely blood.
   components:
   - type: Sprite
     state: mattress4
@@ -150,8 +131,6 @@
   parent: N14BedMattressDirty1
   id: N14BedMattressDirty5
   suffix: mouldy
-  name: furniture-n14-bed-mattress
-  description: A mattress on the floor. I'm not sleeping on that.
   components:
   - type: Sprite
     state: mattress5

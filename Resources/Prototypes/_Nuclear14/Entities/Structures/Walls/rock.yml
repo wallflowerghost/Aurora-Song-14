@@ -1,10 +1,8 @@
-#Aurora's Song | replaced names with locale strings
+#Aurora's Song | replaced names and descriptions with locale strings
 # Rock
 - type: entity
   id: N14RockGrey
   parent: BaseWall
-  name: structures-n14-rock-asteroid
-  description: A rocky asteroid.
   components:
   - type: Transform
     noRot: true
@@ -47,9 +45,7 @@
 # Ore veins
 - type: entity
   id: N14RockGreyCoal
-  name: structures-n14-rock-ore-coal
   parent: N14RockGrey
-  description: An ore vein rich with coal.
   suffix: Coal
   components:
     - type: OreVein
@@ -70,9 +66,7 @@
 
 - type: entity
   id: N14RockGreyGold
-  name: structures-n14-rock-ore-gold
   parent: N14RockGrey
-  description: An ore vein rich with gold.
   suffix: Gold
   components:
     - type: OreVein
@@ -93,9 +87,7 @@
 
 - type: entity
   id: N14RockGreySilver
-  name: structures-n14-rock-ore-silver
   parent: N14RockGrey
-  description: An ore vein rich with silver.
   suffix: Silver
   components:
     - type: OreVein
@@ -116,9 +108,7 @@
 
 - type: entity
   id: N14RockGreySteel
-  name: structures-n14-rock-ore-steel
   parent: N14RockGrey
-  description: An ore vein rich with Steel.
   suffix: Steel
   components:
     - type: OreVein
@@ -139,9 +129,7 @@
 
 - type: entity
   id: N14RockGreyUranium
-  name: structures-n14-rock-ore-uranium
   parent: N14RockGrey
-  description: An ore vein rich with uranium.
   suffix: Uranium
   components:
     - type: OreVein
@@ -163,9 +151,7 @@
 - type: entity
   id: N14RockGreyMining
   parent: N14RockGrey
-  name: structures-n14-rock-ore
   suffix: higher ore yield .44
-  description: An asteroid.
   components:
   - type: OreVein
     oreChance: 0.44
@@ -186,9 +172,7 @@
 - type: entity
   id: SteelRock
   parent: N14RockGrey
-  name: structures-n14-rock-ore
   suffix: Low Ore Yield
-  description: A rocky asteroid.
   components:
   - type: IconSmooth
     key: walls
@@ -209,9 +193,7 @@
 
 - type: entity
   id: N14RockGreySalt
-  name: structures-n14-rock-ore-salt
   parent: N14RockGrey
-  description: An ore vein rich with salt.
   suffix: Salt
   components:
     - type: OreVein
@@ -233,9 +215,7 @@
 - type: entity
   id: N14RockMining
   parent: SteelRock
-  name: structures-n14-rock-ore
   suffix: higher ore yield
-  description: An asteroid.
   components:
   - type: OreVein
     oreChance: 0.33
@@ -246,7 +226,6 @@
 - type: entity
   id: N14WallRock
   parent: BaseWall
-  name: structures-n14-rock
   suffix: planetmap
   components:
     - type: Transform
@@ -290,9 +269,7 @@
 # Ore veins
 - type: entity
   id: N14WallRockCoal
-  name: structures-n14-rock-ore-coal
   parent: N14WallRock
-  description: An ore vein rich with coal.
   suffix: Coal
   components:
     - type: OreVein
@@ -313,9 +290,7 @@
 
 - type: entity
   id: N14WallRockGold
-  name: structures-n14-rock-ore-gold
   parent: N14WallRock
-  description: An ore vein rich with gold.
   suffix: Gold
   components:
     - type: OreVein
@@ -336,9 +311,7 @@
 
 - type: entity
   id: N14WallRockSilver
-  name: structures-n14-rock-ore-silver
   parent: N14WallRock
-  description: An ore vein rich with silver.
   suffix: Silver
   components:
     - type: OreVein
@@ -359,9 +332,7 @@
 
 - type: entity
   id: N14WallRockSteel
-  name: structures-n14-rock-ore-steel
   parent: N14WallRock
-  description: An ore vein rich with Steel.
   suffix: Steel
   components:
     - type: OreVein
@@ -382,9 +353,7 @@
 
 - type: entity
   id: N14WallRockUranium
-  name: structures-n14-rock-ore-uranium
   parent: N14WallRock
-  description: An ore vein rich with uranium.
   suffix: Uranium
   components:
     - type: OreVein
@@ -405,9 +374,7 @@
 
 - type: entity
   id: N14WallRockSalt
-  name: structures-n14-rock-ore-salt
   parent: N14WallRock
-  description: An ore vein rich with salt.
   suffix: Salt
   components:
     - type: OreVein
@@ -429,7 +396,6 @@
 # Basalt variants
 - type: entity
   id: N14WallRockBasalt
-  name: structures-n14-rock-basalt
   parent: N14WallRock
   components:
     - type: Icon
@@ -450,9 +416,7 @@
 
 - type: entity
   id: N14WallRockBasaltCoal
-  name: structures-n14-rock-ore-coal
   parent: N14WallRockBasalt
-  description: An ore vein rich with coal.
   suffix: Coal
   components:
     - type: OreVein
@@ -473,9 +437,7 @@
 
 - type: entity
   id: N14WallRockBasaltGold
-  name: structures-n14-rock-ore-gold
   parent: N14WallRockBasalt
-  description: An ore vein rich with gold.
   suffix: Gold
   components:
     - type: OreVein
@@ -496,9 +458,7 @@
 
 - type: entity
   id: N14WallRockBasaltSilver
-  name: structures-n14-rock-ore-silver
   parent: N14WallRockBasalt
-  description: An ore vein rich with silver.
   suffix: Silver
   components:
     - type: OreVein
@@ -519,9 +479,7 @@
 
 - type: entity
   id: N14WallRockBasaltSteel
-  name: structures-n14-rock-ore-steel
   parent: N14WallRockBasalt
-  description: An ore vein rich with Steel.
   suffix: Steel
   components:
     - type: OreVein
@@ -542,9 +500,7 @@
 
 - type: entity
   id: N14WallRockBasaltUranium
-  name: structures-n14-rock-ore-uranium
   parent: N14WallRockBasalt
-  description: An ore vein rich with uranium.
   suffix: Uranium
   components:
     - type: OreVein
@@ -565,9 +521,7 @@
 
 - type: entity
   id: N14WallRockBasaltSalt
-  name: structures-n14-rock-ore-salt
   parent: N14WallRockBasalt
-  description: An ore vein rich with salt.
   suffix: Salt
   components:
     - type: OreVein
@@ -589,7 +543,6 @@
 # Sand variants
 - type: entity
   id: N14WallRockSand
-  name: structures-n14-rock-ore-sandstone
   parent: N14WallRock
   components:
     - type: Icon
@@ -610,9 +563,7 @@
 
 - type: entity
   id: N14WallRockSandCoal
-  name: structures-n14-rock-ore-coal
   parent: N14WallRockSand
-  description: An ore vein rich with coal.
   suffix: Coal
   components:
     - type: OreVein
@@ -633,9 +584,7 @@
 
 - type: entity
   id: N14WallRockSandGold
-  name: structures-n14-rock-ore-gold
   parent: N14WallRockSand
-  description: An ore vein rich with gold.
   suffix: Gold
   components:
     - type: OreVein
@@ -656,9 +605,7 @@
 
 - type: entity
   id: N14WallRockSandSilver
-  name: structures-n14-rock-ore-sand
   parent: N14WallRockSand
-  description: An ore vein rich with silver.
   suffix: Silver
   components:
     - type: OreVein
@@ -679,9 +626,7 @@
 
 - type: entity
   id: N14WallRockSandSteel
-  name: structures-n14-rock-ore-steel
   parent: N14WallRockSand
-  description: An ore vein rich with Steel.
   suffix: Steel
   components:
     - type: OreVein
@@ -702,9 +647,7 @@
 
 - type: entity
   id: N14WallRockSandUranium
-  name: structures-n14-rock-ore-uranium
   parent: N14WallRockSand
-  description: An ore vein rich with uranium.
   suffix: Uranium
   components:
     - type: OreVein
@@ -725,9 +668,7 @@
 
 - type: entity
   id: N14WallRockSandSalt
-  name: structures-n14-rock-ore-salt
   parent: N14WallRockSand
-  description: An ore vein rich with salt.
   suffix: Salt
   components:
     - type: OreVein
@@ -749,7 +690,6 @@
 # Andesite variants
 - type: entity
   id: N14WallRockAndesite
-  name: structures-n14-rock-andesite
   parent: N14WallRock
   components:
     - type: Icon
@@ -770,9 +710,7 @@
 
 - type: entity
   id: N14WallRockAndesiteCoal
-  name: structures-n14-rock-ore-coal
   parent: N14WallRockAndesite
-  description: An ore vein rich with coal.
   suffix: Coal
   components:
     - type: OreVein
@@ -793,9 +731,7 @@
 
 - type: entity
   id: N14WallRockAndesiteGold
-  name: structures-n14-rock-ore-gold
   parent: N14WallRockAndesite
-  description: An ore vein rich with gold.
   suffix: Gold
   components:
     - type: OreVein
@@ -816,9 +752,7 @@
 
 - type: entity
   id: N14WallRockAndesiteSilver
-  name: structures-n14-rock-ore-salt
   parent: N14WallRockAndesite
-  description: An ore vein rich with silver.
   suffix: Silver
   components:
     - type: OreVein
@@ -839,9 +773,7 @@
 
 - type: entity
   id: N14WallRockAndesiteSteel
-  name: structures-n14-rock-ore-steel
   parent: N14WallRockAndesite
-  description: An ore vein rich with Steel.
   suffix: Steel
   components:
     - type: OreVein
@@ -862,9 +794,7 @@
 
 - type: entity
   id: N14WallRockAndesiteUranium
-  name: structures-n14-rock-ore-uranium
   parent: N14WallRockAndesite
-  description: An ore vein rich with uranium.
   suffix: Uranium
   components:
     - type: OreVein
@@ -885,9 +815,7 @@
 
 - type: entity
   id: N14WallRockAndesiteSalt
-  name: structures-n14-rock-ore-salt
   parent: N14WallRockAndesite
-  description: An ore vein rich with salt.
   suffix: Salt
   components:
     - type: OreVein

@@ -1,136 +1,244 @@
 # floors
-tiles-n14-carpet = carpet
-tiles-n14-carpet-blue = blue carpet
-tiles-n14-carpet-blue-fancy = fancy blue carpet
-tiles-n14-carpet-green = green carpet
-tiles-n14-carpet-green-fancy = fancy green carpet
-tiles-n14-carpet-red = red carpet
-tiles-n14-carpet-red-fancy = fancy red carpet
-tiles-n14-carpet-violet = violet carpet
-tiles-n14-concrete = concrete floor
-tiles-n14-concrete-brick = concrete brick
-tiles-n14-concrete-brick-horizontal = horizontal concrete brick
-tiles-n14-concrete-brick-vertical = vertical concrete brick
-tiles-n14-concrete-dark = dark concrete floor
-tiles-n14-concrete-grey = grey concrete floor
-tiles-n14-concrete-hexacrete = hexacrete floor
-tiles-n14-concrete-hexacrete-dark = dark hexacrete floor
-tiles-n14-concrete-industrial = industrial concrete floor
-tiles-n14-concrete-industrial-split = split industrial concrete floor
-tiles-n14-concrete-road = concrete road
-tiles-n14-concrete-tile = concrete tile
-tiles-n14-concrete-tile-small = small concrete tile
-tiles-n14-dirt = dirt
-tiles-n14-dirt-indoors = dirt indoors
-tiles-n14-metal-blue = metal floor blue
-tiles-n14-metal-blue-solid = metal floor solid blue
-tiles-n14-metal-green = metal floor green
-tiles-n14-metal-green-solid = metal floor green solid
-tiles-n14-metal-grey = metal floor grey
-tiles-n14-metal-grey-solid = metal floor grey solid
-tiles-n14-metal-grey-dark = metal floor grey dark
-tiles-n14-metal-grey-dark-solid = metal floor grey dark solid
-tiles-n14-metal-purple = metal floor purple
-tiles-n14-metal-purple-solid = metal floor purple solid
-tiles-n14-metal-red = metal floor red
-tiles-n14-metal-red-solid = metal floor red solid
-tiles-n14-metal-teal = metal floor teal
-tiles-n14-metal-teal-solid = metal floor teal solid
-tiles-n14-metal-white = metal floor white
-tiles-n14-metal-white-solid = metal floor white solid
-tiles-n14-metal-yellow = metal floor yellow
-tiles-n14-metal-yellow-solid = metal floor yellow solid
-tiles-n14-freezer = freezer
-tiles-n14-road = road
-tiles-n14-road-bottom = road bottom
-tiles-n14-road-corner1 = road corner one
-tiles-n14-road-corner2 = road corner two
-tiles-n14-road-corner3 = road corner three
-tiles-n14-road-corner4 = road corner four
-tiles-n14-road-inner-middle = road inner middle
-tiles-n14-road-inner-turn1 = road inner turn one
-tiles-n14-road-inner-turn2 = road inner turn two
-tiles-n14-road-inner-turn3 = road iner turn three
-tiles-n14-road-inner-turn4 = road inner turn four
-tiles-n14-road-left = road left
-tiles-n14-road-outer-corner1 = road outer corner one
-tiles-n14-road-outer-corner2 = road outer corner two
-tiles-n14-road-outer-corner3 = road outer corner three
-tiles-n14-road-outer-corner4 = road outer corner four
-tiles-n14-road-outer-middle = road outer middle
-tiles-n14-road-outer-turn-east = road outer turn east
-tiles-n14-road-outer-turn-north = road outer turn north
-tiles-n14-road-outer-turn-south = road outer turn south
-tiles-n14-road-outer-turn-west = road outer turn west
-tiles-n14-road-right = road right
-tiles-n14-road-top = road top
-tiles-n14-rubble = rubble
-tiles-n14-rubble-indoors = rubble indoors
-tiles-n14-tunnel = tunnel floor
-tiles-n14-tunnel-rusty = rusty tunnel floor
-tiles-n14-tunnel-wasteland = wasteland tunner floor
-tiles-n14-tile = tile floor
-tiles-n14-tile-black = black tile floor
-tiles-n14-tile-black-full = full black tile floor
-tiles-n14-tile-black-large = large black tile floor
-tiles-n14-tile-blue-long = long blue tile floor
-tiles-n14-tile-brown = brown tile floor
-tiles-n14-tile-cafe = cafe tile floor
-tiles-n14-tile-ceramic = ceramic tile floor
-tiles-n14-tile-ceramic-broken = broken ceramic tile floor
-tiles-n14-tile-check = checked tile floor
-tiles-n14-tile-fancy = fancy tile floor
-tiles-n14-tile-green = green tile floor
-tiles-n14-tile-green-full = full green tile floor
-tiles-n14-tile-grey = grey tile floor
-tiles-n14-tile-grey-large = large grey tile floor
-tiles-n14-tile-grey-long = long grey tile floor
-tiles-n14-tile-navy = navy tile floor
-tiles-n14-tile-navy-full = full navy tile floor
-tiles-n14-tile-navy-large = large navy tile floor
-tiles-n14-tile-ornate = ornate tile floor
-tiles-n14-tile-sierra = sierra tile floor
-tiles-n14-tile-sierra-broken = broken sierra tile floor
-tiles-n14-tile-white = white tile floor
-tiles-n14-tile-white-large = large white tile floor
-tiles-n14-tile-white-full = full white tile floor
-tiles-n14-tiny-corner-horizontal1 = tiny corner horizontal one
-tiles-n14-tiny-corner-horizontal2 = tiny corner horizontal two
-tiles-n14-tiny-corner-horizontal3 = tiny corner horizontal three
-tiles-n14-tiny-corner-horizontal4 = tiny corner horizontal four
-tiles-n14-tiny-corner-vertical1 = tiny corner vertical one
-tiles-n14-tiny-corner-vertical2 = tiny corner vertical two
-tiles-n14-tiny-corner-vertical3 = tiny corner vertical three
-tiles-n14-tiny-corner-vertical4 = tiny corner vertical four
-tiles-n14-wasteland = wasteland
-tiles-n14-wood-house = house wood floor
-tile-n14-wood-maple = maple wood floor
-tiles-n14-industrial = industrial floor
-tiles-n14-metal-tile = metal tile floor
-tiles-n14-metal-grate = metal grate floor
-tiles-n14-metal-solid = metal solid floor
-tiles-n14-wood = wood floor
-tiles-n14-wood-broken = broken wood floor
-tiles-n14-wood-broken-burnt = burnt broken wood floor
-tiles-n14-wood-damaged = damaged wood floor
-tiles-n14-wood-fancy = fancy wood floor
-tiles-n14-wood-fancy-damaged = damaged family wood floor
-tiles-n14-wood-maple = maple floor
-tiles-n14-wood-mosaic = mosaic wood floor
-tiles-n14-wood-mosaic-damaged = damaged mosaic wood floor
-tiles-n14-wood-oak = oak floor
-tiles-n14-wood-oak-broken = broken oak floor
-tiles-n14-wood-wide = wide wood floor
-tiles-n14-wood-wide-damaged = damaged wide wood floor
+ent-FloorTileItemCarpetRed = carpet
+
+tile-FloorMS13CarpetBlue = blue carpet
+tile-FloorMS13CarpetFancyBlue = fancy blue carpet
+
+tile-FloorMS13CarpetGreen= green carpet
+tiles-FloorMS13CarpetFancyGreen = fancy green carpet
+
+tile-FloorCarpetRed = red carpet
+tile-FloorMS13CarpetRed = red carpet
+
+tile-FloorMS13CarpetFancyRed = fancy red carpet
+
+tile-FloorMS13CarpetViolet = violet carpet
+
+tile-N14FloorConcrete = concrete floor
+tile-FloorMS13Concrete = concrete floor
+
+tile-FloorMS13BrickConcrete = concrete brick
+tile-FloorMS13BrickHorizontal = horizontal concrete brick
+tile-FloorMS13BrickVertical = vertical concrete brick
+
+tile-N14FloorConcreteDark = dark concrete floor
+tile-N14FloorConcreteGreyBay= grey concrete floor
+
+tile-N14FloorConcreteHexacrete = hexacrete floor
+tile-N14FloorConcreteHexacreteDark= dark hexacrete floor
+
+tile-FloorMS13ConcreteIndustrial = industrial concrete floor
+tile-FloorMS13ConcreteIndustrialAlt = industrial concrete floor
+
+tile-FloorMS13ConcreteIndustrialSplit = split industrial concrete floor
+
+tiles-FloorMS13BrickConcrete = concrete road
+
+tiles-N14FloorConcreteTileGoon= concrete tile
+tile-FloorMS13TileConcreteSmall = small concrete tile
+
+tile-FloorDirtNew = dirt
+tile-FloorDirtIndoors= dirt indoors
+
+ent-FloorTileItemMetalBlue = metal floor blue
+tile-FloorMetalBlue = metal floor blue
+
+ent-FloorTileItemMetalBlueSolid = metal floor solid blue
+tile-FloorMetalBlueSolid = metal floor solid blue
+
+ent-FloorTileItemMetalGreen = metal floor green
+tile-FloorMetalGreen = metal floor green
+
+ent-FloorTileItemMetalGreenSolid = metal floor green solid
+tile-FloorMetalGreenSolid = metal floor green solid
+
+ent-FloorTileItemMetalGrey = metal floor grey
+tile-FloorMetalGrey = metal floor grey
+
+ent-FloorTileItemMetalGreySolid = metal floor grey solid
+tile-FloorMetalGreySolid = metal floor grey solid
+
+ent-FloorTileItemMetalGreyDark = metal floor grey dark
+tile-FloorMetalGreyDark = metal floor grey dark
+
+ent-FloorTileItemMetalGreyDarkSolid = metal floor grey dark solid
+tile-FloorMetalGreyDarkSolid = metal floor grey dark solid
+
+ent-FloorTileItemMetalPurple = metal floor purple
+tile-FloorMetalPurple = metal floor purple
+
+ent-FloorTileItemMetalPurpleSolid = metal floor purple solid
+tile-FloorMetalPurpleSolid = metal floor purple solid
+
+ent-FloorTileItemMetalRed = metal floor red
+tile-FloorMetalRed = metal floor red
+
+ent-FloorTileItemMetalRedSolid = metal floor red solid
+tile-FloorMetalRedSolid = metal floor red solid
+
+ent-FloorTileItemMetalTeal = metal floor teal
+tile-FloorMetalTeal = metal floor teal
+
+ent-FloorTileItemMetalTealSolid = metal floor teal solid
+tile-FloorMetalTealSolid = FloorMetalTealSolid
+
+ent-FloorTileItemMetalWhite = metal floor white
+tile-FloorMetalWhite = metal floor white
+
+ent-FloorTileItemMetalWhiteSolid = metal floor white solid
+tile-FloorMetalWhiteSolid = metal floor white solid
+
+ent-FloorTileItemMetalYellow = metal floor yellow
+tile-FloorMetalYellow = metal floor yellow
+
+ent-FloorTileItemMetalYellowSolid = metal floor yellow solid
+tile-FloorMetalYellowSolid = metal floor yellow solid
+
+ent-FloorTileItemMetalFreezer = freezer
+tile-FloorMetalFreezer = freezer
+
+tile-N14FloorRoadBottom = road bottom
+tile-N14FloorRoadCorner1 = road corner one
+tile-N14FloorRoadCorner2= road corner two
+tile-N14FloorRoadCorner3= road corner three
+tile-N14FloorRoadCorner4= road corner four
+tile-N14FloorRoadInnerMiddle = road inner middle
+tile-N14FloorRoadInnerTurn1 = road inner turn one
+tile-N14FloorRoadInnerTurn2 = road inner turn two
+tile-N14FloorRoadInnerTurn3 = road iner turn three
+tile-N14FloorRoadInnerTurn4 = road inner turn four
+tile-N14FloorRoadLeft = road left
+tile-N14FloorRoadOuterCorner1 = road outer corner one
+tile-N14FloorRoadOuterCorner2 = road outer corner two
+tile-N14FloorRoadOuterCorner3 = road outer corner three
+tile-N14FloorRoadOuterCorner4 = road outer corner four
+tile-N14FloorRoadOuterMiddlePath = road outer middle
+tile-N14FloorRoadOuterTurnEast = road outer turn east
+tile-N14FloorRoadOuterTurnNorth = road outer turn north
+tile-N14FloorRoadOuterTurnSouth = road outer turn south
+tile-N14FloorRoadOuterTurnWest = road outer turn west
+tile-N14FloorRoadRight = road right
+tile-N14FloorRoadTop = road top
+tile-N14FloorRoadTinyCornerHorizontal1= road tiny corner horizontal one
+tile-N14FloorRoadTinyCornerHorizontal2 = road tiny corner horizontal two
+tile-N14FloorRoadTinyCornerHorizontal3 = road tiny corner horizontal three
+tile-N14FloorRoadTinyCornerHorizontal4 = road tiny corner horizontal four
+tile-N14FloorRoadTinyCornerVertical1 = road tiny corner vertical one
+tile-N14FloorRoadTinyCornerVertical2 = road tiny corner vertical two
+tile-N14FloorRoadTinyCornerVertical3 = road tiny corner vertical three
+tile-N14FloorRoadTinyCornerVertical4 = road tiny corner vertical four
+
+tile-FloorRubble = rubble
+tile-FloorRubbleIndoors = rubble indoors
+
+tile-FloorMetalTunnel = tunnel floor
+tile-FloorMetalTunnelRusty = rusty tunnel floor
+tile-FloorMetalTunnelWasteland = wasteland tunner floor
+
+tile-FloorMS13TileBlack = black tile floor
+tile-FloorMS13TileBlackFull= full black tile floor
+tile-FloorMS13TileBlackLarge = large black tile floor
+
+tile-FloorMS13TileLongBlue = long blue tile floor
+
+tile-FloorMS13TileBrown = brown tile floor
+
+tile-FloorMS13TileCafe= cafe tile floor
+
+tile-FloorMS13TileCeramic = ceramic tile floor
+tile-FloorMS13TileCeramicBroken = broken ceramic tile floor
+
+tile-FloorMS13TileCheck = checked tile floor
+
+tile-FloorMS13TileFancy = fancy tile floor
+
+tile-FloorMS13TileGreen = green tile floor
+tile-FloorMS13TileGreenFull = full green tile floor
+
+tile-FloorMS13TileGrey = grey tile floor
+tile-FloorMS13TileGreyLarge = large grey tile floor
+tile-FloorMS13TileGreyLong = long grey tile floor
+
+tile-FloorMS13TileNavy = navy tile floor
+tile-FloorMS13TileNavyFull = full navy tile floor
+tile-FloorMS13TileNavyLarge = large navy tile floor
+
+tile-FloorMS13TileOrnate = ornate tile floor
+
+tile-FloorMS13TileSierra = sierra tile floor
+tile-FloorMS13TileSierraBroken = broken sierra tile floor
+
+tile-FloorMS13TileWhiteLarge = large white tile floor
+tile-FloorMS13TileWhiteFull = full white tile floor
+
+tile-N14Plating = wasteland
+
+ent-FloorTileItemWoodHouse = house wood floor
+tile-FloorWoodHouse = house wood floor
+
+ent-FloorTileItemWoodMaple = maple wood floor
+tile-FloorWoodMaple = maple wood floor
+
+ent-FloorTileItemMetalIndustrial = industrial floor
+tile-FloorMS13MetalIndustrial = industrial floor
+
+ent-FloorTileItemMetalMS13 = metal tile floor
+tile-FloorMS13MetalTile = metal tile floor
+
+ent-FloorTileItemMetalGrate = metal grate floor
+tile-FloorMS13MetalGrate = metal grate floor
+
+ent-FloorTileItemMetalSolid = metal solid floor
+tile-FloorMS13MetalSolid = metal solid floor
+
+tile-FloorMS13WoodCommon= wood floor
+
+tile-FloorWoodHouseBroken = broken wood floor
+
+tile-FloorWoodBurntBroken = burnt broken wood floor
+
+tile-FloorMS13WoodCommonDamaged = damaged wood floor
+
+tile-FloorMS13WoodFancy = fancy wood floor
+
+tile-FloorMS13WoodFancyDamaged = damaged fancy wood floor
+
+tile-FloorMS13WoodMosaic= mosaic wood floor
+
+tile-FloorMS13WoodMosaicDamaged = damaged mosaic wood floor
+
+ent-FloorTileItemWoodOak = oak floor
+tile-FloorWoodOak = oak floor
+tile-FloorWoodOakBroken = broken oak floor
+
+tile-FloorMS13WoodWide = wide wood floor
+
+tile-FloorMS13WoodWideDamaged= damaged wide wood floor
 # water
-tiles-n14-water = water
-tiles-n14-water-deep = deep water
-tiles-n14-water-river = river water
-tiles-n14-water-shallow = shallow water
-tiles-n14-water-sewer = sewer water
-tiles-n14-water-sewer-deep = deep sewer water
-tiles-n14-water-sewer-shallow = shallow sewer water
-tiles-n14-water-salt = salt water
-tiles-n14-water-salt-deep = deep salt water
-tiles-n14-water-salt-shallow = shallow salt water
-tiles-n14-water-medium = medium water
+ent-N14FloorWaterDirtyEntity = water
+    .desc = A real thirst quencher.
+ent-N14FloorWaterMedium = water
+    .desc = Unclean water, likely highly unclean.
+
+ent-N14FloorWaterDeep = deep water
+
+tile-WaterRiver = river water
+
+ent-N14FloorWaterShallow = shallow water
+    .desc = Unclean water, likely highly unclean
+
+ent-N14FloorWaterSewerMedium = sewer water
+    .desc = Years of built up feces and urine and other fluids.
+ent-N14FloorWaterSewerDeep = deep sewer water
+    .desc = Years of built up feces and urine and other fluids.
+ent-N14FloorWaterSewerShallow = shallow sewer water
+    .desc = Years of built up feces and urine and other fluids.
+
+ent-N14FloorWaterSaltMedium = salt water
+    .desc =  Unclean water, tainted with sal
+ent-N14FloorWaterSaltDeep = deep salt water
+    .desc = Endless Abyss
+tile-N14FloorWaterSaltShallow = shallow salt water
+    .desc = Unclean water, tainted with salt
+
+tile-WaterMedium = medium water

@@ -1,9 +1,7 @@
-# Aurora's Song | replaced names with locale strings
+# Aurora's Song | replaced names and descriptions with locale strings
 - type: entity
   parent: BaseTree
   id: N14FloraDesertCactus
-  name: flora-n14-desert-cactus
-  description: Some kind of wasteland flora.
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Misc/floradesert.rsi
@@ -22,8 +20,6 @@
 - type: entity
   parent: N14FloraDesertCactus
   id: N14FloraDesertTree1
-  name: flora-n14-desert-tree-yucca
-  description: A Joshua Tree.
   components:
   - type: Sprite
     state: joshua_1
@@ -40,7 +36,6 @@
 - type: entity
   parent: N14FloraDesertTree1
   id: N14FloraDesertTree2
-  name: flora-n14-desert-tree-yucca
   components:
   - type: Sprite
     state: joshua_2
@@ -48,7 +43,6 @@
 - type: entity
   parent: N14FloraDesertTree1
   id: N14FloraDesertTree3
-  name: flora-n14-desert-tree-yucca
   components:
   - type: Sprite
     state: joshua_3
@@ -56,7 +50,6 @@
 - type: entity
   parent: N14FloraDesertTree1
   id: N14FloraDesertTree4
-  name: flora-n14-desert-tree-yucca
   components:
   - type: Sprite
     state: joshua_4
@@ -64,8 +57,6 @@
 - type: entity
   parent: N14FloraDesertCactus
   id: N14FloraTreeBald
-  name: flora-n14-desert-tree-bald
-  description: "What? Even trees go bald."
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Misc/trees-ms.rsi
@@ -83,8 +74,6 @@
 - type: entity
   parent: N14FloraTreeBald
   id: N14FloraTreePine
-  name: flora-n14-desert-tree-pine
-  description: It has an almost overwhelming scent.
   components:
   - type: Sprite
     layers:
@@ -99,8 +88,6 @@
 - type: entity
   parent: N14FloraTreeBald
   id: N14FloraTreeDead1
-  name: flora-n14-desert-tree-dead
-  description: A dead memory of a tree.
   components:
   - type: Sprite
     layers:

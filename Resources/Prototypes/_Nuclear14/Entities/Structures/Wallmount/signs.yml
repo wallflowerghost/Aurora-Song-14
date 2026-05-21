@@ -1,10 +1,8 @@
-# Aurora's Song | replaced names with locale strings
+# Aurora's Song | replaced names and descriptions with locale strings
 # 32x32
 - type: entity
   parent: N14SignBase
   id: N14SignBar
-  name: structures-n14-sign-bar
-  description: Bar! Get drunk here.
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Wallmounts/signs_32x32.rsi
@@ -13,8 +11,6 @@
 - type: entity
   parent: N14SignBar
   id: N14SignClinic
-  name: structures-n14-sign-clinic
-  description: A clinic sign. Hopefully they have meds.
   components:
   - type: Sprite
     state: clinic
@@ -26,8 +22,6 @@
 - type: entity
   parent: N14SignBar
   id: N14SignOpen1
-  name: structures-n14-sign-open
-  description: Open for business. Maybe.
   components:
   - type: Sprite
     state: open
@@ -39,7 +33,6 @@
 - type: entity
   parent: N14SignOpen1
   id: N14SignOpen2
-  name: structures-n14-sign-open
   components:
   - type: Sprite
     state: open_bar
@@ -47,7 +40,6 @@
 - type: entity
   parent: N14SignOpen1
   id: N14SignOpenOn1
-  name: structures-n14-sign-open
   components:
   - type: Sprite
     state: open_on
@@ -55,7 +47,6 @@
 - type: entity
   parent: N14SignOpen1
   id: N14SignOpenOn2
-  name: structures-n14-sign-open
   components:
   - type: Sprite
     state: open_bar_on
@@ -63,8 +54,6 @@
 - type: entity
   parent: N14SignBase
   id: N14SignForRent
-  name: structures-n14-sign-rent
-  description: A sign advertising a place for rent.
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Wallmounts/signs_32x32.rsi
@@ -73,8 +62,6 @@
 - type: entity
   parent: N14SignBase
   id: N14SignNotice
-  name: structures-n14-sign-notice
-  description: NOTICE!
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Wallmounts/walldecor.rsi
@@ -83,7 +70,6 @@
 - type: entity
   parent: N14SignNotice
   id: N14SignDanger
-  name: structures-n14-sign-danger
   description: Danger.
   components:
   - type: Sprite
@@ -93,8 +79,6 @@
 - type: entity
   parent: N14SignBar
   id: N14SignBazaarOn
-  name: structures-n14-sign-bazaar
-  description: A sign for a bazaar. How bizarre.
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Wallmounts/signs_64x32.rsi
@@ -107,8 +91,6 @@
 - type: entity
   parent: N14SignBazaarOn
   id: N14SignHotel
-  name: structures-n14-sign-hotel
-  description: A sign for a hotel. Get a room!
   components:
   - type: Sprite
     state: hotel
@@ -116,8 +98,6 @@
 - type: entity
   parent: N14SignBazaarOn
   id: N14SignPrivateProperty
-  name: structures-n14-sign-private
-  description: A private property sign.
   components:
   - type: Sprite
     state: private
@@ -125,8 +105,6 @@
 - type: entity
   parent: N14SignBazaarOn
   id: N14SignOpenBig
-  name: structures-n14-sign-open
-  description: We are open sign. I hope so.
   components:
   - type: Sprite
     state: we_open_open
@@ -138,8 +116,6 @@
 - type: entity
   parent: N14SignBazaarOn
   id: N14SignWorkersOnly
-  name: structures-n14-sign-workers
-  description: No tresspassing!
   components:
   - type: Sprite
     state: workers

@@ -1,4 +1,4 @@
-# Aurora's Song | replaced names with locale strings
+# Aurora's Song | replaced names and descriptions with locale strings
 # For all other walls see SS14
 # Make a base for wood, metal walls (breaks to girder), concrete (breaks to nothing / rubble), rebarconcrete (breaks to rebar girder) etc for destruction
 
@@ -6,7 +6,6 @@
 - type: entity
   parent: BaseWall
   id: N14WallStore
-  name: structures-n14-wall-store
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Walls/nc14/store.rsi
@@ -27,7 +26,6 @@
 - type: entity
   parent: N14WallStore
   id: N14WallSuperstore
-  name: structures-n14-wall-store
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Walls/nc14/superstore.rsi
@@ -37,7 +35,6 @@
 - type: entity
   parent: N14WallStore
   id: N14WallBrick
-  name: structures-n14-wall-brick
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Walls/nc14/brick.rsi
@@ -50,7 +47,6 @@
 - type: entity
   parent: N14WallStore
   id: N14WallConcreteLight
-  name: structures-n14-wall-concrete
   suffix: light
   components:
   - type: Sprite
@@ -61,7 +57,6 @@
 - type: entity
   parent: N14WallConcreteLight
   id: N14WallConcreteDark
-  name: structures-n14-wall-concrete-dark
   suffix: dark
   components:
   - type: Sprite
@@ -73,8 +68,6 @@
 - type: entity
   id: N14WallWoodFrame
   parent: Barricade
-  name: structures-n14-wall-wooden-frame
-  description: A frame for building into a wall.
   components:
   - type: Construction
     graph: N14WoodWall
@@ -102,7 +95,6 @@
 - type: entity
   parent: BaseWall
   id: N14WallWoodWhite
-  name: structures-n14-wall-wooden
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Walls/nc14/woodwhite.rsi
@@ -134,8 +126,6 @@
 - type: entity
   parent: BaseStructureDynamic
   id: N14WallWoodWhiteFrame
-  name: structures-n14-wall-frame
-  description: Part of a wooden wall supporting the structure.
   components:
   - type: Transform
     anchored: true
@@ -179,7 +169,6 @@
 - type: entity
   parent: N14WallWoodWhite
   id: N14WallWoodDark
-  name: structures-n14-wall-wooden-dark
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Walls/nc14/wooddark.rsi
@@ -189,7 +178,6 @@
 - type: entity
   parent: N14WallWoodWhiteFrame
   id: N14WallWoodDarkFrame
-  name: structures-n14-wall-wooden-dark-frame
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Walls/nc14/wooddark.rsi
@@ -198,8 +186,6 @@
 - type: entity
   parent: N14WallWoodWhite
   id: N14WallWoodLog
-  name: structures-n14-wall-log
-  description: A wall made out of wooden logs.
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Walls/nc14/woodlognew.rsi
@@ -216,8 +202,6 @@
 - type: entity
   parent: BaseWall
   id: N14WallTent
-  name: structures-n14-wall-tent
-  description: A tent made from cloth. Keeps the weather out at least.
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Walls/nc14/tent.rsi
@@ -243,7 +227,6 @@
 
 - type: entity
   id: N14BlastDoorExteriorIndestructible
-  name: structures-n14-wall-blast
   parent: BlastDoor
   suffix: Indestructible, Closed
   components:
@@ -258,7 +241,6 @@
 
 - type: entity
   id: BlastDoorExteriorIndestructibleOpen
-  name: structures-n14-wall-blast
   parent: BlastDoorOpen
   suffix: Indestructible, Open
   components:

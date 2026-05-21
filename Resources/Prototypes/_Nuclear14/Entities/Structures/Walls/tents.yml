@@ -1,9 +1,7 @@
-# Aurora's Song | replaced names with locale strings
+# Aurora's Song | replaced names and descriptions with locale strings
 - type: entity
   parent: BaseStructure
   id: N14TentLeatherWall
-  name: structures-n14-tent-leather
-  description: A tent made out of leather.
   components:
   - type: Sprite
     drawdepth: Walls
@@ -46,7 +44,6 @@
 - type: entity
   parent: N14TentLeatherWall
   id: N14TentLeatherCorner
-  name: structures-n14-tent-leather
   suffix: corner
   components:
   - type: Sprite
@@ -55,7 +52,6 @@
 - type: entity
   parent: N14TentLeatherWall
   id: N14TentClothWall
-  name: structures-n14-tent-cloth
   description: A tent made out of cloth.
   components:
   - type: Sprite
@@ -73,7 +69,6 @@
 - type: entity
   parent: N14TentClothWall
   id: N14TentClothCorner
-  name: structures-n14-tent-cloth
   suffix: corner
   components:
   - type: Sprite

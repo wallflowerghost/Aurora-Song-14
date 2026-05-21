@@ -1,9 +1,8 @@
-#Aurora's Song | replaced names with locale strings
+#Aurora's Song | replaced names and descriptions with locale strings.
+#Aurora's Song | Rewrote description to make behavior clearer.
 - type: entity
   id: N14Torch
-  name: structures-n14-torch
   suffix: floor
-  description: A torch for lighting an area, add your own fire. #Aurora's Song | Rewrote description to make behavior clearer.
   placement:
     mode: SnapgridCenter
   components:
@@ -64,7 +63,6 @@
 - type: entity
   parent: N14Torch
   id: N14TorchWall
-  name: structures-n14-torch-wall
   suffix: wall
   components:
   - type: Sprite

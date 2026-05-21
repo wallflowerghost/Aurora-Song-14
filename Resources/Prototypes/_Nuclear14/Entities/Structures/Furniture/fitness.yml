@@ -1,9 +1,7 @@
-# Aurora's Song | replaced names with locale strings
+# Aurora's Song | replaced names and descriptions with locale strings
 - type: entity
   parent: SeatBase
   id: N14FitnessWeightsBench1
-  name: furniture-n14-fitness-weight-bench
-  description: A bench for pumping iron.
   components:
   - type: Transform
     anchored: true
@@ -18,7 +16,6 @@
 - type: entity
   parent: N14FitnessWeightsBench1
   id: N14FitnessWeightLifter
-  name: furniture-n14-fitness-weight-lifter
   components:
   - type: Sprite
     state: fitnesslifter
@@ -39,8 +36,6 @@
 - type: entity
   id: N14FitnessPunchingBag
   parent: BaseStructure
-  name: furniture-n14-fitness-punching-bag
-  description: A punching bag. Let's get big!
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Furniture/np13_misc.rsi

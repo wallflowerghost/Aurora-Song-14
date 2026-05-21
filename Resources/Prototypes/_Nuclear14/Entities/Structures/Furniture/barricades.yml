@@ -1,9 +1,7 @@
-# Aurora's Song | replaced names with locale strings
+# Aurora's Song | replaced names and descriptions with locale strings
 - type: entity
   id: N14BarricadeSandbagSingle
   parent: BaseStructure
-  name: furniture-n14-barricade-sandbags
-  description: A sandbag fortification.
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Furniture/barricades.rsi
@@ -39,8 +37,6 @@
 - type: entity
   id: N14BarricadeTanktrap
   parent: N14BarricadeSandbagSingle
-  name: furniture-n14-barricade-tank-trap
-  description: A metal fabricated spike for blocking vehicles.
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Furniture/barricades.rsi
@@ -76,8 +72,6 @@
 - type: entity
   id: N14BarricadeTanktrapRusty
   parent: N14BarricadeTanktrap
-  name: furniture-n14-barricade-tank-trap
-  description: A rusty metal fabricated spike for blocking vehicles.
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Furniture/barricades.rsi
@@ -87,8 +81,6 @@
 - type: entity
   parent: BaseStructure
   id: N14BarricadeRazorwire
-  name: furniture-n14-barricade-razorwire
-  description: A razorwire fortification.
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Furniture/barricades.rsi
@@ -151,8 +143,6 @@
 - type: entity
   parent: N14BarricadeSandbagSingle
   id: N14BarricadeMetal
-  name: furniture-n14-barricade-metal
-  description: A metal fortification.
   suffix: black
   components:
   - type: Sprite
@@ -165,7 +155,6 @@
 - type: entity
   parent: N14BarricadeMetal
   id: N14BarricadeMetalGreen
-  name: furniture-n14-barricade-metal-green
   suffix: green
   components:
   - type: Sprite

@@ -1,9 +1,7 @@
-# Aurora's Song | replaced names with locale strings
+# Aurora's Song | replaced names and descriptions with locale strings
 - type: entity
   id: N14CarpetSingleBase
-  name: furniture-n14-carpet
   parent: BaseStructure
-  description: Better than the floor.
   abstract: true
   components:
   - type: Sprite
@@ -26,7 +24,6 @@
 - type: entity
   parent: N14CarpetSingleBase
   id: N14RugMat
-  name: furniture-n14-rug-mat
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Furniture/rugs.rsi
@@ -35,7 +32,6 @@
 - type: entity
   parent: N14RugMat
   id: N14RugMatWelcome
-  name: furniture-n14-rug-mat
   suffix: welcome
   components:
   - type: Sprite
@@ -44,7 +40,6 @@
 - type: entity
   parent: N14RugMat
   id: N14RugMatVulgar1
-  name: furniture-n14-rug-mat
   suffix: get f
   description: A charming floor mat.
   components:
@@ -54,7 +49,6 @@
 - type: entity
   parent: N14RugMatVulgar1
   id: N14RugMatVulgar2
-  name: furniture-n14-rug-mat
   suffix: f off
   components:
   - type: Sprite
@@ -63,7 +57,6 @@
 - type: entity
   parent: N14RugMatVulgar1
   id: N14RugMatTown
-  name: furniture-n14-rug-mat
   suffix: s town
   components:
   - type: Sprite
@@ -72,7 +65,6 @@
 - type: entity
   parent: N14RugMatVulgar1
   id: N14RugMatNCR
-  name: furniture-n14-rug-mat
   suffix: ncr sucks
   components:
   - type: Sprite
@@ -81,7 +73,6 @@
 - type: entity
   parent: N14RugMatVulgar1
   id: N14RugMatBOS
-  name: furniture-n14-rug-mat
   suffix: bos sucks
   components:
   - type: Sprite
@@ -92,7 +83,6 @@
 - type: entity
   parent: N14RugMat
   id: N14RugMatRubberSingle
-  name: furniture-n14-rug-mat-rubber
   description: A rubber protective floor mat.
   components:
   - type: Sprite
@@ -101,7 +91,6 @@
 - type: entity
   parent: N14RugMatRubberSingle
   id: N14RugMatRubber1
-  name: furniture-n14-rug-mat-rubber
   components:
   - type: Sprite
     state: rubber_1
@@ -109,7 +98,6 @@
 - type: entity
   parent: N14RugMatRubberSingle
   id: N14RugMatRubber2
-  name: furniture-n14-rug-mat-rubber
   components:
   - type: Sprite
     state: rubber_2
@@ -117,7 +105,6 @@
 - type: entity
   parent: N14RugMatRubberSingle
   id: N14RugMatRubber3
-  name: furniture-n14-rug-mat-rubber
   components:
   - type: Sprite
     state: rubber_3
@@ -126,7 +113,6 @@
 - type: entity
   parent: N14CarpetSingleBase
   id: N14RugBlue
-  name: furniture-n14-carpet-blue
   description: A modern looking blue rug.
   components:
   - type: Sprite
@@ -136,7 +122,6 @@
 - type: entity
   parent: N14RugBlue
   id: N14RugBlueShag
-  name: furniture-n14-carpet-blue-shag
   suffix: shag
   components:
   - type: Sprite
@@ -146,8 +131,6 @@
 - type: entity
   parent: N14RugBlue
   id: N14RugBrownFancy
-  name: furniture-n14-carpet-brown
-  description: A fancy looking rug.
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Furniture/rugs64x64.rsi
@@ -156,8 +139,6 @@
 - type: entity
   parent: N14RugBlue
   id: N14RugRed
-  name: furniture-n14-carpet-red
-  description: A patterned red rug.
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Furniture/rugs64x64.rsi
@@ -166,8 +147,6 @@
 - type: entity
   parent: N14RugBlue
   id: N14RugYellow
-  name: furniture-n14-carpet-yellow
-  description: A patterned yellow rug.
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Furniture/rugs64x64.rsi
@@ -176,8 +155,6 @@
 - type: entity
   parent: N14RugBlue
   id: N14RugMatRubberLarge
-  name: furniture-n14-rug-mat-rubber
-  description: A large rubber mat.
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Furniture/rugs64x64.rsi

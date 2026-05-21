@@ -1,11 +1,9 @@
-#Aurora's Song | Replaced names with locale strings
+#Aurora's Song | Replaced names and descriptions with locale strings in structures.yml
 # Barrels
 # Base
 - type: entity
   parent: BaseStructureDynamic
   id: N14BaseBarrel
-  name: structures-n14-storage-barrel
-  description: This barrel looks like it could contain something.
   categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
@@ -59,7 +57,6 @@
 - type: entity
   parent: N14BaseBarrel
   id: N14BaseBarrelOpen
-  name: structures-n14-storage-barrel-open
   suffix: open
   categories: [ HideSpawnMenu ]
   components:
@@ -75,8 +72,6 @@
 - type: entity
   parent: N14BaseBarrel
   id: N14BlackBarrel
-  name: structures-n14-storage-barrel-black
-  description: A worn out black barrel. The label is torn off.
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Storage/barrels.rsi
@@ -85,8 +80,6 @@
 - type: entity
   parent: N14BaseBarrel
   id: N14BlueBarrel
-  name: structures-n14-storage-barrel-blue
-  description: A blue barrel with a warning sign of. Maybe it contains water?
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Storage/barrels.rsi
@@ -95,8 +88,6 @@
 - type: entity
   parent: N14BaseBarrel
   id: N14RedBarrel
-  name: structures-n14-storage-barrel-red
-  description: A red barrel with an explosive warning sign on. Better be careful.
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Storage/barrels.rsi
@@ -119,8 +110,6 @@
 - type: entity
   parent: N14BaseBarrel
   id: N14YellowBarrel
-  name: structures-n14-storage-barrel-yellow
-  description: A yellow barrel with a radiation warning sign on. Better be careful.
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Storage/barrels.rsi
@@ -134,8 +123,6 @@
   parent: N14BaseBarrelOpen
   id: N14BlackBarrelOpen
   suffix: open
-  name: structures-n14-storage-barrel-black
-  description: A worn out black barrel. The label is torn off. The lid is off and you can see inside.
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Storage/barrels.rsi
@@ -145,8 +132,6 @@
   parent: N14BaseBarrelOpen
   id: N14BlueBarrelOpen
   suffix: open
-  name: structures-n14-storage-barrel-blue
-  description: A blue barrel with a warning sign of. The lid is off and you can see inside.
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Storage/barrels.rsi
@@ -156,8 +141,6 @@
   parent: N14BaseBarrelOpen
   id: N14RedBarrelOpen
   suffix: open
-  name: structures-n14-storage-barrel-red
-  description: A red barrel with an explosive warning sign on. The lid is off and you can see inside.
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Storage/barrels.rsi
@@ -167,8 +150,6 @@
   parent: N14BaseBarrelOpen
   id: N14YellowBarrelOpen
   suffix: open
-  name: structures-n14-storage-barrel-yellow
-  description: A yellow barrel with a radiation warning sign on. The lid is off and you can see inside but it still makes you twitch.
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Storage/barrels.rsi
@@ -181,9 +162,7 @@
 - type: entity
   parent: N14BlackBarrelOpen
   id: N14BlackBarrelFull
-  name: structures-n14-storage-barrel-black
   suffix: full
-  description: A worn out black barrel. This one looks full of some dark liquid.
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Storage/barrels.rsi
@@ -193,9 +172,7 @@
 - type: entity
   parent: N14RedBarrelOpen
   id: N14RedBarrelFull
-  name: structures-n14-storage-barrel-red
   suffix: full
-  description: A red barrel with an explosive warning sign on. It has a golden liquid inside.
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Storage/barrels.rsi
@@ -218,9 +195,7 @@
 - type: entity
   parent: N14YellowBarrelOpen
   id: N14YellowBarrelFull
-  name: structures-n14-storage-barrel-yellow
   suffix: full
-  description: A yellow barrel with a radiation warning sign on. You can see the glowing goo bubble.
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Storage/barrels.rsi
@@ -253,8 +228,6 @@
 - type: entity
   parent: BaseStructureDynamic
   id: N14BurningBarrel
-  name: structures-n14-storage-barrel-burnt
-  description: This barrel looks like it once contained a fire.
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Storage/burningbarrel.rsi
@@ -277,8 +250,6 @@
 - type: entity
   parent: N14BurningBarrel
   id: N14BurningBarrelLit
-  name: structures-n14-storage-barrel-burning
-  description: This barrel is smoldering. Toasty
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Storage/burningbarrel.rsi

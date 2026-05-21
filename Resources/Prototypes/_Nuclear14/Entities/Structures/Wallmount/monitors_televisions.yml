@@ -1,9 +1,7 @@
-# Aurora's Song | replaced names with locale strings
+# Aurora's Song | replaced name and description with locale strings
 - type: entity
   parent: BaseComputer
   id: N14ComputerVDU
-  name: monitors-n14-VDU
-  description: A wall mounted video display unit.
   components:
   - type: Sprite
     drawdepth: Overdoors

@@ -1,10 +1,8 @@
-# Aurora's Song | replaced names with locale files
+# Aurora's Song | replaced names and descriptions with locale files
 - type: entity
   parent: BaseStructure
   id: N14WindowBase # use for single tile / standalone windows & broken windows
-  description: A window for seeing into places.
   abstract: true
-  name: structures-n14-window
   placement:
     mode: SnapgridCenter
     snap:
@@ -63,8 +61,6 @@
 - type: entity
   parent: N14WindowBase
   id: N14WindowBaseAirtight # use for single tile / standalone windows that are intact
-  name: structures-n14-window
-  description: A window for seeing into places.
   abstract: true
   components:
   - type: Airtight
@@ -80,8 +76,6 @@
 - type: entity
   parent: N14WindowBase
   id: N14WindowSmoothBase # Use for windows that smooth together
-  name: structures-n14-window
-  description: A window for seeing into places.
   abstract: true
   components:
   - type: Sprite
@@ -98,8 +92,6 @@
 - type: entity
   parent: N14WindowSmoothBase
   id: N14WindowSmoothBaseAirtight # use for windows that smooth together that are intact
-  name: structures-n14-window
-  description: A window for seeing into places.
   abstract: true
   components:
   - type: Airtight
@@ -119,13 +111,11 @@
 ## Smooth Windows
 - type: entity
   id: N14Window
-  name: structures-n14-window
   parent: N14WindowSmoothBaseAirtight
 
 - type: entity
   parent: N14WindowSmoothBase
   id: N14WindowBroken
-  name: structures-n14-window
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Windows/windowbroken.rsi
@@ -138,7 +128,6 @@
 - type: entity
   parent: N14WindowBaseAirtight
   id: N14WindowRuins
-  name: structures-n14-window-ruins
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Windows/window_ruins.rsi
@@ -150,7 +139,6 @@
 - type: entity
   parent: N14WindowBaseAirtight
   id: N14WindowRuinsVertical
-  name: structures-n14-window-ruins
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Windows/window_ruins.rsi
@@ -162,7 +150,6 @@
 - type: entity
   parent: N14WindowBase
   id: N14WindowRuinsBroken
-  name: structures-n14-window-ruins-broken
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Windows/window_ruins.rsi
@@ -174,7 +161,6 @@
 - type: entity
   parent: N14WindowBase
   id: N14WindowRuinsVerticalBroken
-  name: structures-n14-window-ruins-broken
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Windows/window_ruins.rsi
@@ -186,7 +172,6 @@
 - type: entity
   parent: N14WindowBase
   id: N14WindowRuinsDestroyed
-  name: structures-n14-window-ruins-destroyed
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Windows/window_ruins.rsi
@@ -198,7 +183,6 @@
 # Wood / House
 - type: entity
   parent: N14WindowBaseAirtight
-  name: structures-n14-window-house
   id: N14WindowHouse
   components:
   - type: Sprite
@@ -211,7 +195,6 @@
 - type: entity
   parent: N14WindowBaseAirtight
   id: N14WindowHouseVertical
-  name: structures-n14-window-house
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Windows/window_ruins.rsi
@@ -223,7 +206,6 @@
 - type: entity
   parent: N14WindowBaseAirtight
   id: N14WindowHouseWood
-  name: structures-n14-window-house-wood
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Windows/window_ruins.rsi
@@ -235,7 +217,6 @@
 - type: entity
   parent: N14WindowBase
   id: N14WindowHouseBroken
-  name: structures-n14-window-house-broken
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Windows/window_ruins.rsi
@@ -247,7 +228,6 @@
 - type: entity
   parent: N14WindowBase
   id: N14WindowHouseBrokenVertical
-  name: structures-n14-window-house-broken
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Windows/window_ruins.rsi
@@ -259,7 +239,6 @@
 - type: entity
   parent: N14WindowBase
   id: N14WindowHouseWoodBroken
-  name: structures-n14-window-house-broken
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Windows/window_ruins.rsi
@@ -273,7 +252,6 @@
   parent: N14WindowBaseAirtight
   id: N14WindowStoreLeft
   suffix: left
-  name: structures-n14-window-store
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Windows/window_ruins.rsi
@@ -286,7 +264,6 @@
   parent: N14WindowStoreLeft
   id: N14WindowStoreMiddleHorizontal
   suffix: middle horizontal
-  name: structures-n14-window-store
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Windows/window_ruins.rsi
@@ -299,7 +276,6 @@
   parent: N14WindowStoreLeft
   id: N14WindowStoreRight
   suffix: right
-  name: structures-n14-window-store
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Windows/window_ruins.rsi
@@ -312,7 +288,6 @@
   parent: N14WindowStoreLeft
   id: N14WindowStoreBottom
   suffix: bottom
-  name: structures-n14-window-store
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Windows/window_ruins.rsi
@@ -325,7 +300,6 @@
   parent: N14WindowStoreLeft
   id: N14WindowStoreMiddleVertical
   suffix: middle vertical
-  name: structures-n14-window-store
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Windows/window_ruins.rsi
@@ -338,7 +312,6 @@
   parent: N14WindowStoreLeft
   id: N14WindowStoreTop
   suffix: top
-  name: structures-n14-window-store
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Windows/window_ruins.rsi

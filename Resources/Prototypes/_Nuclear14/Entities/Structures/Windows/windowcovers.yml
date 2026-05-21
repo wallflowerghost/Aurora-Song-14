@@ -1,9 +1,7 @@
-# Aurora's Song | replaced names with locale strings
+# Aurora's Song | replaced names and descriptions with locale strings
 - type: entity
   id: N14BarricadeWindow
   parent: BaseStructure
-  name: furniture-n14-barricade
-  description: A makeshift barricade.
   components:
     - type: CanBuildWindowOnTop
     - type: Sprite
@@ -39,8 +37,6 @@
 - type: entity
   parent: N14BarricadeWindow
   id: N14BarricadeDoor
-  name: furniture-n14-barricade-door
-  description: A locked door. Might have to break it down.
   components:
     - type: Sprite
       sprite: _Nuclear14/Structures/Furniture/barricades.rsi
@@ -52,8 +48,6 @@
 - type: entity
   id: N14WindowBars
   parent: BaseStructure
-  name: furniture-n14-barricade-window-bars
-  description: Sturdy looking bars blocking access.
   components:
     - type: MeleeSound
       soundGroups:
@@ -90,7 +84,6 @@
 
 - type: entity
   id: N14WindowBars2
-  name: furniture-n14-barricade-window-bars
   parent: N14WindowBars
   components:
     - type: Sprite

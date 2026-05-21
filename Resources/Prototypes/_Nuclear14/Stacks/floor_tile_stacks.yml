@@ -3,139 +3,112 @@
 
 - type: stack
   id: FloorTileMetalBlue
-  name: tiles-n14-metal-blue
   spawn: FloorTileItemMetalBlue
 
 - type: stack
   id: FloorTileMetalBlueSolid
-  name: tiles-n14-metal-blue-solid
   spawn: FloorTileItemMetalBlueSolid
 
 - type: stack
   id: FloorTileMetalGreen
-  name: tiles-n14-metal-green
   spawn: FloorTileItemMetalGreen
 
 - type: stack
   id: FloorTileMetalGreenSolid
-  name: tiles-n14-metal-green-solid
   spawn: FloorTileItemMetalGreenSolid
 
 - type: stack
   id: FloorTileMetalGrey
-  name: tiles-n14-metal-grey
   spawn: FloorTileItemMetalGrey
 
 - type: stack
   id: FloorTileMetalGreySolid
-  name: tiles-n14-metal-grey-solid
   spawn: FloorTileItemMetalGreySolid
 
 - type: stack
   id: FloorTileMetalGreyDark
-  name: tiles-n14-metal-grey-dark
   spawn: FloorTileItemMetalGreyDark
 
 - type: stack
   id: FloorTileMetalGreyDarkSolid
-  name: tiles-n14-metal-grey-dark-solid
   spawn: FloorTileItemMetalGreyDarkSolid
 
 - type: stack
   id: FloorTileMetalPurple
-  name: tiles-n14-metal-purple
   spawn: FloorTileItemMetalPurple
 
 - type: stack
   id: FloorTileMetalPurpleSolid
-  name: tiles-n14-metal-purple-solid
   spawn: FloorTileItemMetalPurpleSolid
 
 - type: stack
   id: FloorTileMetalRed
-  name: tiles-n14-metal-red
   spawn: FloorTileItemMetalRed
 
 - type: stack
   id: FloorTileMetalRedSolid
-  name: tiles-n14-metal-red-solid
   spawn: FloorTileItemMetalRedSolid
 
 - type: stack
   id: FloorTileMetalTeal
-  name: tiles-n14-metal-teal
   spawn: FloorTileItemMetalTeal
 
 - type: stack
   id: FloorTileMetalTealSolid
-  name: tiles-n14-metal-teal-solid
   spawn: FloorTileItemMetalTealSolid
 
 - type: stack
   id: FloorTileMetalWhite
-  name: tiles-n14-metal-white
   spawn: FloorTileItemMetalWhite
 
 - type: stack
   id: FloorTileMetalWhiteSolid
-  name: tiles-n14-metal-white-solid
   spawn: FloorTileItemMetalWhiteSolid
 
 - type: stack
   id: FloorTileMetalYellow
-  name: tiles-n14-metal-yellow
   spawn: FloorTileItemMetalYellow
 
 - type: stack
   id: FloorTileMetalYellowSolid
-  name: tiles-n14-metal-yellow-solid
   spawn: FloorTileItemMetalYellowSolid
 
 - type: stack
   id: FloorTileMetalFreezer
-  name: tiles-n14-freezer
   spawn: FloorTileItemMetalFreezer
 
 # Other
 
 - type: stack
   id: FloorTileWoodOak
-  name: tiles-n14-wood-oak
   spawn: FloorTileItemWoodOak
 
 - type: stack
   id: FloorTileWoodHouse
-  name: tiles-n14-wood-house
   spawn: FloorTileItemWoodHouse
 
 - type: stack
   id: FloorTileWoodMaple
-  name: tile-n14-wood-maple
   spawn: FloorTileItemWoodMaple
 
 - type: stack
   id: FloorTileCarpetRed
-  name: tiles-n14-carpet-red
   spawn: FloorTileItemCarpetRed
 
 
 # MS13
 - type: stack
   id: FloorTileMetalIndustrial
-  name: tiles-n14-industrial
   spawn: FloorTileItemMetalIndustrial
 
 - type: stack
   id: FloorTileMetalMS13
-  name: tiles-n14-metal-tile
   spawn: FloorTileItemMetalMS13
 
 - type: stack
   id: FloorTileMetalGrate
-  name: tiles-n14-metal-grate
   spawn: FloorTileItemMetalGrate
 
 - type: stack
   id: FloorTileMetalSolid
-  name: tiles-n14-metal-solid
   spawn: FloorTileItemMetalSolid

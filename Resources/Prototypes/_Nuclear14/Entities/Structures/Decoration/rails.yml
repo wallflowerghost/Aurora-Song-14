@@ -1,7 +1,6 @@
-# Aurora's Song | Replaced names with locale strings
+# Aurora's Song | Replaced names and descriptions with locale strings
 - type: entity
   id: N14Rails
-  name: structures-n14-railway
   placement:
     mode: SnapgridCenter
   components:
@@ -35,7 +34,6 @@
 - type: entity
   parent: N14Rails
   id: N14RailsJunctionRightTop
-  name: structures-n14-railway
   suffix: junction right top
   components:
   - type: Sprite
@@ -44,7 +42,6 @@
 - type: entity
   parent: N14Rails
   id: N14RailsJunctionLeftTop
-  name: structures-n14-railway
   suffix: junction left top
   components:
   - type: Sprite
@@ -53,7 +50,6 @@
 - type: entity
   parent: N14Rails
   id: N14RailsJunctionRightBottom
-  name: structures-n14-railway
   suffix: junction right bottom
   components:
   - type: Sprite
@@ -62,7 +58,6 @@
 - type: entity
   parent: N14Rails
   id: N14RailsJunctionLeftBottom
-  name: structures-n14-railway
   suffix: junction left bottom
   components:
   - type: Sprite
@@ -71,7 +66,6 @@
 - type: entity
   parent: N14Rails
   id: N14RailsTurnWS
-  name: structures-n14-railway
   suffix: turn west-south
   components:
   - type: Sprite
@@ -80,7 +74,6 @@
 - type: entity
   parent: N14Rails
   id: N14RailsTurnNW
-  name: structures-n14-railway
   suffix: turn north-west
   components:
   - type: Sprite
@@ -89,7 +82,6 @@
 - type: entity
   parent: N14Rails
   id: N14RailsTurnNE
-  name: structures-n14-railway
   suffix: turn north-east
   components:
   - type: Sprite
@@ -98,7 +90,6 @@
 - type: entity
   parent: N14Rails
   id: N14RailsTurnSE
-  name: structures-n14-railway
   suffix: turn south-east
   components:
   - type: Sprite
