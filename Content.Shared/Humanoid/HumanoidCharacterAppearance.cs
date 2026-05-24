@@ -66,6 +66,18 @@ public sealed partial class HumanoidCharacterAppearance : ICharacterAppearance, 
         return new(EyeColor, SkinColor, newMarkings, Height, Width); // Aurora's Song - Scale sliders
     }
 
+    // Aurora's Song
+    public HumanoidCharacterAppearance WithHeight(float newHeight)
+    {
+        return new(EyeColor, SkinColor, Markings, newHeight, Width);
+    }
+
+    // Aurora's Song
+    public HumanoidCharacterAppearance WithWidth(float newWidth)
+    {
+        return new(EyeColor, SkinColor, Markings, Height, newWidth);
+    }
+
     public static HumanoidCharacterAppearance DefaultWithSpecies(ProtoId<SpeciesPrototype> species, Sex sex)
     {
         var protoMan = IoCManager.Resolve<IPrototypeManager>();

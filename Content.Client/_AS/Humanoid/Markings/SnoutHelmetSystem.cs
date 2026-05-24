@@ -1,5 +1,6 @@
 // Originally from https://github.com/DeltaV-Station/Delta-v/pull/3875, Edited by snezshiba with permission
 
+using Content.Shared.Body;
 using Content.Shared.Humanoid;
 using Content.Shared.Humanoid.Markings;
 
@@ -7,7 +8,9 @@ namespace Content.Shared._AS.Humanoid.Markings;
 
 public sealed class SnoutHelmetSystem : EntitySystem
 {
-    private const MarkingCategories MarkingToQuery = MarkingCategories.Head;
+    [Dependency] private readonly SharedVisualBodySystem _visualBody = default!;
+
+    private const HumanoidVisualLayers MarkingToQuery = HumanoidVisualLayers.Head;
     private const int MaximumMarkingCount = 0;
 
     public override void Initialize()
@@ -19,9 +22,19 @@ public sealed class SnoutHelmetSystem : EntitySystem
 
     private void OnComponentStartup(EntityUid uid, SnoutHelmetComponent component, ComponentStartup args)
     {
-        if (!TryComp(uid, out HumanoidAppearanceComponent? humanoidAppearanceComponent) ||
-            !humanoidAppearanceComponent.ClientOldMarkings.Markings.TryGetValue(MarkingToQuery, out var markings))
+        if (!_visualBody.TryGatherMarkingsData(uid,
+                [component.Layer],
+                out _,
+                out _,
+                out var applied))
+        {
             return;
+        }
+
+        if (!applied.TryGetValue(component.Organ, out var markingsSet))
+            return;
+
+        var markings = markingsSet[component.Layer];
 
         foreach (var marking in markings)
         {
