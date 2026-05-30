@@ -319,7 +319,7 @@
   - type: VisualOrgan
     data:
       sprite: Mobs/Customization/eyes.rsi
-      state: human
+      state: eyes
 
 - type: entity
   parent: [ OrganBaseTongue, OrganShelegInternal ]
