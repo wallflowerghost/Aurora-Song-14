@@ -23,7 +23,7 @@
     HeadSide: MobHumanoidAnyMarking # Aurora's Song -- Changed from MobSlimeMarkingFollowSkin > MobHumanoidAnyMarking for jewelery
     Tail: MobSlimeMarkingFollowSkinNoAlpha # Aurora's Song | Matches alpha with base to make animal tails seemless.
 #    Wings: MobSlimeMarkingFollowSkin //Need to work on this, Den has a different visual layer composition
-    Eyes: MobHumanoidAnyMarking #imp, so they can pick their eyes
+    Eyes: MobHumanoidEyes
     LArm: MobSlimeLArm
     RArm: MobSlimeRArm
     LHand: MobSlimeLHand
@@ -36,10 +36,6 @@
 - type: markingPoints
   id: MobSlimeMarkingLimits
   points:
-    Eyes: #imp, so they can pick their eyes
-      points: 1
-      required: true
-      defaultMarkings: [ SlimeEyesDefault ]
     Hair:
       points: 1
       required: false

@@ -69,7 +69,7 @@
   bodyPart: Snout
   markingCategory: Snout
   # Aurora's Song - Adds AS species.
-  speciesRestriction: [Human, Dwarf, SlimePerson, Goblin, Sheleg, Felinid, Oni]
+  speciesRestriction: [Human, Dwarf, Goblin, Sheleg, Felinid, Oni, Fairy, Harpy]
   coloring:
     default:
       type:

@@ -165,13 +165,13 @@
           negative: false
   sprites:
   - sprite: _Impstation/Mobs/Customization/SlimePerson/eyes.rsi
-    state: eyeglow
+    state: glow
   shader: unshaded
 
 - type: marking
   id: SlimeEyesDroopy
   bodyPart: Eyes
-  markingCategory: Eyes
+  markingCategory: Overlay # Aurora's Song - Moved slime's markings to overlay
   speciesRestriction: [ SlimePerson ]
   coloring:
     default:
@@ -185,7 +185,7 @@
 - type: marking
   id: SlimeEyesDroopyGlowing
   bodyPart: Eyes
-  markingCategory: Eyes
+  markingCategory: Overlay # Aurora's Song - Moved slime's markings to overlay
   speciesRestriction: [ SlimePerson ]
   coloring:
     default:
@@ -200,7 +200,7 @@
 - type: marking
   id: SlimeEyesCyclops
   bodyPart: Eyes
-  markingCategory: Eyes
+  markingCategory: Overlay # Aurora's Song - Moved slime's markings to overlay
   speciesRestriction: [ SlimePerson ]
   coloring:
     default:
@@ -214,7 +214,7 @@
 - type: marking
   id: SlimeEyesCyclopsGlowing
   bodyPart: Eyes
-  markingCategory: Eyes
+  markingCategory: Overlay # Aurora's Song - Moved slime's markings to overlay
   speciesRestriction: [ SlimePerson ]
   coloring:
     default:
@@ -241,7 +241,7 @@
           color: "#F8F8F8"
   sprites:
   - sprite: _Impstation/Mobs/Customization/SlimePerson/rarm.rsi
-    state: bonearmright
+    state: bone
 
 #LArm
 
@@ -258,7 +258,7 @@
           color: "#F8F8F8"
   sprites:
   - sprite: _Impstation/Mobs/Customization/SlimePerson/larm.rsi
-    state: bonearmleft
+    state: bone
 
 # RLeg
 
@@ -275,7 +275,7 @@
           color: "#F8F8F8"
   sprites:
   - sprite: _Impstation/Mobs/Customization/SlimePerson/rleg.rsi
-    state: bonelegright
+    state: bone
 
 # LLeg
 
@@ -292,7 +292,7 @@
           color: "#F8F8F8"
   sprites:
   - sprite: _Impstation/Mobs/Customization/SlimePerson/lleg.rsi
-    state: bonelegleft
+    state: bone
 
 # UndergarmentBottom
 
@@ -313,7 +313,7 @@
           color: "#F8F8F8"
   sprites:
   - sprite: _Impstation/Mobs/Customization/SlimePerson/lfoot.rsi
-    state: bonefootleft
+    state: bone
 
 # RFoot
 
@@ -330,7 +330,7 @@
           color: "#F8F8F8"
   sprites:
   - sprite: _Impstation/Mobs/Customization/SlimePerson/rfoot.rsi
-    state: bonefootright
+    state: bone
 
 # LHand
 
@@ -347,7 +347,7 @@
           color: "#F8F8F8"
   sprites:
   - sprite: _Impstation/Mobs/Customization/SlimePerson/lhand.rsi
-    state: bonehandleft
+    state: bone
 
 #RHand
 
@@ -364,4 +364,4 @@
           color: "#F8F8F8"
   sprites:
   - sprite: _Impstation/Mobs/Customization/SlimePerson/rhand.rsi
-    state: bonehandright
+    state: bone
