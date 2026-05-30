@@ -1,3 +1,123 @@
+# Chest
+
+- type: marking
+  id: bubble
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [ SlimePerson ]
+  forcedColoring: false
+  followSkinColor: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/animatedmarkings.rsi
+    state: bubble
+
+- type: marking
+  id: fishbowl
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [ SlimePerson ]
+  forcedColoring: false
+  followSkinColor: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/animatedmarkings.rsi
+    state: fishbowl1
+  - sprite: _Impstation/Mobs/Customization/animatedmarkings.rsi
+    state: fishbowl2
+
+- type: marking
+  id: SlimeBonechest
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [SlimePerson]
+  followSkinColor: false
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#F8F8F8"
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/slime_parts.rsi
+    state: bonechest
+
+- type: marking
+  id: SlimeCore
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [SlimePerson]
+  followSkinColor: true
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/slime_parts.rsi
+    state: core
+
+- type: marking
+  id: SlimeCoreGlowing
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [ SlimePerson ]
+  followSkinColor: false
+  coloring:
+    default:
+      type:
+        !type:EyeColoring
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/SlimePerson/chest.rsi
+    state: core
+  shader: unshaded
+
+- type: marking
+  id: SlimeLungs
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [SlimePerson]
+  followSkinColor: true
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/slime_parts.rsi
+    state: lungs
+
+# Head
+
+- type: marking
+  id: FadingStars
+  bodyPart: Head
+  markingCategory: Overlay # Aurora's Song - Moved slime markings to overlay
+  speciesRestriction: [ SlimePerson ]
+  forcedColoring: false
+  followSkinColor: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/animatedmarkings.rsi
+    state: fadingstars1
+  - sprite: _Impstation/Mobs/Customization/animatedmarkings.rsi
+    state: fadingstars2
+  - sprite: _Impstation/Mobs/Customization/animatedmarkings.rsi
+    state: fadingstars3
+  shader: unshaded
+
+- type: marking
+  id: fizz
+  bodyPart: Head
+  markingCategory: Overlay # Aurora's Song - Moved slime markings to overlay
+  speciesRestriction: [ SlimePerson ]
+  forcedColoring: false
+  followSkinColor: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/animatedmarkings.rsi
+    state: fizz
+
+- type: marking
+  id: SlimeBonehead
+  bodyPart: Head
+  markingCategory: Overlay # Aurora's Song - Moved slime's markings to overlay
+  speciesRestriction: [SlimePerson]
+  followSkinColor: false
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#F8F8F8"
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/slime_parts.rsi
+    state: bonehead
+
 - type: marking
   id: SlimeNose
   bodyPart: Head
@@ -29,6 +149,24 @@
   - sprite: _Impstation/Mobs/Customization/slime_parts.rsi
     state: brain
 
+# Snout
+
+# Eyes
+
+- type: marking
+  id: SlimeEyesDefault
+  bodyPart: Eyes
+  markingCategory: Eyes
+  speciesRestriction: [ SlimePerson ]
+  forcedColoring: true
+  coloring:
+    default:
+      type:
+        !type:EyeColoring
+  sprites:
+  - sprite: _Impstation/Mobs/Species/Slime/parts.rsi
+    state: eyes
+
 - type: marking # TODO: If we ever figure out how to make markings use shaders, make this unshaded! For now, this at least gives the right impression.
   id: SlimeEyeglow
   bodyPart: Eyes
@@ -45,69 +183,64 @@
   shader: unshaded
 
 - type: marking
-  id: SlimeLungs
-  bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [SlimePerson]
-  followSkinColor: true
-  sprites:
-  - sprite: _Impstation/Mobs/Customization/slime_parts.rsi
-    state: lungs
-
-- type: marking
-  id: SlimeCore
-  bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [SlimePerson]
-  followSkinColor: true
-  sprites:
-  - sprite: _Impstation/Mobs/Customization/slime_parts.rsi
-    state: core
-
-- type: marking
-  id: SlimeBonehead
-  bodyPart: Head
-  markingCategory: Overlay # Aurora's Song - Moved slime's markings to overlay
-  speciesRestriction: [SlimePerson]
-  followSkinColor: false
+  id: SlimeEyesDroopy
+  bodyPart: Eyes
+  markingCategory: Eyes
+  speciesRestriction: [ SlimePerson ]
   coloring:
     default:
       type:
-        !type:SimpleColoring
-          color: "#F8F8F8"
+        !type:EyeColoring
+        negative: false
   sprites:
-  - sprite: _Impstation/Mobs/Customization/slime_parts.rsi
-    state: bonehead
+  - sprite: _Impstation/Mobs/Customization/SlimePerson/eyes.rsi
+    state: droopy
 
 - type: marking
-  id: SlimeBonechest
-  bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [SlimePerson]
-  followSkinColor: false
+  id: SlimeEyesDroopyGlowing
+  bodyPart: Eyes
+  markingCategory: Eyes
+  speciesRestriction: [ SlimePerson ]
   coloring:
     default:
       type:
-        !type:SimpleColoring
-          color: "#F8F8F8"
+        !type:EyeColoring
+        negative: false
   sprites:
-  - sprite: _Impstation/Mobs/Customization/slime_parts.rsi
-    state: bonechest
+  - sprite: _Impstation/Mobs/Customization/SlimePerson/eyes.rsi
+    state: droopyglow
+  shader: unshaded
 
 - type: marking
-  id: SlimeBonearmleft
-  bodyPart: LArm
-  markingCategory: Arms
-  speciesRestriction: [SlimePerson]
-  followSkinColor: false
+  id: SlimeEyesCyclops
+  bodyPart: Eyes
+  markingCategory: Eyes
+  speciesRestriction: [ SlimePerson ]
   coloring:
     default:
       type:
-        !type:SimpleColoring
-          color: "#F8F8F8"
+        !type:EyeColoring
+        negative: false
   sprites:
-  - sprite: _Impstation/Mobs/Customization/slime_parts.rsi
-    state: bonearmleft
+  - sprite: _Impstation/Mobs/Customization/SlimePerson/eyes.rsi
+    state: cyclops
+
+- type: marking
+  id: SlimeEyesCyclopsGlowing
+  bodyPart: Eyes
+  markingCategory: Eyes
+  speciesRestriction: [ SlimePerson ]
+  coloring:
+    default:
+      type:
+        !type:EyeColoring
+        negative: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/SlimePerson/eyes.rsi
+    state: cyclopsglow
+  shader: unshaded
+
+# RArm
 
 - type: marking
   id: SlimeBonearmright
@@ -124,39 +257,11 @@
   - sprite: _Impstation/Mobs/Customization/slime_parts.rsi
     state: bonearmright
 
-- type: marking
-  id: SlimeBonefootleft
-  bodyPart: LFoot
-  markingCategory: Legs
-  speciesRestriction: [SlimePerson]
-  followSkinColor: false
-  coloring:
-    default:
-      type:
-        !type:SimpleColoring
-          color: "#F8F8F8"
-  sprites:
-  - sprite: _Impstation/Mobs/Customization/slime_parts.rsi
-    state: bonefootleft
+#LArm
 
 - type: marking
-  id: SlimeBonefootright
-  bodyPart: RFoot
-  markingCategory: Legs
-  speciesRestriction: [SlimePerson]
-  followSkinColor: false
-  coloring:
-    default:
-      type:
-        !type:SimpleColoring
-          color: "#F8F8F8"
-  sprites:
-  - sprite: _Impstation/Mobs/Customization/slime_parts.rsi
-    state: bonefootright
-
-- type: marking
-  id: SlimeBonehandleft
-  bodyPart: LHand
+  id: SlimeBonearmleft
+  bodyPart: LArm
   markingCategory: Arms
   speciesRestriction: [SlimePerson]
   followSkinColor: false
@@ -167,12 +272,14 @@
           color: "#F8F8F8"
   sprites:
   - sprite: _Impstation/Mobs/Customization/slime_parts.rsi
-    state: bonehandleft
+    state: bonearmleft
+
+# RLeg
 
 - type: marking
-  id: SlimeBonehandright
-  bodyPart: RHand
-  markingCategory: Arms
+  id: SlimeBonelegright
+  bodyPart: RLeg
+  markingCategory: Legs
   speciesRestriction: [SlimePerson]
   followSkinColor: false
   coloring:
@@ -182,7 +289,9 @@
           color: "#F8F8F8"
   sprites:
   - sprite: _Impstation/Mobs/Customization/slime_parts.rsi
-    state: bonehandright
+    state: bonelegright
+
+# LLeg
 
 - type: marking
   id: SlimeBonelegleft
@@ -199,9 +308,15 @@
   - sprite: _Impstation/Mobs/Customization/slime_parts.rsi
     state: bonelegleft
 
+# UndergarmentBottom
+
+# UndergarmentTop
+
+# LFoot
+
 - type: marking
-  id: SlimeBonelegright
-  bodyPart: RLeg
+  id: SlimeBonefootleft
+  bodyPart: LFoot
   markingCategory: Legs
   speciesRestriction: [SlimePerson]
   followSkinColor: false
@@ -212,4 +327,55 @@
           color: "#F8F8F8"
   sprites:
   - sprite: _Impstation/Mobs/Customization/slime_parts.rsi
-    state: bonelegright
+    state: bonefootleft
+
+# RFoot
+
+- type: marking
+  id: SlimeBonefootright
+  bodyPart: RFoot
+  markingCategory: Legs
+  speciesRestriction: [SlimePerson]
+  followSkinColor: false
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#F8F8F8"
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/slime_parts.rsi
+    state: bonefootright
+
+# LHand
+
+- type: marking
+  id: SlimeBonehandleft
+  bodyPart: LHand
+  markingCategory: Arms
+  speciesRestriction: [SlimePerson]
+  followSkinColor: false
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#F8F8F8"
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/slime_parts.rsi
+    state: bonehandleft
+
+#RHand
+
+- type: marking
+  id: SlimeBonehandright
+  bodyPart: RHand
+  markingCategory: Arms
+  speciesRestriction: [SlimePerson]
+  followSkinColor: false
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#F8F8F8"
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/slime_parts.rsi
+    state: bonehandright
