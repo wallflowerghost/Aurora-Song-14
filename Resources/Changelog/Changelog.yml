@@ -5112,3 +5112,10 @@ Entries:
   id: 9478
   time: '2026-05-26T04:37:18.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1084
+- author: Zenixic
+  changes:
+    - type: Tweak
+      message: Nanomed Plus is now accessible to anyone.
+  id: 9479
+  time: '2026-05-25T09:12:32.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1081
