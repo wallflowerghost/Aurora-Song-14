@@ -5005,3 +5005,10 @@ Entries:
   id: 9463
   time: '2026-05-10T16:19:58.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1045
+- author: ZigTag
+  changes:
+    - type: Fix
+      message: diona and slime can digest cryo chems again
+  id: 9464
+  time: '2026-05-30T04:05:09.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1103
