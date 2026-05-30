@@ -69,11 +69,6 @@
       Kidneys: OrganArachnidKidneys
   - type: HumanoidProfile
     species: Arachnid
-    hideLayersOnEquip: # Aurora's Song - Hide your dang fangs
-    - Hair # imp
-    - Snout
-    - HeadTop
-    - HeadSide
 
 - type: entity
   parent:

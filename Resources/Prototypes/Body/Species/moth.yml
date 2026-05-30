@@ -131,11 +131,6 @@
       Kidneys: OrganMothKidneys
   - type: HumanoidProfile
     species: Moth
-    hideLayersOnEquip:
-    - HeadTop
-    - HeadSide #imp
-    - Snout #imp
-    - Tail #imp
   # Aurora's Song - imp added some layer changes here but upstream has them organized differently now, it should be better
 
 - type: entity
