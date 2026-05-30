@@ -4898,6 +4898,343 @@ Entries:
   id: 9463
   time: '2026-05-10T16:19:58.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1045
+- author: ZigTag
+  changes:
+    - type: Fix
+      message: diona and slime can digest cryo chems again
+  id: 9464
+  time: '2026-05-30T04:05:09.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1103
+- author: ZigTag
+  changes:
+    - type: Fix
+      message: APCs and subsequent devices can be disabled with EMPs again
+  id: 9465
+  time: '2026-05-30T04:03:27.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1099
+- author: ZigTag
+  changes:
+    - type: Fix
+      message: engi borg construction module now spawns with bag
+  id: 9466
+  time: '2026-05-30T04:02:41.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1096
+- author: ZigTag
+  changes:
+    - type: Fix
+      message: helium canisters now drop broken helium canisters when broken
+  id: 9467
+  time: '2026-05-27T20:20:23.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1094
+- author: ZigTag
+  changes:
+    - type: Tweak
+      message: changing grids no longer drops people when you carry them
+  id: 9468
+  time: '2026-05-27T20:18:17.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1092
+- author: ZigTag
+  changes:
+    - type: Fix
+      message: magic crayon
+  id: 9469
+  time: '2026-05-27T20:20:12.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1093
+- author: ZigTag
+  changes:
+    - type: Fix
+      message: no more duplicated vulp markings in head and limbs
+  id: 9470
+  time: '2026-05-30T04:02:16.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1087
+- author: ZigTag
+  changes:
+    - type: Remove
+      message: bark accent, all instances have been replaced with OwO
+  id: 9471
+  time: '2026-05-27T20:17:54.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1089
+- author: ZigTag
+  changes:
+    - type: Fix
+      message: pirate grenades are no longer hostile to the user
+  id: 9472
+  time: '2026-05-27T03:04:33.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1091
+- author: assignedgod
+  changes:
+    - type: Remove
+      message: 'Removed catgirlium, daviscium, and mothrazine '
+  id: 9473
+  time: '2026-05-27T03:03:06.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1086
+- author: assignedgod
+  changes:
+    - type: Fix
+      message: 'made space mirage use a sprite again '
+  id: 9474
+  time: '2026-05-27T03:02:22.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1088
+- author: ZigTag
+  changes:
+    - type: Fix
+      message: >-
+        arcryox is now listed as a proper cryogenic chemical, it works in
+        cryopods finally
+  id: 9475
+  time: '2026-05-27T02:54:10.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1090
+- author: Oberonics
+  changes:
+    - type: Fix
+      message: Added Bubbles! and Pops! back to the slime emote wheel.
+  id: 9476
+  time: '2026-05-26T06:48:17.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1085
+- author: snezshiba
+  changes:
+    - type: Fix
+      message: Fixed missing species undergarments and duplicate vulp undergarments
+  id: 9477
+  time: '2026-05-26T05:22:54.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1030
+- author: Oberonics
+  changes:
+    - type: Fix
+      message: IPCs now move around as intended.
+  id: 9478
+  time: '2026-05-26T04:37:18.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1084
+- author: Zenixic
+  changes:
+    - type: Tweak
+      message: Nanomed Plus is now accessible to anyone.
+  id: 9479
+  time: '2026-05-25T09:12:32.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1081
+- author: Zenixic
+  changes:
+    - type: Tweak
+      message: >-
+        The Alley no longer has a table on top of a table, Command area is
+        actually powered and fixed a disposal pipe.
+  id: 9480
+  time: '2026-05-25T08:59:50.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1082
+- author: ZigTag
+  changes:
+    - type: Fix
+      message: bounty panel has some color again!
+  id: 9481
+  time: '2026-05-25T08:40:02.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1083
+- author: portfiend
+  changes:
+    - type: Add
+      message: >-
+        The "Bounty Contracts" PDA app has a new "Offers" tab and four new
+        bounty types - Donation, Promotion, Target, and Trade.
+  id: 9482
+  time: '2026-05-25T08:39:48.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1027
+- author: entings
+  changes:
+    - type: Fix
+      message: >-
+        Organs can now be disposed of, by mouth or by your favorite grinding
+        apparatus.
+  id: 9483
+  time: '2026-05-25T06:53:00.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1076
+- author: entings
+  changes:
+    - type: Fix
+      message: Slime people no longer consume oxygen when breathing.
+  id: 9484
+  time: '2026-05-24T21:09:30.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1077
+- author: salamanderskies
+  changes:
+    - type: Fix
+      message: Xenoborg guidebook entry is no longer viewable.
+  id: 9485
+  time: '2026-05-24T21:00:25.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1079
+- author: entings
+  changes:
+    - type: Fix
+      message: Slimes can now have eyebags without their faces disappearing.
+  id: 9486
+  time: '2026-05-24T02:45:13.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1036
+- author: Zenixic
+  changes:
+    - type: Add
+      message: >-
+        The spray painter has received some QoL features like palettes and a
+        color picker!
+  id: 9487
+  time: '2026-05-24T02:36:23.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1039
+- author: ATDoop
+  changes:
+    - type: Tweak
+      message: Diona base markings are greyscale for easier coloring
+    - type: Tweak
+      message: Diona marking points have been slightly increased
+    - type: Tweak
+      message: Some diona markings can have multiple colors now
+  id: 9488
+  time: '2026-05-24T02:31:27.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1025
+- author: assignedgod
+  changes:
+    - type: Tweak
+      message: Renamed the mantis coffin to pyxis
+  id: 9489
+  time: '2026-05-24T02:09:26.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1072
+- author: entings
+  changes:
+    - type: Fix
+      message: Arachnids no longer have human metabolisms.
+  id: 9490
+  time: '2026-05-24T02:03:50.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1073
+- author: salamanderskies
+  changes:
+    - type: Add
+      message: Adds a bunch of religious-themed outfits to loadouts, from Impstation!
+  id: 9491
+  time: '2026-05-23T21:37:02.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1066
+- author: salamanderskies
+  changes:
+    - type: Add
+      message: Warm and dim lights are now printable in most lathes.
+  id: 9492
+  time: '2026-05-18T22:31:43.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1064
+- author: salamanderskies
+  changes:
+    - type: Add
+      message: Meat sheets are now printable in the biogenerator.
+  id: 9493
+  time: '2026-05-18T22:24:56.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1063
+- author: TurtleOfMen
+  changes:
+    - type: Add
+      message: Baron heavy tanker shuttle
+  id: 9494
+  time: '2026-05-18T21:55:23.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/788
+- author: ZigTag
+  changes:
+    - type: Fix
+      message: vulps have short and tall capabilities now
+    - type: Fix
+      message: vulps have dog vision again
+  id: 9495
+  time: '2026-05-18T21:53:48.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1060
+- author: ZigTag
+  changes:
+    - type: Fix
+      message: people can spawn in med pods again
+    - type: Tweak
+      message: med pods now have a 100% chance of spawning a body
+  id: 9496
+  time: '2026-05-18T21:53:27.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1059
+- author: ZigTag
+  changes:
+    - type: Add
+      message: Spiky Ponytail
+    - type: Remove
+      message: Messy Ponytail no longer shows up twice!
+    - type: Fix
+      message: Tajaran animated tails now work properly
+  id: 9497
+  time: '2026-05-18T21:53:09.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1056
+- author: ZigTag
+  changes:
+    - type: Fix
+      message: hands becoming backwards when you reconnect
+  id: 9498
+  time: '2026-05-17T00:53:51.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1058
+- author: Eillyrea
+  changes:
+    - type: Add
+      message: Leopard Tails for Tajarans
+  id: 9499
+  time: '2026-05-16T23:35:19.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1054
+- author: WallflowerGhost
+  changes:
+    - type: Add
+      message: Two new hair styles, with mirrored bangs
+  id: 9500
+  time: '2026-05-16T23:31:14.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1051
+- author: ZigTag
+  changes:
+    - type: Tweak
+      message: nubody removed blending from organs and limbs
+  id: 9501
+  time: '2026-05-16T01:46:28.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1052
+- author: entings
+  changes:
+    - type: Add
+      message: Impstation's remaining arachnid markings are now available for use.
+  id: 9502
+  time: '2026-05-15T23:41:51.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1037
+- author: salamanderskies
+  changes:
+    - type: Add
+      message: Added a lot of moth markings from Impstation!
+  id: 9503
+  time: '2026-05-15T18:04:33.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1033
+- author: BlitzTheSquishy
+  changes:
+    - type: Add
+      message: A new advertisement campaign for Iverian Heavy Shipyards has started.
+  id: 9504
+  time: '2026-05-15T12:58:41.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1044
+- author: assignedgod
+  changes:
+    - type: Tweak
+      message: The faust, halberd, and greatsword can now pry open unpowered doors
+  id: 9505
+  time: '2026-05-15T12:56:03.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1047
+- author: salamanderskies
+  changes:
+    - type: Fix
+      message: Wallmount substations now correctly require a capacitor to construct.
+  id: 9506
+  time: '2026-05-15T12:53:40.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1050
+- author: crocodilecarousel, animal-collective, maelines, mhachimagus, Pinkbat5
+  changes:
+    - type: Add
+      message: Enjoy 34 stylish new hairstyles from the IMP sector!
+  id: 9507
+  time: '2026-05-14T01:05:45.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/934
+- author: entings
+  changes:
+    - type: Fix
+      message: Slime people no longer consume oxygen when breathing.
+  id: 9508
+  time: '2026-05-24T21:09:30.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1077
 - author: Kowlin
   changes:
   - message: All intern jobs now lock out after 10 hours, up from 5 hours.
