@@ -259,7 +259,6 @@
   minLimit: 0
   loadouts:
   - PassengerWintercoat
-  - BomberBlack #imp
 
 - type: loadoutGroup
   id: PassengerShoes
@@ -795,7 +794,6 @@
   minLimit: 0
   loadouts:
   - CargoTechnicianWintercoat
-  - BomberCargo #imp
 
 - type: loadoutGroup
   id: CargoTechnicianShoes
@@ -832,7 +830,6 @@
   minLimit: 0
   loadouts:
   - SalvageSpecialistWintercoat
-  - BomberCargo #imp
 
 - type: loadoutGroup
   id: SalvageSpecialistShoes
@@ -944,7 +941,6 @@
   loadouts:
   - StationEngineerOuterVest
   - StationEngineerWintercoat
-  - BomberEngineering #imp
 
 - type: loadoutGroup
   id: StationEngineerShoes
@@ -981,9 +977,6 @@
   minLimit: 0
   loadouts:
   - AtmosphericTechnicianWintercoat
-  - BomberEngineering #imp
-  - BomberAtmos #imp
-  - BomberAtmosHolo #imp
 
 - type: loadoutGroup
   id: AtmosphericTechnicianBackpack
@@ -1110,7 +1103,6 @@
   - RoboticistLabCoat
   - RoboticistWintercoat
   - SeniorResearcherLabCoat
-  - BomberScience #imp
 
 - type: loadoutGroup
   id: ScientistShoes
@@ -1444,7 +1436,6 @@
   - RegularLabCoat
   - MedicalDoctorWintercoat
   - SeniorPhysicianLabCoat
-  - BomberMedical #imp
 
 - type: loadoutGroup
   id: MedicalBackpack
@@ -1556,7 +1547,6 @@
   loadouts:
   - ParamedicWindbreaker
   - ParamedicWintercoat
-  - BomberMedical #imp
 
 - type: loadoutGroup
   id: ParamedicShoes
