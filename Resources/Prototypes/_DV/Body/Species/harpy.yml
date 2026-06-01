@@ -248,12 +248,6 @@
   components:
   - type: Metabolizer
     updateInterval: 2.0
-    removeEmpty: true
-    solutionOnBody: false
-    solution: "Lung"
-    groups:
-    - id: Gas
-      rateModifier: 200.0
 
 - type: entity
   id: ActionHarpyPlayMidi
