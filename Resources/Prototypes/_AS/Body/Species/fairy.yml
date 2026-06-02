@@ -225,11 +225,11 @@
       group: Fairy
 
 - type: entity
-  parent: [ OrganBaseTorso, OrganFairyExternal ]
+  parent: [ OrganBaseTorsoSexed, OrganBaseTorso, OrganFairyExternal ] # Aurora's Song - Add sexed organs
   id: OrganFairyTorso
 
 - type: entity
-  parent: [ OrganBaseHead, OrganFairyExternal ]
+  parent: [ OrganBaseHeadSexed, OrganBaseHead, OrganFairyExternal ] # Aurora's Song - Add sexed organs
   id: OrganFairyHead
 
 - type: entity

@@ -161,11 +161,11 @@
       group: Feroxi
 
 - type: entity
-  parent: [ OrganBaseTorso, OrganFeroxiExternal ]
+  parent: [ OrganBaseTorsoSexed, OrganBaseTorso, OrganFeroxiExternal ] # Aurora's Song - Add sexed organs
   id: OrganFeroxiTorso
 
 - type: entity
-  parent: [ OrganBaseHead, OrganFeroxiExternal ]
+  parent: [ OrganBaseHeadSexed, OrganBaseHead, OrganFeroxiExternal ] # Aurora's Song - Add sexed organs
   id: OrganFeroxiHead
 
 - type: entity

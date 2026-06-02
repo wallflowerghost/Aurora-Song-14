@@ -218,11 +218,11 @@
       group: Tajaran
 
 - type: entity
-  parent: [ OrganBaseTorso, OrganTajaranExternal ]
+  parent: [ OrganBaseTorsoSexed, OrganBaseTorso, OrganTajaranExternal ] # Aurora's Song - Add sexed organs
   id: OrganTajaranTorso
 
 - type: entity
-  parent: [ OrganBaseHead, OrganTajaranExternal ]
+  parent: [ OrganBaseHeadSexed, OrganBaseHead, OrganTajaranExternal ] # Aurora's Song - Add sexed organs
   id: OrganTajaranHead
 
 - type: entity

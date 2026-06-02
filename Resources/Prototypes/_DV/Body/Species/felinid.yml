@@ -195,11 +195,11 @@
       group: Felinid
 
 - type: entity
-  parent: [ OrganBaseTorso, OrganFelinidExternal ]
+  parent: [ OrganBaseTorsoSexed, OrganBaseTorso, OrganFelinidExternal ] # Aurora's Song - Add sexed organs
   id: OrganFelinidTorso
 
 - type: entity
-  parent: [ OrganBaseHead, OrganFelinidExternal ]
+  parent: [ OrganBaseHeadSexed, OrganBaseHead, OrganFelinidExternal ]
   id: OrganFelinidHead
 
 - type: entity

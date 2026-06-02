@@ -139,11 +139,11 @@
       group: Oni
 
 - type: entity
-  parent: [ OrganBaseTorso, OrganOniExternal ]
+  parent: [ OrganBaseTorsoSexed, OrganBaseTorso, OrganOniExternal ] # Aurora's Song - Add sexed organs
   id: OrganOniTorso
 
 - type: entity
-  parent: [ OrganBaseHead, OrganOniExternal ]
+  parent: [ OrganBaseHeadSexed, OrganBaseHead, OrganOniExternal ] # Aurora's Song - Add sexed organs
   id: OrganOniHead
 
 - type: entity

@@ -231,11 +231,11 @@
     sprite: _NF/Mobs/Species/Goblin/parts.rsi
 
 - type: entity
-  parent: [ OrganBaseTorso, OrganGoblinExternal ]
+  parent: [ OrganBaseTorsoSexed, OrganBaseTorso, OrganGoblinExternal ] # Aurora's Song - Add sexed organs
   id: OrganGoblinTorso
 
 - type: entity
-  parent: [ OrganBaseHead, OrganGoblinExternal ]
+  parent: [ OrganBaseHeadSexed, OrganBaseHead, OrganGoblinExternal ] # Aurora's Song - Add sexed organs
   id: OrganGoblinHead
 
 - type: entity

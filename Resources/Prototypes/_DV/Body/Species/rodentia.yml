@@ -173,11 +173,11 @@
       group: Rodentia
 
 - type: entity
-  parent: [ OrganBaseTorso, OrganRodentiaExternal ]
+  parent: [ OrganBaseTorsoSexed, OrganBaseTorso, OrganRodentiaExternal ] # Aurora's Song - Add sexed organs
   id: OrganRodentiaTorso
 
 - type: entity
-  parent: [ OrganBaseHead, OrganRodentiaExternal ]
+  parent: [ OrganBaseHeadSexed, OrganBaseHead, OrganRodentiaExternal ] # Aurora's Song - Add sexed organs
   id: OrganRodentiaHead
 
 - type: entity

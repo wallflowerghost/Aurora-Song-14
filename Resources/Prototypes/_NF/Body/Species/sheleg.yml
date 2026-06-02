@@ -272,11 +272,11 @@
     sprite: _NF/Mobs/Species/Sheleg/parts.rsi
 
 - type: entity
-  parent: [ OrganBaseTorso, OrganShelegExternal ]
+  parent: [ OrganBaseTorsoSexed, OrganBaseTorso, OrganShelegExternal ] # Aurora's Song - Add sexed organs
   id: OrganShelegTorso
 
 - type: entity
-  parent: [ OrganBaseHead, OrganShelegExternal ]
+  parent: [ OrganBaseHeadSexed, OrganBaseHead, OrganShelegExternal ] # Aurora's Song - Add sexed organs
   id: OrganShelegHead
 
 - type: entity

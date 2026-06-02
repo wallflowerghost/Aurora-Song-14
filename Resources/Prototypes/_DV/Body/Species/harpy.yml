@@ -201,11 +201,11 @@
       group: Harpy
 
 - type: entity
-  parent: [ OrganBaseTorso, OrganHarpyExternal ]
+  parent: [ OrganBaseTorsoSexed, OrganBaseTorso, OrganHarpyExternal ] # Aurora's Song - Add sexed organs
   id: OrganHarpyTorso
 
 - type: entity
-  parent: [ OrganBaseHead, OrganHarpyExternal ]
+  parent: [ OrganBaseHeadSexed, OrganBaseHead, OrganHarpyExternal ] # Aurora's Song - Add sexed organs
   id: OrganHarpyHead
 
 - type: entity

@@ -188,11 +188,11 @@
     sprite: _DEN/Mobs/Species/Ovinia/parts.rsi
 
 - type: entity
-  parent: [ OrganBaseTorso, OrganOviniaExternal ]
+  parent: [ OrganBaseTorsoSexed, OrganBaseTorso, OrganOviniaExternal ] # Aurora's Song - Add sexed organs
   id: OrganOviniaTorso
 
 - type: entity
-  parent: [ OrganBaseHead, OrganOviniaExternal ]
+  parent: [ OrganBaseHeadSexed, OrganBaseHead, OrganOviniaExternal ] # Aurora's Song - Add sexed organs
   id: OrganOviniaHead
 
 - type: entity
