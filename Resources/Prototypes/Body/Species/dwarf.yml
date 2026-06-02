@@ -63,7 +63,7 @@
       Female: FemaleDwarf
       Unsexed: UnisexDwarf
   - type: ReplacementAccent
-    accent: scottish
+    accent: dwarvish # Aurora's Song - Scottish to dwarvish
   - type: Speech
     speechSounds: Bass
     allowedEmotes: ['Belch'] # Frontier

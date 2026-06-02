@@ -75,15 +75,16 @@
   components:
   - type: ScrambledAccent
 
+# Aurora's Song - Scottish to dwarvish
 - type: trait
-  id: ScottishAccent
-  name: trait-scottish-name
-  description: trait-scottish-desc
+  id: DwarvishAccent
+  name: trait-dwarvish-name
+  description: trait-dwarvish-desc
   category: SpeechTraits
   cost: 1
   components:
   - type: ReplacementAccent
-    accent: scottish
+    accent: dwarvish
 
 # 2 Cost
 
