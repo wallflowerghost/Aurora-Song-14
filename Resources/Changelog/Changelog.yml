@@ -5395,3 +5395,10 @@ Entries:
   id: 9515
   time: '2026-06-04T23:30:20.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1100
+- author: salamanderskies
+  changes:
+    - type: Add
+      message: Adds dark, light, black, and red wood floor variants from TG and Corvax.
+  id: 9516
+  time: '2026-06-04T23:56:38.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1065
