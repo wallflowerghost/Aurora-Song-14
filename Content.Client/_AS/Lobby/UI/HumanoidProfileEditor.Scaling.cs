@@ -4,7 +4,7 @@ namespace Content.Client.Lobby.UI;
 
 public sealed partial class HumanoidProfileEditor
 {
-    private void SetHeight(float newHeight)
+    private new void SetHeight(float newHeight)
     {
         if (Profile != null &&
             _prototypeManager.TryIndex<SpeciesPrototype>(Profile.Species, out var species))
@@ -35,7 +35,7 @@ public sealed partial class HumanoidProfileEditor
         UpdateHeightControls();
     }
 
-    private void SetWidth(float newWidth)
+    private new void SetWidth(float newWidth)
     {
         if (Profile != null &&
             _prototypeManager.TryIndex<SpeciesPrototype>(Profile.Species, out var species))

@@ -11,7 +11,7 @@ namespace Content.Client.Access.Systems;
 public sealed class JobStatusSystem : SharedJobStatusSystem
 {
     [Dependency] private readonly ShowJobIconsSystem _showJobIcons = default!;
-    [Dependency] private readonly ShowCrewIconsSystem _showCrewIcons = default!;
+    // [Dependency] private readonly ShowCrewIconsSystem _showCrewIcons = default!; // Aurora's Song
     [Dependency] private readonly IPrototypeManager _prototype = default!;
     [Dependency] private readonly LicenseSystem _license = default!; // Aurora's Song
 
