@@ -42,7 +42,6 @@ public abstract partial class SharedChatSystem : EntitySystem
     public const int WhisperMuffledRange = 5; // how far whisper goes at all, in world units
     public static readonly SoundSpecifier DefaultAnnouncementSound
         = new SoundPathSpecifier("/Audio/Announcements/announce.ogg");
-    private readonly CollisionGroup _subtleWhisperMask = CollisionGroup.Impassable; // TheDen - Add sublte
 
     public static readonly ProtoId<RadioChannelPrototype> CommonChannel = "Common";
 

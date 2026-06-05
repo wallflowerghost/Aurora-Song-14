@@ -24,6 +24,7 @@ namespace Content.Shared.Fluids.EntitySystems;
 /// <summary>
 /// Handles the draining of solutions from containers into drains.
 /// </summary>
+[Virtual] // Aurora's Song - For AdvDrainSystem
 public class DrainSystem : EntitySystem // Aurora's Song - Remove sealed
 {
     [Dependency] private readonly EntityLookupSystem _lookup = default!;
