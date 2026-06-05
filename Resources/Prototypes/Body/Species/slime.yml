@@ -63,9 +63,9 @@
       matchSkin: true
     enum.HumanoidVisualLayers.HeadTop:
       matchSkin: true
-    enum.HumanoidVisualLayers.HeadSide:
-      layerAlpha: 0.75 # imp 0.72<0.75
-      matchSkin: true
+#    enum.HumanoidVisualLayers.HeadSide: # imp
+#      layerAlpha: 0.75 # imp 0.72<0.75
+#      matchSkin: true
     enum.HumanoidVisualLayers.Tail:
       matchSkin: true
     # Aurora's Song End

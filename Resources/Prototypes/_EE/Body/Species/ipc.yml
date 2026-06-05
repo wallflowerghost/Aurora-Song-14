@@ -19,39 +19,39 @@
       required: true
       default: [ MobIPCHeadDefault ]
     enum.HumanoidVisualLayers.Chest:
-      limit: 1
+      limit: 2 # Aurora's Song - 1 > 2, to allow for jewelry
       required: true
       default: [ MobIPCTorsoDefault ]
     enum.HumanoidVisualLayers.LArm:
-      limit: 1
+      limit: 2 # Aurora's Song - 1 > 2, to allow for jewelry
       required: true
       default: [ MobIPCLArmDefault ]
     enum.HumanoidVisualLayers.RArm:
-      limit: 1
+      limit: 2 # Aurora's Song - 1 > 2, to allow for jewelry
       required: true
       default: [ MobIPCRArmDefault ]
     enum.HumanoidVisualLayers.LHand:
-      limit: 1
+      limit: 2 # Aurora's Song - 1 > 2, to allow for jewelry
       required: true
       default: [ MobIPCLHandDefault ]
     enum.HumanoidVisualLayers.RHand:
-      limit: 1
+      limit: 2 # Aurora's Song - 1 > 2, to allow for jewelry
       required: true
       default: [ MobIPCRHandDefault ]
     enum.HumanoidVisualLayers.LLeg:
-      limit: 1
+      limit: 2 # Aurora's Song - 1 > 2, to allow for jewelry
       required: true
       default: [ MobIPCLLegDefault ]
     enum.HumanoidVisualLayers.RLeg:
-      limit: 1
+      limit: 2 # Aurora's Song - 1 > 2, to allow for jewelry
       required: true
       default: [ MobIPCRLegDefault ]
     enum.HumanoidVisualLayers.LFoot:
-      limit: 1
+      limit: 2 # Aurora's Song - 1 > 2, to allow for jewelry
       required: true
       default: [ MobIPCLFootDefault ]
     enum.HumanoidVisualLayers.RFoot:
-      limit: 1
+      limit: 2 # Aurora's Song - 1 > 2, to allow for jewelry
       required: true
       default: [ MobIPCRFootDefault ]
     enum.HumanoidVisualLayers.Snout: # DeltaV - Adds ability to use more marking types
