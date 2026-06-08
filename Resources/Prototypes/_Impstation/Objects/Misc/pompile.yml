@@ -49,6 +49,7 @@
     heldPrefix: pompom
   # - type: PluralName - Aurora's Song
   #   oneOf: plural-name-hand-1
+  - type: MothFood # Aurora's Song
 
 - type: entity
   parent: MaterialPom
