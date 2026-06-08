@@ -1283,3 +1283,39 @@ Entries:
   id: 9523
   time: '2026-06-05T01:25:06.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1105
+- author: Zenixic
+  changes:
+    - type: Tweak
+      message: >-
+        SLEO has gotten a new coat of paint. Wiring and atmos piping has also
+        been redone!
+  id: 9524
+  time: '2026-06-06T14:03:21.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1119
+- author: Phoenix51505
+  changes:
+    - type: Tweak
+      message: >-
+        Arcadia have gotten stricter with rewarding assets, and will no longer
+        provide TC rewards to improperly sold crates.
+  id: 9525
+  time: '2026-06-08T03:27:52.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1120
+- author: Smugman
+  changes:
+    - type: Add
+      message: Pompoms and Associated Items from Impstation
+  id: 9526
+  time: '2026-06-08T04:53:53.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/995
+- author: wendyribstonpippin
+  changes:
+    - type: Add
+      message: Your character can now properly talk in standard issue military jargon
+    - type: Add
+      message: >-
+        Thou might also wish to speak as a knight of a foregone day, that is in
+        fact possible as well
+  id: 9527
+  time: '2026-06-08T05:40:33.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1102
