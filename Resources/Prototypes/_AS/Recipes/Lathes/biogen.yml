@@ -53,4 +53,8 @@
   materials:
     Biomass: 100
     Plasma: 1000
-    
+
+- type: latheRecipe
+  id: ASBioGenPompomCube
+  result: PompomCube
+  parent: BaseCubeRecipe
