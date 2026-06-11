@@ -108,7 +108,7 @@
     damageOverlayGroups:
       Brute:
         sprite: Mobs/Effects/brute_damage.rsi
-        color: "#ccac1f"
+        color: "#cf0000" # Aurora's Song - set vulpkanin damage overlay back to red to match their red blood
       Burn:
         sprite: Mobs/Effects/burn_damage.rsi
   #  - type: MessyDrinker # starcup
