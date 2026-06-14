@@ -1382,3 +1382,10 @@ Entries:
   id: 9534
   time: '2026-06-14T22:39:44.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1141
+- author: Toasterblast
+  changes:
+    - type: Tweak
+      message: Medical pouches look slightly nicer now.
+  id: 9535
+  time: '2026-06-14T22:54:44.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1135
