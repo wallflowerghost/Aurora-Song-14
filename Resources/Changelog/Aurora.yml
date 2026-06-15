@@ -1400,3 +1400,10 @@ Entries:
   id: 9536
   time: '2026-06-14T23:30:15.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1124
+- author: ZigTag
+  changes:
+    - type: Fix
+      message: custom money stack splitting (finally)
+  id: 9537
+  time: '2026-06-15T02:10:57.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1143
