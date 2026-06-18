@@ -1430,3 +1430,14 @@ Entries:
   id: 9540
   time: '2026-06-17T17:35:52.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1153
+- author: emergency-ketchup
+  changes:
+    - type: Tweak
+      message: Changed up some tiles and mass scanners around LBK.
+    - type: Add
+      message: Cryosleep pod to LBK.
+    - type: Add
+      message: Occupancy lights to LBK shacks.
+  id: 9541
+  time: '2026-06-18T00:41:59.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1148
