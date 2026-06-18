@@ -1450,3 +1450,10 @@ Entries:
   id: 9542
   time: '2026-06-18T02:33:22.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1150
+- author: GreyScaleHarlequin
+  changes:
+    - type: Fix
+      message: Width slider display in character preview
+  id: 9543
+  time: '2026-06-18T02:46:42.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1160
