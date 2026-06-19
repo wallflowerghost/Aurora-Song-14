@@ -1494,3 +1494,10 @@ Entries:
   id: 9548
   time: '2026-06-18T04:37:11.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1062
+- author: DOSRG, SalamanderSkies, Fulgrimm
+  changes:
+    - type: Add
+      message: Ported Nuclear14 Craftable and Mapping Assets. Happy Decorating!
+  id: 9549
+  time: '2026-06-19T14:09:43.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/976
