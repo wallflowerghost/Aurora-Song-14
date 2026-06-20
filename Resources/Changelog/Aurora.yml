@@ -1526,3 +1526,20 @@ Entries:
   id: 9552
   time: '2026-06-20T04:29:49.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1161
+- author: portfiend, SleepyScarecrow
+  changes:
+    - type: Add
+      message: You can now find pompom seeds and pomegranate seeds randomly on wrecks.
+    - type: Add
+      message: >-
+        You can also print pompom seeds and pomegranate seeds in the
+        biogenerator.
+    - type: Add
+      message: >-
+        Pomegranates can be sliced into pomegranate slices. Both pomegranates
+        and their slices can be stacked on burgers and tacos.
+    - type: Remove
+      message: Never ask me for anything ever again.
+  id: 9553
+  time: '2026-06-20T21:05:31.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1163
