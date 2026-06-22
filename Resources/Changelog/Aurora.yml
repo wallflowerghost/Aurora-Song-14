@@ -1543,3 +1543,10 @@ Entries:
   id: 9553
   time: '2026-06-20T21:05:31.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1163
+- author: ZigTag
+  changes:
+    - type: Add
+      message: IPCs can now eat and drink food, and get drunk too!
+  id: 9554
+  time: '2026-06-22T07:29:29.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1167
