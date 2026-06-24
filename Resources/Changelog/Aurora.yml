@@ -1550,3 +1550,14 @@ Entries:
   id: 9554
   time: '2026-06-22T07:29:29.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1167
+- author: salamanderskies
+  changes:
+    - type: Fix
+      message: Various Damascus fixes.
+    - type: Fix
+      message: >-
+        Damascus Scientists should now no longer be irradiated by the
+        singularity, when it is active.
+  id: 9555
+  time: '2026-06-24T06:46:24.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1130
