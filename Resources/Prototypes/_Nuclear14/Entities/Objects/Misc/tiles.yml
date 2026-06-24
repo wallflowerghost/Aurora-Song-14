@@ -5,7 +5,9 @@
   id: FloorTileItemMetalBlue
   components:
   - type: Sprite
-    state: steel
+    sprite: /Textures/_AS/Objects/Tiles/N14Tiles.rsi # Aurora's Song - was state: steel, added scale and sprite
+    scale: 0.5, 0.5 # Aurora's Song
+    state: metalblue
   - type: Item
     heldPrefix: steel
   - type: FloorTile
@@ -20,7 +22,9 @@
   id: FloorTileItemMetalBlueSolid
   components:
   - type: Sprite
-    state: steel
+    sprite: /Textures/_AS/Objects/Tiles/N14Tiles.rsi # Aurora's Song - was state: steel, added scale and sprite
+    scale: 0.5, 0.5
+    state: metalbluesolid
   - type: Item
     heldPrefix: steel
   - type: FloorTile
@@ -35,7 +39,9 @@
   id: FloorTileItemMetalGreen
   components:
   - type: Sprite
-    state: steel
+    sprite: /Textures/_AS/Objects/Tiles/N14Tiles.rsi # Aurora's Song - was state: steel, added scale and sprite
+    scale: 0.5, 0.5
+    state: metalgreen
   - type: Item
     heldPrefix: steel
   - type: FloorTile
@@ -50,7 +56,9 @@
   id: FloorTileItemMetalGreenSolid
   components:
   - type: Sprite
-    state: steel
+    sprite: /Textures/_AS/Objects/Tiles/N14Tiles.rsi # Aurora's Song - was state: steel, added scale and sprite
+    scale: 0.5, 0.5
+    state: metalgreensolid
   - type: Item
     heldPrefix: steel
   - type: FloorTile
@@ -65,7 +73,9 @@
   id: FloorTileItemMetalGrey
   components:
   - type: Sprite
-    state: steel
+    sprite: /Textures/_AS/Objects/Tiles/N14Tiles.rsi # Aurora's Song - was state: steel, added scale and sprite
+    scale: 0.5, 0.5
+    state: metalgrey
   - type: Item
     heldPrefix: steel
   - type: FloorTile
@@ -80,7 +90,9 @@
   id: FloorTileItemMetalGreySolid
   components:
   - type: Sprite
-    state: steel
+    sprite: /Textures/_AS/Objects/Tiles/N14Tiles.rsi # Aurora's Song - was state: steel, added scale and sprite
+    scale: 0.5, 0.5
+    state: metalgreysolid
   - type: Item
     heldPrefix: steel
   - type: FloorTile
@@ -95,7 +107,9 @@
   id: FloorTileItemMetalGreyDark
   components:
   - type: Sprite
-    state: steel
+    sprite: /Textures/_AS/Objects/Tiles/N14Tiles.rsi # Aurora's Song - was state: steel, added scale and sprite
+    scale: 0.5, 0.5
+    state: metalgreydark
   - type: Item
     heldPrefix: steel
   - type: FloorTile
@@ -110,7 +124,9 @@
   id: FloorTileItemMetalGreyDarkSolid
   components:
   - type: Sprite
-    state: steel
+    sprite: /Textures/_AS/Objects/Tiles/N14Tiles.rsi # Aurora's Song - was state: steel, added scale and sprite
+    scale: 0.5, 0.5
+    state: metalgreydarksolid
   - type: Item
     heldPrefix: steel
   - type: FloorTile
@@ -125,7 +141,9 @@
   id: FloorTileItemMetalPurple
   components:
   - type: Sprite
-    state: steel
+    sprite: /Textures/_AS/Objects/Tiles/N14Tiles.rsi # Aurora's Song - was state: steel, added scale and sprite
+    scale: 0.5, 0.5
+    state: metalpurple
   - type: Item
     heldPrefix: steel
   - type: FloorTile
@@ -140,7 +158,9 @@
   id: FloorTileItemMetalPurpleSolid
   components:
   - type: Sprite
-    state: steel
+    sprite: /Textures/_AS/Objects/Tiles/N14Tiles.rsi # Aurora's Song - was state: steel, added scale and sprite
+    scale: 0.5, 0.5
+    state: metalpurplesolid
   - type: Item
     heldPrefix: steel
   - type: FloorTile
@@ -155,7 +175,9 @@
   id: FloorTileItemMetalRed
   components:
   - type: Sprite
-    state: steel
+    sprite: /Textures/_AS/Objects/Tiles/N14Tiles.rsi # Aurora's Song - was state: steel, added scale and sprite
+    scale: 0.5, 0.5
+    state: metalred
   - type: Item
     heldPrefix: steel
   - type: FloorTile
@@ -170,7 +192,9 @@
   id: FloorTileItemMetalRedSolid
   components:
   - type: Sprite
-    state: steel
+    sprite: /Textures/_AS/Objects/Tiles/N14Tiles.rsi # Aurora's Song - was state: steel, added scale and sprite
+    scale: 0.5, 0.5
+    state: metalredsolid
   - type: Item
     heldPrefix: steel
   - type: FloorTile
@@ -185,7 +209,9 @@
   id: FloorTileItemMetalTeal
   components:
   - type: Sprite
-    state: steel
+    sprite: /Textures/_AS/Objects/Tiles/N14Tiles.rsi # Aurora's Song - was state: steel, added scale and sprite
+    scale: 0.5, 0.5
+    state: metalteal
   - type: Item
     heldPrefix: steel
   - type: FloorTile
@@ -200,7 +226,9 @@
   id: FloorTileItemMetalTealSolid
   components:
   - type: Sprite
-    state: steel
+    sprite: /Textures/_AS/Objects/Tiles/N14Tiles.rsi # Aurora's Song - was state: steel, added scale and sprite
+    scale: 0.5, 0.5
+    state: metaltealsolid
   - type: Item
     heldPrefix: steel
   - type: FloorTile
@@ -215,7 +243,9 @@
   id: FloorTileItemMetalWhite
   components:
   - type: Sprite
-    state: steel
+    sprite: /Textures/_AS/Objects/Tiles/N14Tiles.rsi # Aurora's Song - was state: steel, added scale and sprite
+    scale: 0.5, 0.5
+    state: metalwhite
   - type: Item
     heldPrefix: steel
   - type: FloorTile
@@ -230,7 +260,9 @@
   id: FloorTileItemMetalWhiteSolid
   components:
   - type: Sprite
-    state: steel
+    sprite: /Textures/_AS/Objects/Tiles/N14Tiles.rsi # Aurora's Song - was state: steel, added scale and sprite
+    scale: 0.5, 0.5
+    state: metalwhitesolid
   - type: Item
     heldPrefix: steel
   - type: FloorTile
@@ -245,7 +277,9 @@
   id: FloorTileItemMetalYellow
   components:
   - type: Sprite
-    state: steel
+    sprite: /Textures/_AS/Objects/Tiles/N14Tiles.rsi # Aurora's Song - was state: steel, added scale and sprite
+    scale: 0.5, 0.5
+    state: metalyellow
   - type: Item
     heldPrefix: steel
   - type: FloorTile
@@ -260,7 +294,9 @@
   id: FloorTileItemMetalYellowSolid
   components:
   - type: Sprite
-    state: steel
+    sprite: /Textures/_AS/Objects/Tiles/N14Tiles.rsi # Aurora's Song - was state: steel, added scale and sprite
+    scale: 0.5, 0.5
+    state: metalyellowsolid
   - type: Item
     heldPrefix: steel
   - type: FloorTile
@@ -275,7 +311,9 @@
   id: FloorTileItemMetalFreezer
   components:
   - type: Sprite
-    state: steel
+    sprite: /Textures/_AS/Objects/Tiles/N14Tiles.rsi # Aurora's Song - was state: steel, added scale and sprite
+    scale: 0.5, 0.5
+    state: metalfreezer
   - type: Item
     heldPrefix: steel
   - type: FloorTile
@@ -292,12 +330,15 @@
   id: FloorTileItemWoodOak
   components:
   - type: Sprite
-    state: wood
+    sprite: /Textures/_AS/Objects/Tiles/N14Tiles.rsi # Aurora's Song - was state: wood, added scale and sprite
+    scale: 0.5, 0.5
+    state: oak
   - type: Item
     heldPrefix: wood
   - type: FloorTile
     outputs:
       # - FloorWasteland # Aurora's Song| This floor tile isn't real.
+      - Plating # Aurora's Song
       - FloorWoodOak
   - type: Stack
     stackType: FloorTileWoodOak
@@ -310,12 +351,15 @@
   id: FloorTileItemWoodHouse
   components:
   - type: Sprite
-    state: wood
+    sprite: /Textures/_AS/Objects/Tiles/N14Tiles.rsi # Aurora's Song - was state: wood, added scale and sprite
+    scale: 0.5, 0.5
+    state: woodhouse
   - type: Item
     heldPrefix: wood
   - type: FloorTile
     outputs:
     # - FloorWasteland # Aurora's Song | This floor tile isn't real.
+      - Plating # Aurora's Song
       - FloorWoodHouse
   - type: Stack
     stackType: FloorTileWoodHouse
@@ -328,12 +372,15 @@
   id: FloorTileItemWoodMaple
   components:
   - type: Sprite
-    state: wood
+    sprite: /Textures/_AS/Objects/Tiles/N14Tiles.rsi # Aurora's Song - was state: wood, added scale and sprite
+    scale: 0.5, 0.5
+    state: maple
   - type: Item
     heldPrefix: wood
   - type: FloorTile
     outputs:
     # - FloorWasteland # Aurora's Song | This floor tile isn't real.
+      - Plating # Aurora's Song
       - FloorWoodMaple
   - type: Stack
     stackType: FloorTileWoodMaple
@@ -346,12 +393,15 @@
   id: FloorTileItemMetalIndustrial
   components:
   - type: Sprite
-    state: wood
+    sprite: /Textures/_AS/Objects/Tiles/N14Tiles.rsi # Aurora's Song - was state: wood, added scale and sprite
+    scale: 0.5, 0.5
+    state: steel_industrial
   - type: Item
-    heldPrefix: wood
+    heldPrefix: steel # Aurora's Song - wood > steel
   - type: FloorTile
     outputs:
     # - FloorWasteland # Aurora's Song | This floor tile isn't real.
+      - Plating # Aurora's Song
       - FloorMS13MetalIndustrial
   - type: Stack
     stackType: FloorTileMetalIndustrial
@@ -361,12 +411,15 @@
   id: FloorTileItemMetalMS13
   components:
   - type: Sprite
-    state: wood
+    sprite: /Textures/_AS/Objects/Tiles/N14Tiles.rsi # Aurora's Song - was state: wood, added scale and sprite
+    scale: 0.5, 0.5
+    state: steel_tiles
   - type: Item
-    heldPrefix: wood
+    heldPrefix: steel # Aurora's Song - wood > steel
   - type: FloorTile
     outputs:
     # - FloorWasteland # Aurora's Song| This floor tile isn't real.
+      - Plating # Aurora's Song
       - FloorMS13MetalTile
   - type: Stack
     stackType: FloorTileMetalMS13
@@ -376,12 +429,15 @@
   id: FloorTileItemMetalGrate
   components:
   - type: Sprite
-    state: wood
+    sprite: /Textures/_AS/Objects/Tiles/N14Tiles.rsi # Aurora's Song - was state: wood, added scale and sprite
+    scale: 0.5, 0.5
+    state: steel_grate
   - type: Item
-    heldPrefix: wood
+    heldPrefix: steel # Aurora's Song - wood > steel
   - type: FloorTile
     outputs:
     # - FloorWasteland # Aurora's Song| This floor tile isn't real.
+      - Plating # Aurora's Song
       - FloorMS13MetalGrate
   - type: Stack
     stackType: FloorTileMetalGrate
@@ -391,12 +447,15 @@
   id: FloorTileItemMetalSolid
   components:
   - type: Sprite
-    state: wood
+    sprite: /Textures/_AS/Objects/Tiles/N14Tiles.rsi # Aurora's Song - was state: wood, added scale and sprite
+    scale: 0.5, 0.5
+    state: steel_solid
   - type: Item
-    heldPrefix: wood
+    heldPrefix: steel # Aurora's Song - wood > steel
   - type: FloorTile
     outputs:
     # - FloorWasteland # Aurora's Song| This floor tile isn't real.
+      - Plating # Aurora's Song
       - FloorMS13MetalSolid
   - type: Stack
     stackType: FloorTileMetalSolid
@@ -408,12 +467,15 @@
   id: FloorTileItemCarpetRed
   components:
   - type: Sprite
-    state: wood
+    sprite: /Textures/_AS/Objects/Tiles/N14Tiles.rsi # Aurora's Song - was state: wood, added scale and sprite
+    scale: 0.5, 0.5
+    state: carpet
   - type: Item
     heldPrefix: wood
   - type: FloorTile
     outputs:
     # - FloorWasteland # Aurora's Song| This floor tile isn't real.
+      - Plating # Aurora's Song
       - FloorCarpetRed
   - type: Stack
     stackType: FloorTileCarpetRed
