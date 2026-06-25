@@ -1621,3 +1621,10 @@ Entries:
   id: 9562
   time: '2026-06-25T00:41:05.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1177
+- author: Zenixic
+  changes:
+    - type: Fix
+      message: Fixed two air alarms on SLEO not being powered
+  id: 9563
+  time: '2026-06-25T01:32:41.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1170
