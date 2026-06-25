@@ -1601,3 +1601,12 @@ Entries:
   id: 9560
   time: '2026-06-25T00:19:05.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1165
+- author: BudaLope
+  changes:
+    - type: Tweak
+      message: Powered fans now draw 1 kW instead of 10 kW
+    - type: Add
+      message: adds battery to powered fans, you get 10 seconds
+  id: 9561
+  time: '2026-06-25T00:31:23.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1174
