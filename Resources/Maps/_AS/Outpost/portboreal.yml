@@ -4,7 +4,7 @@ meta:
   engineVersion: 272.0.1
   forkId: ""
   forkVersion: ""
-  time: 07/01/2026 22:01:40
+  time: 07/02/2026 04:58:55
   entityCount: 13717
 maps:
 - 1
@@ -6647,6 +6647,8 @@ entities:
       - 9062
       - 6692
       - 306
+      - 13701
+      - 13702
     - type: Fixtures
       fixtures: {}
   - uid: 40
@@ -62313,6 +62315,9 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 22.5,-22.5
       parent: 2
+    - type: DeviceNetwork
+      deviceLists:
+      - 39
     - type: AtmosPipeColor
       color: '#0055CCFF'
 - proto: GasVentScrubber
@@ -64087,6 +64092,9 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 22.5,-18.5
       parent: 2
+    - type: DeviceNetwork
+      deviceLists:
+      - 39
     - type: AtmosPipeLayers
       pipeLayer: Secondary
     - type: AtmosPipeColor
