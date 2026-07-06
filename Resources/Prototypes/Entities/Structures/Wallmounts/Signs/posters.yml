@@ -47,11 +47,11 @@
     drawdepth: WallTops
     sprite: Structures/Wallmounts/posters.rsi
     state: poster_broken
-    #Aurora Song edit: added this component
+    # Aurora's Song Start - added this component
   - type: Damageable
     damageContainer: StructuralInorganic
     damageModifierSet: Card
-    #end Aurora Song edit
+    # Aurora's Song End
   - type: Destructible
     thresholds:
     - trigger:
