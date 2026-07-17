@@ -10,7 +10,7 @@
     - Bed
   components:
   - type: Sprite
-    sprite: Objects/Misc/bedsheets.rsi
+    sprite: _AS/Objects/Misc/bedsheets.rsi # Aurora Song - New sprites for all bedsheets
     noRot: true
   - type: Item
     size: Small
