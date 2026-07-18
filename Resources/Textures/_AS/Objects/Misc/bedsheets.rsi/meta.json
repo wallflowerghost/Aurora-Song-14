@@ -20,7 +20,10 @@
       "name": "sheetslecommissioner"
     },
 	{
-		"name": "sheetblack"
+	  "name": "sheetblack"
+	},
+	{
+	  "name": "sheetblue"
 	}
   ]
 }
