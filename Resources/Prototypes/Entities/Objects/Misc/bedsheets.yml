@@ -13,8 +13,10 @@
     sprite: _AS/Objects/Misc/bedsheets.rsi # Aurora Song - New sprites for all bedsheets
     noRot: true
   - type: Item
+    sprite: _AS/Objects/Misc/bedsheets.rsi # Aurora Song - Added so children can have new in hand sprites
     size: Small
   - type: Clothing
+    sprite: _AS/Clothing/Neck/Bedsheets/bedsheets.rsi # Aurora Song - New rsi holding new cape sprites
     quickEquip: true
     slots:
     - neck
@@ -32,7 +34,9 @@
   - type: Sprite
     state: sheetblack
   - type: Clothing
-    sprite: Clothing/Neck/Bedsheets/black.rsi
+    equippedPrefix: capeblack # Aurora Song - Changed from "sprite", added the new type below
+  - type: Item
+    heldPrefix: black
 
 - type: entity
   id: BedsheetBlue

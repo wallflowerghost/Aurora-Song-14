@@ -23,6 +23,14 @@
 	  "name": "sheetblack"
 	},
 	{
+	  "name": "black-inhand-left",
+	  "directions": 4
+	},
+	{
+	  "name": "black-inhand-right",
+	  "directions": 4
+	},
+	{
 	  "name": "sheetblue"
 	},
 	{
