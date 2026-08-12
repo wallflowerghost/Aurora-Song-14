@@ -78,6 +78,7 @@
       entity_storage: !type:AllSelector
         children:
         - id: WeaponCaseHeavyCdet
+          amount: 2 # Aurora's Song - New tag added, so safe has 4 CDETs total
         - id: NFWeaponPistolMk58
           amount: 1
         - id: NFMagazinePistol35
